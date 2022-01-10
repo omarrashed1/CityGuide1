@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">SCOUT</string>
-    <string name="app_slogan">Helps You Get A Way</string>
-    <string name="app_powered_by1">Powered by</string>
-    <string name="app_powered_by2">Developer Depository</string>
+    <string name="app_name">رحلة الاحساء</string>
+    <string name="app_slogan">من هنا تبدأ رحلتك.</string>
+    <string name="app_powered_by1">انشئ بواسطة</string>
+    <string name="app_powered_by2">فريق صلة</string>
 
     <!-- Strings for OnBoardingScreen -->
 
@@ -21,7 +21,7 @@
     <!-- Buttons -->
     <string name="skip_btn">تخطي</string>
     <string name="next_btn">التالي</string>
-    <string name="lets_get_started">LET\'S GET STARTED</string>
+    <string name="lets_get_started">لنبدأ الرحلة</string>
 
 
     <!-- Categories -->
@@ -40,7 +40,7 @@
     <!-- Strings for Dashboard -->
 
     <!-- Titles and Descriptions -->
-    <string name="featured_locations_description" translatable="false">All the locations that are featured and having the top demand in town at the moment!</string>
+    <string name="featured_locations" translatable="false">هنا معظم\nالاماكن\nالمميزة </string>
     <string name="most_viewed_locations">الاكثر مشاهدة</string>
     <string name="categories">الفئات</string>
     <string name="view_all">مشاهدة الكل</string>
@@ -54,7 +54,12 @@
     <string name="navHome">الرئيسية</string>
     <string name="navSearch">بحث</string>
     <string name="navAllCategories">كل الفئات</string>
-    <string name="navCurrency">Exchange Currency</string>
+    <string name="navAddMissingPlaces" translatable="false">Add Missing Place</string>
+    <string name="navCurrency">تحويل العملات</string>
+    <string name="navProfileTitle" translatable="false">Profile</string>
+    <string name="navLogin" translatable="false">Log In</string>
+    <string name="navProfile" translatable="false">Profile</string>
+    <string name="navLogOut" translatable="false">Log Out</string>
     <string name="navCategoriesTitle">الفئات</string>
     <string name="navRestaurants">المطاعم</string>
     <string name="navHotels">الفنادق</string>
@@ -65,9 +70,11 @@
     <string name="navRateUs">قيمنا</string>
     <string name="navContactUs">تواصل معنا</string>
     <string name="navAboutUs">عنا</string>
+    <string name="navPrivacyPolicy" translatable="false">سياسة الخصوصية</string>
 
     <!-- Exit Dialog Strings -->
-    <string name="exitDialogMessage">هل تريد الخروج؟</string>
+    <string name="exitDialogTitle" translatable="false">انهاء الجولة ؟</string>
+    <string name="exitDialogMessage">هل انت متأكد؟</string>
     <string name="exitDialogConfirm">نعم</string>
     <string name="exitDialogCancel">لا</string>
 
@@ -77,28 +84,81 @@
 
 
     <!-- Retailer StartUp Screen Strings -->
+    <string name="retailerStartUpTitle" translatable="false">GROW YOUR BUSINESS</string>
+    <string name="retailerStartUpMessage" translatable="false">SCOUT will help you grow your business and gain reach by taking it online.</string>
+    <string name="retailerStartUpLoginBtn" translatable="false">LOGIN</string>
+    <string name="retailerStartUpSignUpBtn" translatable="false">SIGN UP</string>
+    <string name="retailerStartUpHowWeWork" translatable="false">How We Work?</string>
 
 
     <!-- RetailerLogin Strings -->
+    <string name="retailerLoginTitle" translatable="false">LOGIN</string>
+    <string name="retailerLoginMessage" translatable="false">Sign in to continue!</string>
+    <string name="retailerLoginUsernameHint" translatable="false">Username</string>
+    <string name="retailerLoginPasswordHint" translatable="false">Password</string>
+    <string name="retailerLoginRememberMeCheckBox" translatable="false">Remember Me</string>
+    <string name="retailerLoginForgotPassword" translatable="false">Forgot Password?</string>
+    <string name="retailerLoginBtn" translatable="false">LOGIN</string>
+    <string name="retailerLoginCreateAccountMsg" translatable="false">Don\'t have an account?</string>
+    <string name="retailerLoginCreateAccountBtn" translatable="false">Create Account</string>
 
 
     <!-- RetailerSignUp Strings -->
+    <string name="retailerSignUpTitle" translatable="false">Create Account</string>
+    <string name="retailerSignUpMessage" translatable="false">Sign up to get started!</string>
+    <string name="retailerSignUpNameHint" translatable="false">Name</string>
+    <string name="retailerSignUpUserNameHint" translatable="false">Username</string>
+    <string name="retailerSignUpEmailHint" translatable="false">Email</string>
+    <string name="retailerSignUpMobileHint" translatable="false">Mobile</string>
+    <string name="retailerSignUpCreatePasswordHint" translatable="false">Create Password</string>
+    <string name="retailerSignUpConfirmPasswordHint" translatable="false">Confirm Password</string>
+    <string name="retailerSignUpNextBtn" translatable="false">التالي</string>
+    <string name="retailerSignUpLoginMsg" translatable="false">Already have an account?</string>
+    <string name="retailerSignUpLoginBtn" translatable="false">Sign in</string>
+    <string name="retailerSignUpChooseGenderTxt" translatable="false">Choose Gender</string>
+    <string name="retailerSignUpMale" translatable="false">Male</string>
+    <string name="retailerSignUpFemale" translatable="false">Female</string>
+    <string name="retailerSignUpOther" translatable="false">Other</string>
+    <string name="retailerSignUpDOBTxt" translatable="false">Select Date of Birth</string>
+    <string name="retailerSignUpMobileMsg" translatable="false">A 6-digit verification code will be sent to the mobile number. Standard rates may apply.</string>
 
 
     <!-- Retailer VerifyOTP Strings -->
+    <string name="verifyOTPTitle" translatable="false">CODE VERIFICATION</string>
+    <string name="verifyOTPMessage" translatable="false">Enter the verification code sent to\n+919915462971</string>
+    <string name="verifyOTPBtn" translatable="false">VERIFY</string>
 
 
     <!-- Retailer Forgot Password Strings -->
+    <string name="forgotPasswordTitle" translatable="false">FORGOT PASSWORD?</string>
+    <string name="forgotPasswordMessage" translatable="false">Provide your account\'s Mobile below for\nwhich you want to reset your password</string>
+    <string name="forgotPasswordMobileHint" translatable="false">Mobile</string>
+    <string name="forgotPasswordNextBtn" translatable="false">التالي</string>
 
 
     <!-- Retailer Make Selection Strings -->
+    <string name="makeSelectionTitle" translatable="false">MAKE\nSELECTION</string>
+    <string name="makeSelectionMsg" translatable="false">Select what contact detail should we be using to reset your password?!</string>
+    <string name="makeSelectionViaSmsTitle" translatable="false">via sms :</string>
+    <string name="makeSelectionViaSmsValueDefault" translatable="false">+919915462971</string>
+    <string name="makeSelectionViaEmailTitle" translatable="false">via mail :</string>
+    <string name="makeSelectionViaEmailValueDefault" translatable="false">developer.depository@gmail.com</string>
 
 
     <!-- Retailer Set New Password Strings -->
+    <string name="setNewPasswordTitle" translatable="false">NEW CREDENTIALS</string>
+    <string name="setNewPasswordMsg" translatable="false">Your identity has been verified.\nSet your new password.</string>
+    <string name="setNewPasswordHint" translatable="false">New Password</string>
+    <string name="confirmNewPasswordHint" translatable="false">Confirm Password</string>
+    <string name="updatePasswordBtn" translatable="false">UPDATE</string>
 
 
     <!-- Password Success Message Strings -->
+    <string name="setPasswordSuccessTitle" translatable="false">PASSWORD UPDATED</string>
+    <string name="setPasswordSuccessMsg" translatable="false">Your password has been updated!</string>
+    <string name="setPasswordSuccessLoginBtn" translatable="false">LOGIN</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="select_lang">اختر لغة</string>
     <string name="king_faisal_university">جامعة الملك فيصل (KFU)</string>
     <string name="imam_muhammad_bin_saud_islamic_university">جامعة الامام محمد بن سعود</string>
@@ -110,11 +170,71 @@
     <string name="wall_street_english">معهد وول ستريت</string>
     <string name="al_anjal_national_schools">مدارس النجاح</string>
     <string name="future_vision_private_schools">مدارس رؤية المستقبل</string>
-    <string name="horn" translatable="false">هورن</string>
-    <string name="restaurents" translatable="false">مطاعم</string>
-    <string name="khaibar" translatable="false">خيبر</string>
+    <string name="project_id">scout-city-guide</string>
+    <string name="google_storage_bucket">scout-city-guide.appspot.com</string>
+    <string name="khaibar">خيبر</string>
     <string name="topaz">توباز</string>
-    <string name="languages">اللغة</string>
-    <string name="lang">English</string>
+    <string name="bharat">بهارات</string>
+    <string name="tendrliune">تيندرلايون</string>
+    <string name="restaurents">المطاعم</string>
+    <string name="horn">هورن</string>
+    <string name="featured_locations_description" translatable="false">هنا الاماكن السياحية الاكثر شهرة في المنطقة حيث تعتبر الاعلى تقيماً والاكثر زيارة.</string>
+    <!-- فنادق-->
+    <string name="hotel">فنادق </string>
+    <string name="triple_tree_hotel">تريبل تري</string>
+    <string name="somewhere_hotel">فندق مكان</string>
+    <string name="intercontinental_hotel">فندق الانتركونتنينتال</string>
+    <string name="alahssa_grand">الاحساء جراند</string>
+    <string name="coral_hotel">فندق كورال</string>
+    <string name="separ_hotel">فندق سيبار </string>
+    <string name="taleen_hotel">فندق تالين</string>
+    <string name="garden_hotel">فندق جاردن بلازا</string>
+    <string name="linh_hotel">فندق لينة</string>
+    <string name="alkut_hotel">فندق الكوت</string>
+    <!-- مطاعم -->
+    <string name="hasa_gril">الاحساء جريل</string>
+    <string name="al_keet">الكيت</string>
+    <string name="casa_pasta">كازاباستا</string>
+    <string name="lava">لاڤــا</string>
+    <string name="dunkin">دانكن دونت</string>
+    <!-- اسواق -->
+    <string name="al_qaysarya">القيصريـة</string>
+    <string name="alqisryahdec">سوق تاريخي انشئ عام 1822م ستجد هناك كل مايتعلق التراث الاحسائي, يقع في مدينة الهفوف. </string>
+    <string name="al_qaria">القرية الشعبية</string>
+    <string name="al_qariadec">القرية الشعبية سوق انشئ حديث بهوية تراثية يتحوي على اكثر من 1500 نشاط تجاري مختلف بين حديثًا و قديم, يقع في مدينة المبرز. </string>
+    <string name="al_sweeq">السويق</string>
+    <string name="al_sweeqdec">يعد واحد من اشهر الاسواق في المنطقة حيث يتاده الكثيرين من داخل وخارج المملكة, يقع في مدينة الهفوف.</string>
+    <string name="alahsa_mall">الاحساء مول</string>
+    <string name="alahsa_malldec">هو مجمع تجاري يحتوي على العديد من الأنشطة التجارية الحديثة,اضافةً الى السينما , يوجد ايضاً على عدد من المطاعم والكافيهات .</string>
+    <string name="alfawares_mall">الفوارس مول</string>
+    <string name="alfawares_malldec">مجمع تجاري يحتوي على اماكن تجارية متعددة يتميز المجمع بأنه يقع بين الهفوف والمبرز.</string>
+    <string name="farm_superstores">اسواق المزرعة </string>
+    <string name="farm_superstoresdes">اسواق المزرعة سوق تمويني للمواد الغذائية المواد الضرورية.</string>
+    <string name="alothaim_mall">العثيم مول</string>
+    <string name="alothaim_malldec">مجمع العثيم يعد واحد من سلسلة مجمعات العثيم في المملكة العربية السعودية ويعد اكبر مجمع في منطقة الاحساء.</string>
+    <string name="UqairBeach">" شاطئ العقير"</string>
+    <string name="AlQarah">جبل القارة</string>
+    <string name="AlAsfar">بحيرة الاصفر</string>
+    <string name="JawathaCity">مدينة جواثـا</string>
+    <string name="AlArbaa">جبل الاربع</string>
+    <string name="AlShu">جبل الشعبة</string>
+    <string name="KingAbdullahPark">حديقة الملك عبدالله</string>
+    <string name="ZooPark">حديقة الحيوان</string>
+    <string name="alasfardec">بحيرة الاصفر هي بحيرة تقع بين كثبان رملية حيث تتجلى فيها قدرة الخالق عز وجل منظر خلاب يجلب انظار المرتادين.</string>
+    <string name="alshudec">جبل الشعبة هو جبل يقع على الطريق الممتد من الاحساء الى الدمام وله تشكيل حجري جميل يلفت الناظرين.</string>
+    <string name="zoodec">حديقة حيوانات تقع في الطرف في مدينة الاحساء تحتوي على العديد من الحيوانات.</string>
+    <string name="aluqairdec">شاطئ العقير يعد من احد اهم الشواطئ في المملكة العربية السعودية حيث يوجد فيه اقدم ميناء في المملكة وله مكانة تاريخية ويعد وجهة سياحية لاهالي المنطقة.</string>
+    <string name="alqaradec">جبل القارة احد المعالم السياحية المهمة في منطقة الخليج وتنفرد فيه مدينة الاحساء هناك ستكتشف الكثير من الاسرار المذهلة عن الطبيعة.</string>
+    <string name="jawadec">مدينة جواثة وجهة سياحية ترفيهية للعائلات .</string>
+    <string name="alarbadec">"تتميز جبال الاربع التشكيل الحجري الغريب حيث لها منظر خلاب هنالك يتجه الكثير من السياح لقضاء يوم صحرواي. "</string>
+    <string name="kingabdudec">حديقة الملك عبدالله (رحمه الله) تقع في مدينة الهفوف وتعتبر وجهة ترفيهية للعائلات.</string>
+    <string name="HouseAllegiance">بيت البيعة</string>
+    <string name="IbrahimPalace">قصر ابراهيم</string>
+    <string name="SahoodFort">حصن صاهود</string>
+    <string name="OldAlUqayrSeaport">ميناء العقير التاريخي</string>
+    <string name="PrincesSchool">المدرسة الاميرية</string>
+    <string name="MuhairisPalace">قصر محيرس</string>
+    <string name="KhuzamPalace">قصر خزام</string>
+
 
 </resources>

@@ -1,13 +1,5 @@
 package com.developerdepository.scout.User;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -23,11 +15,19 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.developerdepository.scout.Common.LoginSignup.RetailerStartUpScreenActivity;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.CategoriesAdapter;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.CategoriesModel;
-import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.FeaturedModel;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.FeaturedLocationsAdapter;
+import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.FeaturedModel;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.MostViewedLocationsAdapter;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.MostViewedModel;
 import com.developerdepository.scout.R;
@@ -250,14 +250,14 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
 
         ArrayList<FeaturedModel> featuredLocations = new ArrayList<>();
 
-        featuredLocations.add(new FeaturedModel(R.drawable.thumbnail_16, "Uqair Beach", "Uqair Beach is the best rated Beach in Al-Ahsa'a at the moment.",4.1, "https://goo.gl/maps/VsvYoYf4hKAYZKdq6"));
-        featuredLocations.add(new FeaturedModel(R.drawable.garah2, "Al-Qarah Mountain", "From the breathtaking summit of Al Qarah Mountain, Arabic translations of the surrounding region’s place names bring new meaning.",4.1,"https://goo.gl/maps/sif9HkYrGtzmLopY7"));
-        featuredLocations.add(new FeaturedModel(R.drawable.ysea, "Al-Asfar Lake", "Al-Asfar Lake is a lake located in Al-Omran east of Al-Ahsa in Saudi Arabia. It is considered the largest watershed in the Gulf region, and it is the only one in the Kingdom of its kind in which an integrated wildlife lives.",3.9, "https://goo.gl/maps/HcwayaM5mNTmFkys7"));
-        featuredLocations.add(new FeaturedModel(R.drawable.juatha, "Jawatha City", "The city of Jawatha is a historic treasure of the Kingdom, because it was once a palace or fortress used by Abd al-Qays, Bahrain. It was mentioned in the Book of the Status of the Arabian Island, settled by nations for the rich eyes and fertility of its agricultural soil.",4.4, "https://goo.gl/maps/ChwGniSrBxQ3dH4m6"));
-        featuredLocations.add(new FeaturedModel(R.drawable.alarba, "Al-Arbaa Mountain", "Jabal Al-Arbaa is a wonderful rock formation located in south Al-Hofuf and is one of the well-known group of mountains in Al-Ahsa. It is named after its four conical shaped plateaus, two joined together and the other two separate from each other.",4.2, "https://goo.gl/maps/dMR1ipYXiwkMxMz77"));
-        featuredLocations.add(new FeaturedModel(R.drawable.alshabah, "Al-Shu'ba Mountain", "Al-Shu'ba mountain located in east of Al-Shu'ba village at Al-Ahsa and to the north of Al-Eskan next to the road leading from eastern villages to the northern villages and to Al-Dammam.",4.0, "https://goo.gl/maps/ic6gMSsEL8cVNsiu8"));
-        featuredLocations.add(new FeaturedModel(R.drawable.park, "King Abdullah Park", "Located in the southern part of Al Hofuf, King Abdullah Environmental Park is one of the best amusement options in this region.",3.9, "https://goo.gl/maps/kHq7VxmTwDS5zjox6"));
-        featuredLocations.add(new FeaturedModel(R.drawable.zoo, "Zoo Park", "Al-Tharf Model Garden or Al-Ahsa Zoo is a park that includes many animals located in Al-Ahsa Governorate in the Eastern Province of Saudi Arabia. The park is also one of Al-Ahsa’s tourist attractions.",3.3, "https://goo.gl/maps/MDtYUvrYjx6fT49X8"));
+        featuredLocations.add(new FeaturedModel(R.drawable.thumbnail_16, R.string.UqairBeach, R.string.aluqairdec,4.1, "https://goo.gl/maps/VsvYoYf4hKAYZKdq6"));
+        featuredLocations.add(new FeaturedModel(R.drawable.garah2, R.string.AlQarah, R.string.alqaradec,4.1,"https://goo.gl/maps/sif9HkYrGtzmLopY7"));
+        featuredLocations.add(new FeaturedModel(R.drawable.ysea, R.string.AlAsfar, R.string.alasfardec,3.9, "https://goo.gl/maps/HcwayaM5mNTmFkys7"));
+        featuredLocations.add(new FeaturedModel(R.drawable.juatha, R.string.JawathaCity, R.string.jawadec,4.4, "https://goo.gl/maps/ChwGniSrBxQ3dH4m6"));
+        featuredLocations.add(new FeaturedModel(R.drawable.alarba, R.string.AlArbaa, R.string.alarbadec,4.2, "https://goo.gl/maps/dMR1ipYXiwkMxMz77"));
+        featuredLocations.add(new FeaturedModel(R.drawable.alshabah, R.string.AlShu, R.string.alshudec,4.0, "https://goo.gl/maps/ic6gMSsEL8cVNsiu8"));
+        featuredLocations.add(new FeaturedModel(R.drawable.park, R.string.KingAbdullahPark, R.string.kingabdudec,3.9, "https://goo.gl/maps/kHq7VxmTwDS5zjox6"));
+        featuredLocations.add(new FeaturedModel(R.drawable.zoo, R.string.ZooPark, R.string.zoodec,3.3, "https://goo.gl/maps/MDtYUvrYjx6fT49X8"));
 
         featuredAdapter = new FeaturedLocationsAdapter(featuredLocations);
 
@@ -271,13 +271,13 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
 
         ArrayList<MostViewedModel> mostViewedLocations = new ArrayList<>();
 
-        mostViewedLocations.add(new MostViewedModel(R.drawable.house, "House of Allegiance", "The House of Allegiance or House of Allegiance is a historical house located in the Al Kut neighborhood of Al Hofuf Al Ahsa’iya city, Kingdom of Saudi Arabia. It is the house of Abdul Latif bin Abdul Rahman Al-Mulla, the head of the Al-Mulla family, and the house of the one who witnessed the people of Al-Ahsa pledge allegiance to King Abdul Aziz and their accession to the Saudi state in 1913.",  4.1, "https://goo.gl/maps/p5QXwJvbgVx8sT5D9"));
-        mostViewedLocations.add(new MostViewedModel(R.drawable.ibrahem, "Ibrahim Palace", "The Ibrahim Palace was built during the time of the first Saudi state and is considered to be an architectural masterpiece.",  4.2, "https://goo.gl/maps/d46xCcZon2Au4cLW9"));
-        mostViewedLocations.add(new MostViewedModel(R.drawable.sahoood, "Sahood Fort ", "Sahood Fort is situated outside the western walls of Al Mubarraz, Saudi Arabia. The fort is used as barracks for the Saudi Arabian Armed Forces.",  4.0, "https://goo.gl/maps/7sE3UNmeVwJRtrh89"));
-        mostViewedLocations.add(new MostViewedModel(R.drawable.muqair, "Old Al Uqayr Seaport", "Uqair is the site of numerous historic meetings between the founding king and foreign diplomats and the place in which he conducted negotiations with international political forces in the region.",  4.3, "https://goo.gl/maps/BDwqm4NjFLkApL397"));
-        mostViewedLocations.add(new MostViewedModel(R.drawable.school, "Princes School", "The Princes School, the House of Culture, or the First Hofuf School is one of the oldest public schools in the Kingdom of Saudi Arabia,Its construction began in 1937 and was officially opened in February 1941.",  4.4, "https://goo.gl/maps/zziZ2NVQ24hA5uFV9"));
-        mostViewedLocations.add(new MostViewedModel(R.drawable.mehers, "Muhairis Palace", "Muhairis Palace is a palace built by Imam Saud bin Abdul Aziz on the top of a hill in 1208 AH for military purposes.",  3.5, "https://goo.gl/maps/pAWeGE75s8JaXH5T6"));
-        mostViewedLocations.add(new MostViewedModel(R.drawable.khusam, "Khuzam Palace ", "Khuzam Palace is located in the east of Al-Raqeqa neighborhood (currently Al-Mazrou’iya) located west of the city of Hofuf. It is the seat of the Bedouin residents who go to Al-Ahsa in the summer seasons for two months to exchange goods available in Al-Ahsa such as dates, sugar, some textiles, guns, ammunition and others for the goods they brought from the desert.",  2.5, "https://goo.gl/maps/8QXrya6cbGwX6oKm8"));
+        mostViewedLocations.add(new MostViewedModel(R.drawable.house, getString(R.string.HouseAllegiance), "The House of Allegiance or House of Allegiance is a historical house located in the Al Kut neighborhood of Al Hofuf Al Ahsa’iya city, Kingdom of Saudi Arabia. It is the house of Abdul Latif bin Abdul Rahman Al-Mulla, the head of the Al-Mulla family, and the house of the one who witnessed the people of Al-Ahsa pledge allegiance to King Abdul Aziz and their accession to the Saudi state in 1913.",  4.1, "https://goo.gl/maps/p5QXwJvbgVx8sT5D9"));
+        mostViewedLocations.add(new MostViewedModel(R.drawable.ibrahem, getString(R.string.IbrahimPalace), "The Ibrahim Palace was built during the time of the first Saudi state and is considered to be an architectural masterpiece.",  4.2, "https://goo.gl/maps/d46xCcZon2Au4cLW9"));
+        mostViewedLocations.add(new MostViewedModel(R.drawable.sahoood, getString(R.string.SahoodFort), "Sahood Fort is situated outside the western walls of Al Mubarraz, Saudi Arabia. The fort is used as barracks for the Saudi Arabian Armed Forces.",  4.0, "https://goo.gl/maps/7sE3UNmeVwJRtrh89"));
+        mostViewedLocations.add(new MostViewedModel(R.drawable.muqair, getString(R.string.OldAlUqayrSeaport), "Uqair is the site of numerous historic meetings between the founding king and foreign diplomats and the place in which he conducted negotiations with international political forces in the region.",  4.3, "https://goo.gl/maps/BDwqm4NjFLkApL397"));
+        mostViewedLocations.add(new MostViewedModel(R.drawable.school, getString(R.string.PrincesSchool), "The Princes School, the House of Culture, or the First Hofuf School is one of the oldest public schools in the Kingdom of Saudi Arabia,Its construction began in 1937 and was officially opened in February 1941.",  4.4, "https://goo.gl/maps/zziZ2NVQ24hA5uFV9"));
+        mostViewedLocations.add(new MostViewedModel(R.drawable.mehers, getString(R.string.MuhairisPalace), "Muhairis Palace is a palace built by Imam Saud bin Abdul Aziz on the top of a hill in 1208 AH for military purposes.",  3.5, "https://goo.gl/maps/pAWeGE75s8JaXH5T6"));
+        mostViewedLocations.add(new MostViewedModel(R.drawable.khusam, getString(R.string.KhuzamPalace), "Khuzam Palace is located in the east of Al-Raqeqa neighborhood (currently Al-Mazrou’iya) located west of the city of Hofuf. It is the seat of the Bedouin residents who go to Al-Ahsa in the summer seasons for two months to exchange goods available in Al-Ahsa such as dates, sugar, some textiles, guns, ammunition and others for the goods they brought from the desert.",  2.5, "https://goo.gl/maps/8QXrya6cbGwX6oKm8"));
 
         mostViewedAdapter = new MostViewedLocationsAdapter(mostViewedLocations);
 
@@ -291,11 +291,11 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
 
         ArrayList<CategoriesModel> categories = new ArrayList<>();
 
-        categories.add(new CategoriesModel(R.color.card2, R.drawable.illustration_shopping, "Shopping"));
-        categories.add(new CategoriesModel(R.color.card5, R.drawable.illustration_restaurant, "Restaurants"));
-        categories.add(new CategoriesModel(R.color.card4, R.drawable.illustration_hospital, "Hospitals"));
-        categories.add(new CategoriesModel(R.color.card1, R.drawable.illustration_education, "Education"));
-        categories.add(new CategoriesModel(R.color.card3, R.drawable.illustration_travel, "Travel"));
+        categories.add(new CategoriesModel(R.color.card2, R.drawable.illustration_shopping, R.string.navShops));
+        categories.add(new CategoriesModel(R.color.card5, R.drawable.illustration_restaurant, R.string.navRestaurants));
+        categories.add(new CategoriesModel(R.color.card4, R.drawable.illustration_hospital, R.string.navHotels));
+        categories.add(new CategoriesModel(R.color.card1, R.drawable.illustration_education, R.string.navEducation));
+        categories.add(new CategoriesModel(R.color.card3, R.drawable.illustration_travel, R.string.travel));
 
         categoriesAdapter = new CategoriesAdapter(categories);
 

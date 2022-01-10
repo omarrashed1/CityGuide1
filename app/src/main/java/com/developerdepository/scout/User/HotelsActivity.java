@@ -1,15 +1,14 @@
 package com.developerdepository.scout.User;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.content.Intent;
-
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.developerdepository.scout.R;
 
@@ -45,7 +44,7 @@ public class HotelsActivity extends AppCompatActivity {
             }
         });
 
-        h2 = findViewById(R.id.category1);
+        h2 = findViewById(R.id.category2);
         h2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,7 +55,7 @@ public class HotelsActivity extends AppCompatActivity {
 
 
 
-        h3 = findViewById(R.id.category1);
+        h3 = findViewById(R.id.category3);
         h3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,7 +65,7 @@ public class HotelsActivity extends AppCompatActivity {
 
 
 
-        h4 = findViewById(R.id.category1);
+        h4 = findViewById(R.id.category4);
         h4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,7 +76,7 @@ public class HotelsActivity extends AppCompatActivity {
 
 
 
-        h5 = findViewById(R.id.category1);
+        h5 = findViewById(R.id.category5);
         h5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,7 +87,7 @@ public class HotelsActivity extends AppCompatActivity {
 
 
 
-        h6 = findViewById(R.id.category1);
+        h6 = findViewById(R.id.category6);
         h6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,7 +101,7 @@ public class HotelsActivity extends AppCompatActivity {
 
 
 
-        h7 = findViewById(R.id.category1);
+        h7 = findViewById(R.id.category7);
         h7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -116,7 +115,7 @@ public class HotelsActivity extends AppCompatActivity {
 
 
 
-        h8 = findViewById(R.id.category1);
+        h8 = findViewById(R.id.category8);
         h8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -132,7 +131,7 @@ public class HotelsActivity extends AppCompatActivity {
 
 
 
-        h9 = findViewById(R.id.category1);
+        h9 = findViewById(R.id.category9);
         h9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -145,7 +144,7 @@ public class HotelsActivity extends AppCompatActivity {
 
 
 
-        h10 = findViewById(R.id.category1);
+        h10 = findViewById(R.id.category10);
         h10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

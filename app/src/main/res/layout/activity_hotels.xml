@@ -65,7 +65,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/poppins_semibold"
-                android:text="Hotel"
+                android:text="@string/hotel"
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
                 android:textColor="@android:color/black"
@@ -102,12 +102,12 @@
                         android:id="@+id/textView2"
                         android:layout_width="164dp"
                         android:layout_height="81dp"
-                        android:layout_marginStart="16dp"
+                        android:layout_marginStart="24dp"
                         android:layout_marginTop="24dp"
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
                         android:includeFontPadding="false"
-                        android:text="Triple Tree hotel"
+                        android:text="@string/triple_tree_hotel"
                         android:textAlignment="textStart"
                         android:textAllCaps="false"
                         android:textColor="@android:color/black"
@@ -116,7 +116,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.313" />
+                        app:layout_constraintVertical_bias="0.941" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -166,7 +166,7 @@
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
                         android:includeFontPadding="false"
-                        android:text="SomeWhere hotel "
+                        android:text="@string/somewhere_hotel"
                         android:textAlignment="textEnd"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
@@ -175,7 +175,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.274" />
+                        app:layout_constraintVertical_bias="0.677" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -224,7 +224,7 @@
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
                         android:includeFontPadding="false"
-                        android:text="Intercontinental al ahssa hotel"
+                        android:text="@string/intercontinental_hotel"
                         android:textAlignment="textStart"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
@@ -233,7 +233,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.357" />
+                        app:layout_constraintVertical_bias="1.0" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -282,7 +282,7 @@
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
                         android:includeFontPadding="false"
-                        android:text="Al ahssa Grand "
+                        android:text="@string/alahssa_grand"
                         android:textAlignment="textEnd"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
@@ -291,7 +291,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.171" />
+                        app:layout_constraintVertical_bias="0.53" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -335,12 +335,12 @@
                     <TextView
                         android:layout_width="162dp"
                         android:layout_height="62dp"
-                        android:layout_marginStart="16dp"
+                        android:layout_marginStart="24dp"
                         android:layout_marginTop="24dp"
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
                         android:includeFontPadding="false"
-                        android:text="Coral hotel"
+                        android:text="@string/coral_hotel"
                         android:textAlignment="textStart"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
@@ -349,7 +349,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.214" />
+                        app:layout_constraintVertical_bias="0.642" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -394,11 +394,11 @@
                         android:layout_width="208dp"
                         android:layout_height="64dp"
                         android:layout_marginTop="24dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginEnd="24dp"
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
                         android:includeFontPadding="false"
-                        android:text="Separ Furnished Hotel"
+                        android:text="@string/separ_hotel"
                         android:textAlignment="textEnd"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
@@ -407,7 +407,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.205" />
+                        app:layout_constraintVertical_bias="0.75" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -451,12 +451,12 @@
                     <TextView
                         android:layout_width="185dp"
                         android:layout_height="88dp"
-                        android:layout_marginStart="24dp"
+                        android:layout_marginStart="28dp"
                         android:layout_marginTop="24dp"
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
                         android:includeFontPadding="false"
-                        android:text="Taleen hotel"
+                        android:text="@string/taleen_hotel"
                         android:textAlignment="textStart"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
@@ -464,7 +464,8 @@
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.659" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -513,7 +514,7 @@
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
                         android:includeFontPadding="false"
-                        android:text="Garden Plaza hotel"
+                        android:text="@string/garden_hotel"
                         android:textAlignment="textEnd"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
@@ -522,7 +523,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.303" />
+                        app:layout_constraintVertical_bias="0.616" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -566,12 +567,12 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
+                        android:layout_marginStart="28dp"
                         android:layout_marginTop="24dp"
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
                         android:includeFontPadding="false"
-                        android:text="Homes Linh hotel"
+                        android:text="@string/linh_hotel"
                         android:textAlignment="textStart"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
@@ -580,7 +581,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.232" />
+                        app:layout_constraintVertical_bias="0.53" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -631,7 +632,7 @@
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
                         android:includeFontPadding="false"
-                        android:text="Al Kut hotel"
+                        android:text="@string/alkut_hotel"
                         android:textAlignment="textEnd"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
@@ -640,7 +641,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.313" />
+                        app:layout_constraintVertical_bias="0.626" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

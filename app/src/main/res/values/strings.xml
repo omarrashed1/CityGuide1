@@ -12,7 +12,9 @@
     <string name="third_slide_title">Add Missing Place</string>
     <string name="fourth_slide_title">Sit Back &amp; Enjoy</string>
 
+
     <!-- Descriptions -->
+
     <string name="first_slide_desc">You can search any place nearby or within the specified city. SCOUT will display specific or all related facilities to match your search.</string>
     <string name="second_slide_desc">SCOUT provides contact numbers of almost all the departments and facilities registered on it. You can make a booking through that as well.</string>
     <string name="third_slide_desc">If you have a facility and you want to be part of our growing industry, then add your place on SCOUT following simple steps.</string>
@@ -59,12 +61,12 @@
     <string name="navHome">Home</string>
     <string name="navSearch">Search</string>
     <string name="navAllCategories">All Categories</string>
-    <string name="navAddMissingPlaces">Add Missing Place</string>
+    <string name="navAddMissingPlaces" translatable="false">Add Missing Place</string>
     <string name="navCurrency">Exchange Currency</string>
-    <string name="navProfileTitle">Profile</string>
-    <string name="navLogin">Log In</string>
-    <string name="navProfile">Profile</string>
-    <string name="navLogOut">Log Out</string>
+    <string name="navProfileTitle" translatable="false">Profile</string>
+    <string name="navLogin" translatable="false">Log In</string>
+    <string name="navProfile" translatable="false">Profile</string>
+    <string name="navLogOut" translatable="false">Log Out</string>
     <string name="navCategoriesTitle">Categories</string>
     <string name="navRestaurants">Restaurants</string>
     <string name="navHotels">Hotels</string>
@@ -89,81 +91,81 @@
 
 
     <!-- Retailer StartUp Screen Strings -->
-    <string name="retailerStartUpTitle">GROW YOUR BUSINESS</string>
-    <string name="retailerStartUpMessage">SCOUT will help you grow your business and gain reach by taking it online.</string>
-    <string name="retailerStartUpLoginBtn">LOGIN</string>
-    <string name="retailerStartUpSignUpBtn">SIGN UP</string>
-    <string name="retailerStartUpHowWeWork">How We Work?</string>
+    <string name="retailerStartUpTitle" translatable="false">GROW YOUR BUSINESS</string>
+    <string name="retailerStartUpMessage" translatable="false">SCOUT will help you grow your business and gain reach by taking it online.</string>
+    <string name="retailerStartUpLoginBtn" translatable="false">LOGIN</string>
+    <string name="retailerStartUpSignUpBtn" translatable="false">SIGN UP</string>
+    <string name="retailerStartUpHowWeWork" translatable="false">How We Work?</string>
 
 
     <!-- RetailerLogin Strings -->
-    <string name="retailerLoginTitle">LOGIN</string>
-    <string name="retailerLoginMessage">Sign in to continue!</string>
-    <string name="retailerLoginUsernameHint">Username</string>
-    <string name="retailerLoginPasswordHint">Password</string>
-    <string name="retailerLoginRememberMeCheckBox">Remember Me</string>
-    <string name="retailerLoginForgotPassword">Forgot Password?</string>
-    <string name="retailerLoginBtn">LOGIN</string>
-    <string name="retailerLoginCreateAccountMsg">Don\'t have an account?</string>
-    <string name="retailerLoginCreateAccountBtn">Create Account</string>
+    <string name="retailerLoginTitle" translatable="false">LOGIN</string>
+    <string name="retailerLoginMessage" translatable="false">Sign in to continue!</string>
+    <string name="retailerLoginUsernameHint" translatable="false">Username</string>
+    <string name="retailerLoginPasswordHint" translatable="false">Password</string>
+    <string name="retailerLoginRememberMeCheckBox" translatable="false">Remember Me</string>
+    <string name="retailerLoginForgotPassword" translatable="false">Forgot Password?</string>
+    <string name="retailerLoginBtn" translatable="false">LOGIN</string>
+    <string name="retailerLoginCreateAccountMsg" translatable="false">Don\'t have an account?</string>
+    <string name="retailerLoginCreateAccountBtn" translatable="false">Create Account</string>
 
 
     <!-- RetailerSignUp Strings -->
-    <string name="retailerSignUpTitle">Create Account</string>
-    <string name="retailerSignUpMessage">Sign up to get started!</string>
-    <string name="retailerSignUpNameHint">Name</string>
-    <string name="retailerSignUpUserNameHint">Username</string>
-    <string name="retailerSignUpEmailHint">Email</string>
-    <string name="retailerSignUpMobileHint">Mobile</string>
-    <string name="retailerSignUpCreatePasswordHint">Create Password</string>
-    <string name="retailerSignUpConfirmPasswordHint">Confirm Password</string>
+    <string name="retailerSignUpTitle" translatable="false">Create Account</string>
+    <string name="retailerSignUpMessage" translatable="false">Sign up to get started!</string>
+    <string name="retailerSignUpNameHint" translatable="false">Name</string>
+    <string name="retailerSignUpUserNameHint" translatable="false">Username</string>
+    <string name="retailerSignUpEmailHint" translatable="false">Email</string>
+    <string name="retailerSignUpMobileHint" translatable="false">Mobile</string>
+    <string name="retailerSignUpCreatePasswordHint" translatable="false">Create Password</string>
+    <string name="retailerSignUpConfirmPasswordHint" translatable="false">Confirm Password</string>
     <string name="retailerSignUpNextBtn">NEXT</string>
-    <string name="retailerSignUpLoginMsg">Already have an account?</string>
-    <string name="retailerSignUpLoginBtn">Sign in</string>
-    <string name="retailerSignUpChooseGenderTxt">Choose Gender</string>
-    <string name="retailerSignUpMale">Male</string>
-    <string name="retailerSignUpFemale">Female</string>
-    <string name="retailerSignUpOther">Other</string>
-    <string name="retailerSignUpDOBTxt">Select Date of Birth</string>
-    <string name="retailerSignUpMobileMsg">A 6-digit verification code will be sent to the mobile number. Standard rates may apply.</string>
+    <string name="retailerSignUpLoginMsg" translatable="false">Already have an account?</string>
+    <string name="retailerSignUpLoginBtn" translatable="false">Sign in</string>
+    <string name="retailerSignUpChooseGenderTxt" translatable="false">Choose Gender</string>
+    <string name="retailerSignUpMale" translatable="false">Male</string>
+    <string name="retailerSignUpFemale" translatable="false">Female</string>
+    <string name="retailerSignUpOther" translatable="false">Other</string>
+    <string name="retailerSignUpDOBTxt" translatable="false">Select Date of Birth</string>
+    <string name="retailerSignUpMobileMsg" translatable="false">A 6-digit verification code will be sent to the mobile number. Standard rates may apply.</string>
 
 
     <!-- Retailer VerifyOTP Strings -->
-    <string name="verifyOTPTitle">CODE VERIFICATION</string>
-    <string name="verifyOTPMessage">Enter the verification code sent to\n+919915462971</string>
-    <string name="verifyOTPBtn">VERIFY</string>
+    <string name="verifyOTPTitle" translatable="false">CODE VERIFICATION</string>
+    <string name="verifyOTPMessage" translatable="false">Enter the verification code sent to\n+919915462971</string>
+    <string name="verifyOTPBtn" translatable="false">VERIFY</string>
 
 
     <!-- Retailer Forgot Password Strings -->
-    <string name="forgotPasswordTitle">FORGOT PASSWORD?</string>
-    <string name="forgotPasswordMessage">Provide your account\'s Mobile below for\nwhich you want to reset your password</string>
-    <string name="forgotPasswordMobileHint">Mobile</string>
+    <string name="forgotPasswordTitle" translatable="false">FORGOT PASSWORD?</string>
+    <string name="forgotPasswordMessage" translatable="false">Provide your account\'s Mobile below for\nwhich you want to reset your password</string>
+    <string name="forgotPasswordMobileHint" translatable="false">Mobile</string>
     <string name="forgotPasswordNextBtn">NEXT</string>
 
 
     <!-- Retailer Make Selection Strings -->
-    <string name="makeSelectionTitle">MAKE\nSELECTION</string>
-    <string name="makeSelectionMsg">Select what contact detail should we be using to reset your password?!</string>
-    <string name="makeSelectionViaSmsTitle">via sms :</string>
-    <string name="makeSelectionViaSmsValueDefault">+919915462971</string>
-    <string name="makeSelectionViaEmailTitle">via mail :</string>
-    <string name="makeSelectionViaEmailValueDefault">developer.depository@gmail.com</string>
+    <string name="makeSelectionTitle" translatable="false">MAKE\nSELECTION</string>
+    <string name="makeSelectionMsg" translatable="false">Select what contact detail should we be using to reset your password?!</string>
+    <string name="makeSelectionViaSmsTitle" translatable="false">via sms :</string>
+    <string name="makeSelectionViaSmsValueDefault" translatable="false">+919915462971</string>
+    <string name="makeSelectionViaEmailTitle" translatable="false">via mail :</string>
+    <string name="makeSelectionViaEmailValueDefault" translatable="false">developer.depository@gmail.com</string>
 
 
     <!-- Retailer Set New Password Strings -->
-    <string name="setNewPasswordTitle">NEW CREDENTIALS</string>
-    <string name="setNewPasswordMsg">Your identity has been verified.\nSet your new password.</string>
-    <string name="setNewPasswordHint">New Password</string>
-    <string name="confirmNewPasswordHint">Confirm Password</string>
-    <string name="updatePasswordBtn">UPDATE</string>
+    <string name="setNewPasswordTitle" translatable="false">NEW CREDENTIALS</string>
+    <string name="setNewPasswordMsg" translatable="false">Your identity has been verified.\nSet your new password.</string>
+    <string name="setNewPasswordHint" translatable="false">New Password</string>
+    <string name="confirmNewPasswordHint" translatable="false">Confirm Password</string>
+    <string name="updatePasswordBtn" translatable="false">UPDATE</string>
 
 
     <!-- Password Success Message Strings -->
-    <string name="setPasswordSuccessTitle">PASSWORD UPDATED</string>
-    <string name="setPasswordSuccessMsg">Your password has been updated!</string>
-    <string name="setPasswordSuccessLoginBtn">LOGIN</string>
+    <string name="setPasswordSuccessTitle" translatable="false">PASSWORD UPDATED</string>
+    <string name="setPasswordSuccessMsg" translatable="false">Your password has been updated!</string>
+    <string name="setPasswordSuccessLoginBtn" translatable="false">LOGIN</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="select_lang">select language</string>
     <string name="king_faisal_university">King Faisal University (KFU)</string>
     <string name="imam_muhammad_bin_saud_islamic_university">Imam Muhammad Bin Saud Islamic University</string>
@@ -177,12 +179,63 @@
     <string name="future_vision_private_schools">Future Vision Private Schools</string>
     <string name="horn">Horn</string>
     <string name="restaurents">Restaurents</string>
-    <string name="tendrliune" translatable="false">Tendrliune</string>
-    <string name="todo" translatable="false">TODO</string>
+    <string name="tendrliune">Tendrliune</string>
+    <string name="todo">TODO</string>
     <string name="khaibar">Khaibar</string>
     <string name="topaz">Topaz</string>
-    <string name="bharat" translatable="false">Bharat</string>
-    <string name="languages">Languages</string>
-    <string name="lang">اللغة العربية</string>
+    <string name="bharat">Bharat</string>
+    <string name="hotel">Hotel</string>
+    <string name="triple_tree_hotel">Triple Tree hotel</string>
+    <string name="somewhere_hotel">SomeWhere hotel</string>
+    <string name="intercontinental_hotel">Intercontinental al ahssa hotel</string>
+    <string name="alahssa_grand">Al ahssa Grand</string>
+    <string name="coral_hotel">Coral hotel</string>
+    <string name="separ_hotel">Separ Furnished Hotel</string>
+    <string name="taleen_hotel">Taleen hotel</string>
+    <string name="garden_hotel">Garden Plaza hotel</string>
+    <string name="linh_hotel">Homes Linh hotel</string>
+    <string name="alkut_hotel">Al Kut hotel</string>
+    <string name="hasa_gril">Hasa Gril</string>
+    <string name="al_keet">AL-Keet</string>
+    <string name="casa_pasta">Casa Pasta</string>
+    <string name="lava">Lava</string>
+    <string name="dunkin">Dunkin Dounet</string>
+    <string name="al_qaysarya">AL QAYSARYA</string>
+    <string name="alqisryahdec">A historical market located in Al-Ahsa, eastern Saudi Arabia</string>
+    <string name="al_qaria">AL QARIA</string>
+    <string name="al_qariadec">The popular village markets is the largest commercial market in Al-Ahsa Governorate, containing 1,500 commercial units of various modern and old activities</string>
+    <string name="al_sweeq">AL SWEEQ</string>
+    <string name="al_sweeqdec">It is one of the most famous markets in the city of Hofuf, and is characterized by its excellent and close location in the Al-Rafa neighborhood</string>
+    <string name="alahsa_mall">AL AHSA MALL</string>
+    <string name="alahsa_malldec">It is one of the largest single-storey complexes, characterized by its family atmosphere, and contains many shops, restaurants and cafes .</string>
+    <string name="alfawares_mall">AL FAWARES MALL</string>
+    <string name="alfawares_malldec">One of the largest malls in Al-Ahsa with an area of ​​30 thousand square meters. It consists of two floors containing many shops and restaurants.</string>
+    <string name="farm_superstores">FARM SUPERSTORES</string>
+    <string name="farm_superstoresdes">Farm Superstores is one of the leading trading, retail and import companies.</string>
+    <string name="alothaim_mall">AL OTHAIM MALL</string>
+    <string name="alothaim_malldec">A place that understands your needs and deserves your journey, an ideal destination for shopping and entertainment.</string>
+    <string name="UqairBeach">Uqair Beach</string>
+    <string name="AlQarah">Al-Qarah Mountain</string>
+    <string name="AlAsfar">Al-Asfar Lake</string>
+    <string name="JawathaCity">Jawatha City</string>
+    <string name="AlArbaa">Al-Arbaa Mountain</string>
+    <string name="AlShu">Al-Shu\'ba Mountain</string>
+    <string name="KingAbdullahPark">King Abdullah Park</string>
+    <string name="ZooPark">Zoo Park</string>
+    <string name="aluqairdec">Uqair Beach is the best rated Beach in Al-Ahsa\'a at the moment.</string>
+    <string name="alqaradec">From the breathtaking summit of Al Qarah Mountain, Arabic translations of the surrounding region’s place names bring new meaning.</string>
+    <string name="alasfardec">Al-Asfar Lake is a lake located in Al-Omran east of Al-Ahsa in Saudi Arabia. It is considered the largest watershed in the Gulf region, and it is the only one in the Kingdom of its kind in which an integrated wildlife lives.</string>
+    <string name="jawadec">The city of Jawatha is a historic treasure of the Kingdom, because it was once a palace or fortress used by Abd al-Qays, Bahrain. It was mentioned in the Book of the Status of the Arabian Island, settled by nations for the rich eyes and fertility of its agricultural soil.</string>
+    <string name="alarbadec">Jabal Al-Arbaa is a wonderful rock formation located in south Al-Hofuf and is one of the well-known group of mountains in Al-Ahsa. It is named after its four conical shaped plateaus, two joined together and the other two separate from each other.</string>
+    <string name="alshudec">Al-Shu\'ba mountain located in east of Al-Shu\'ba village at Al-Ahsa and to the north of Al-Eskan next to the road leading from eastern villages to the northern villages and to Al-Dammam.</string>
+    <string name="kingabdudec">Located in the southern part of Al Hofuf, King Abdullah Environmental Park is one of the best amusement options in this region.</string>
+    <string name="zoodec">Al-Tharf Model Garden or Al-Ahsa Zoo is a park that includes many animals located in Al-Ahsa Governorate in the Eastern Province of Saudi Arabia. The park is also one of Al-Ahsa’s tourist attractions.</string>
+    <string name="HouseAllegiance">House of Allegiance</string>
+    <string name="IbrahimPalace">Ibrahim Palace</string>
+    <string name="SahoodFort">"Sahood Fort "</string>
+    <string name="OldAlUqayrSeaport">Old AlUqayrSeaport</string>
+    <string name="PrincesSchool">Princes School</string>
+    <string name="MuhairisPalace">Muhairis Palace</string>
+    <string name="KhuzamPalace">"Khuzam Palace "</string>
 
 </resources>

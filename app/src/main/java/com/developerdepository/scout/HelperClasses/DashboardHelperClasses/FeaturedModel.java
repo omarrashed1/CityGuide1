@@ -1,17 +1,14 @@
 package com.developerdepository.scout.HelperClasses.DashboardHelperClasses;
 
-import android.content.Intent;
-import android.net.Uri;
-
 public class FeaturedModel {
     int image;
-    String title, description;
+    int title, description;
     double ratingBar;
     String url;
     public FeaturedModel() {
     }
 
-    public FeaturedModel(int image, String title, String description, double ratingBar, String url) {
+    public FeaturedModel(int image, int title, int description, double ratingBar, String url) {
         this.image = image;
         this.title = title;
         this.description = description;
@@ -23,11 +20,11 @@ public class FeaturedModel {
         return image;
     }
 
-    public String getTitle() {
+    public int getTitle() {
         return title;
     }
 
-    public String getDescription() {
+    public int getDescription() {
         return description;
     }
 

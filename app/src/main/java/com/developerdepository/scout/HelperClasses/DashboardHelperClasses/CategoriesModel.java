@@ -2,12 +2,12 @@ package com.developerdepository.scout.HelperClasses.DashboardHelperClasses;
 
 public class CategoriesModel {
     int background, image;
-    String title;
+    int title;
 
     public CategoriesModel() {
     }
 
-    public CategoriesModel(int background, int image, String title) {
+    public CategoriesModel(int background, int image, int title) {
         this.background = background;
         this.image = image;
         this.title = title;
@@ -21,7 +21,7 @@ public class CategoriesModel {
         return image;
     }
 
-    public String getTitle() {
+    public int getTitle() {
         return title;
     }
 }
