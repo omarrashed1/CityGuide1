@@ -107,7 +107,7 @@ public class OnBoardingActivity extends AppCompatActivity {
             dash[i].setTextSize(35);
             dash[i].setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
             dash[i].setAlpha(0.40f);
-            dash[i].setTextColor(getResources().getColor(android.R.color.black));
+            dash[i].setTextColor(getResources().getColor(R.color.lightWhite));
 
             dashLayout.addView(dash[i]);
         }

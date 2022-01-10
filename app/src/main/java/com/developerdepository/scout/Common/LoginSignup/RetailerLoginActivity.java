@@ -1,16 +1,11 @@
 package com.developerdepository.scout.Common.LoginSignup;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
-import android.net.Network;
 import android.net.NetworkInfo;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
@@ -22,10 +17,12 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.developerdepository.scout.Databases.SessionManager;
 import com.developerdepository.scout.LocationOwner.RetailerDashboardActivity;
 import com.developerdepository.scout.R;
-import com.developerdepository.scout.User.UserDashboardActivity;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -54,6 +51,7 @@ public class RetailerLoginActivity extends AppCompatActivity {
     private CheckBox rememberMe;
     private Button loginBtn;
     private TextView forgotPassword, createAccountBtn;
+
 
     AlertDialog progressDialog;
 

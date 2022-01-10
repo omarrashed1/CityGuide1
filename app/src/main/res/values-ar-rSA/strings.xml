@@ -7,16 +7,16 @@
     <!-- Strings for OnBoardingScreen -->
 
     <!-- Titles -->
-    <string name="first_slide_title">Search Your Location</string>
-    <string name="second_slide_title">Make A Call</string>
-    <string name="third_slide_title">Add Missing Place</string>
-    <string name="fourth_slide_title">Sit Back &amp; Enjoy</string>
+    <string name="first_slide_title">مدينة الاحساء الجميلة</string>
+    <string name="second_slide_title">"عزيزي الزائر اهلا بك في واحة الأحساء "</string>
+    <string name="third_slide_title">وهناك المزيد ايضا !!</string>
+    <string name="fourth_slide_title">هيا بنا نستمتع في الأحساء</string>
 
     <!-- Descriptions -->
-    <string name="first_slide_desc">You can search any place nearby or within the specified city. SCOUT will display specific or all related facilities to match your search.</string>
-    <string name="second_slide_desc">SCOUT provides contact numbers of almost all the departments and facilities registered on it. You can make a booking through that as well.</string>
-    <string name="third_slide_desc">If you have a facility and you want to be part of our growing industry, then add your place on SCOUT following simple steps.</string>
-    <string name="fourth_slide_desc">SCOUT will handle everything for you. Grow your business with us without worrying about anything.</string>
+    <string name="first_slide_desc">واحدة من اعظم المدن في المملكة العربية السعودية وشهرتها بالواحات الخضراء الرائعة</string>
+    <string name="second_slide_desc">في هذا التطبيق ، سوف يكتشف الزوار أهم المناطق والمعالم الأثرية في واحة الأحساء</string>
+    <string name="third_slide_desc">يشمل التطبيق الفنادق السياحية و اهم المدارس و الجامعات التعليمية</string>
+    <string name="fourth_slide_desc">هنا ، سترى وتستكشف بالتأكيد سياحة فريدة من نوعها</string>
 
     <!-- Buttons -->
     <string name="skip_btn">تخطي</string>
@@ -92,13 +92,13 @@
 
 
     <!-- RetailerLogin Strings -->
-    <string name="retailerLoginTitle" translatable="false">LOGIN</string>
+    <string name="retailerLoginTitle" translatable="false">محول العملات</string>
     <string name="retailerLoginMessage" translatable="false">Sign in to continue!</string>
     <string name="retailerLoginUsernameHint" translatable="false">Username</string>
     <string name="retailerLoginPasswordHint" translatable="false">Password</string>
     <string name="retailerLoginRememberMeCheckBox" translatable="false">Remember Me</string>
     <string name="retailerLoginForgotPassword" translatable="false">Forgot Password?</string>
-    <string name="retailerLoginBtn" translatable="false">LOGIN</string>
+    <string name="retailerLoginBtn" translatable="false">حول</string>
     <string name="retailerLoginCreateAccountMsg" translatable="false">Don\'t have an account?</string>
     <string name="retailerLoginCreateAccountBtn" translatable="false">Create Account</string>
 
@@ -171,7 +171,7 @@
     <string name="al_anjal_national_schools">مدارس النجاح</string>
     <string name="future_vision_private_schools">مدارس رؤية المستقبل</string>
     <string name="project_id">scout-city-guide</string>
-    <string name="google_storage_bucket">scout-city-guide.appspot.com</string>
+    <string name="google_storage_bucket">هنا ، سترى وتستكشف بالتأكيد سياحة فريدة من نوعها</string>
     <string name="khaibar">خيبر</string>
     <string name="topaz">توباز</string>
     <string name="bharat">بهارات</string>
@@ -237,5 +237,17 @@
     <string name="KhuzamPalace">قصر خزام</string>
     <string name="languages">اللغة</string>
     <string name="lang">English</string>
+    <string name="housedec">بيت البيعة هو منزل تاريخي يقع في حي الكوت في مدينة الهفوف الأحساء بالمملكة العربية السعودية. هو منزل عبد اللطيف بن عبد الرحمن الملا ، رب أسرة الملا ، وبيت من شهد مبايعة أهل الأحساء للملك عبد العزيز وانضمامهم للدولة السعودية. في عام 1913.</string>
+    <string name="ibrahimdec">تم بناء قصر إبراهيم في عهد الدولة السعودية الأولى ويعتبر تحفة معمارية.</string>
+    <string name="sahooddec">تقع قلعة صهود خارج الأسوار الغربية للمبرز بالمملكة العربية السعودية. يستخدم الحصن كثكنات للقوات المسلحة السعودية.</string>
+    <string name="oladec">العقير هي موقع لقاءات تاريخية عديدة بين الملك المؤسس ودبلوماسيين أجانب والمكان الذي أجرى فيه المفاوضات مع القوى السياسية الدولية في المنطقة.</string>
+    <string name="princedec">تعتبر مدرسة الأمراء أو دار الثقافة أو مدرسة الهفوف الأولى من أقدم المدارس الحكومية في المملكة العربية السعودية ، بدأ بناؤها عام 1937 وافتتحت رسمياً في فبراير 1941.</string>
+    <string name="Muhdec">قصر المحيرس هو قصر بناه الإمام سعود بن عبد العزيز على قمة تل عام 1208 هـ لأغراض عسكرية.</string>
+    <string name="khuzdec">يقع قصر خزام شرق حي الرقة (المزروعية حاليا) غرب مدينة الهفوف. هو مقر السكان البدو الذين يتوجهون إلى الأحساء في مواسم الصيف لمدة شهرين لتبادل البضائع المتوفرة في الأحساء مثل التمور والسكر وبعض المنسوجات والبنادق والذخيرة وغيرها مقابل البضائع التي جلبوها من الصحراء.</string>
+    <string name="curnamount">ادخل المبلغ</string>
+    <string name="fromc">العملة الاولى</string>
+    <string name="result1">النتيجة</string>
+    <string name="toc">العملة الثانية</string>
+
 
 </resources>
