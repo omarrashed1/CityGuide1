@@ -178,7 +178,7 @@
     <string name="horn">Horn</string>
     <string name="restaurents">Restaurents</string>
     <string name="tendrliune">Tendrliune</string>
-    <string name="todo">TODO</string>
+
     <string name="khaibar">Khaibar</string>
     <string name="topaz">Topaz</string>
     <string name="bharat">Bharat</string>
@@ -236,7 +236,7 @@
     <string name="MuhairisPalace">Muhairis Palace</string>
     <string name="KhuzamPalace">"Khuzam Palace "</string>
     <string name="languages">languages</string>
-    <string name="lang">العربية</string>
+    <string name="lang"> اللغة العربية</string>
     <string name="housedec">The House of Allegiance or House of Allegiance is a historical house located in the Al Kut neighborhood of Al Hofuf Al Ahsa’iya city, Kingdom of Saudi Arabia. It is the house of Abdul Latif bin Abdul Rahman Al-Mulla, the head of the Al-Mulla family, and the house of the one who witnessed the people of Al-Ahsa pledge allegiance to King Abdul Aziz and their accession to the Saudi state in 1913.</string>
     <string name="ibrahimdec">The Ibrahim Palace was built during the time of the first Saudi state and is considered to be an architectural masterpiece.</string>
     <string name="sahooddec">Sahood Fort is situated outside the western walls of Al Mubarraz, Saudi Arabia. The fort is used as barracks for the Saudi Arabian Armed Forces.</string>

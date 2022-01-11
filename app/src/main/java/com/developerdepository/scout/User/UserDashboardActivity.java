@@ -8,12 +8,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +20,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.developerdepository.scout.Common.LoginSignup.RetailerStartUpScreenActivity;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.CategoriesAdapter;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.CategoriesModel;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.FeaturedLocationsAdapter;
@@ -59,6 +55,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
 
     Spinner spinner;
     public static final String[] languages = {"Select Language", "English", "Arabic"};
+    private Activity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -160,6 +157,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
         switch (item.getItemId()) {
             case R.id.nav_all_categories :
                 startActivity(new Intent(UserDashboardActivity.this, AllCategoriesActivity.class));
@@ -169,6 +167,15 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                 startActivity(new Intent(UserDashboardActivity.this, CurrencyActivity.class));
                 CustomIntent.customType(UserDashboardActivity.this, "bottom-to-up");
                 break;
+            case R.id.nav_share:
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("text/plain");
+                i.putExtra(Intent.EXTRA_SUBJECT, "Sharing URL");
+                i.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/collection/cluster?clp=igNBChkKEzc0NDgzOTIzODU1NTk3MjMzMTUQCBgDEiIKHGNvbS5jb2Rld29yZC5kb2N1bWVudHNjYW5uZXIQARgDGAE%3D:S:ANO1ljIaAkk&gsr=CkSKA0EKGQoTNzQ0ODM5MjM4NTU1OTcyMzMxNRAIGAMSIgocY29tLmNvZGV3b3JkLmRvY3VtZW50c2Nhbm5lchABGAMYAQ%3D%3D:S:ANO1ljIkNIQ");
+                startActivity(Intent.createChooser(i, "Share URL"));
+                break;
+            default:
+
         }
 //        change
         if (item.getItemId() == R.id.languages && getString(R.string.lang).equals("English")){
