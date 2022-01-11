@@ -41,7 +41,7 @@
 
     <!-- Titles and Descriptions -->
     <string name="featured_locations" translatable="false">All\nPopular\nLocations</string>
-    <string name="featured_locations_description">Most of the popular locations that have the top demand in town at the moment!</string>
+    <string name="featured_locations_description" translatable="false">Most of the popular locations that have the top demand in town at the moment!</string>
     <string name="most_viewed_locations">Most Viewed</string>
     <string name="categories">Categories</string>
     <string name="view_all">View All</string>
