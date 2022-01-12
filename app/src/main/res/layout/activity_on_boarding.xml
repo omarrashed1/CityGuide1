@@ -4,9 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@drawable/ahsahspla"
     tools:context=".Common.OnBoardingActivity">
-
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </LinearLayout>
     <TextView
         android:id="@+id/skip_btn"
         android:layout_width="wrap_content"
@@ -21,7 +26,7 @@
         android:text="@string/skip_btn"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         android:includeFontPadding="false"
@@ -61,7 +66,7 @@
             android:text="@string/lets_get_started"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textColor="@android:color/black"
+            android:textColor="@color/green"
             android:textSize="18sp"
             android:textStyle="bold"
             android:includeFontPadding="false"
@@ -94,7 +99,7 @@
             android:focusable="true"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_next_arrow"
-            app:tint="@android:color/black"
+            app:tint="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 

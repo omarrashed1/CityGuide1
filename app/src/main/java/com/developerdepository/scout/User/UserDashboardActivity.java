@@ -1,5 +1,18 @@
 package com.developerdepository.scout.User;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Spinner;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -8,19 +21,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.ImageButton;
-import android.widget.TextView;
-
-import com.developerdepository.scout.Common.LoginSignup.RetailerStartUpScreenActivity;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.CategoriesAdapter;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.CategoriesModel;
-import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.FeaturedModel;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.FeaturedLocationsAdapter;
+import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.FeaturedModel;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.MostViewedLocationsAdapter;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.MostViewedModel;
 import com.developerdepository.scout.R;
@@ -29,6 +33,7 @@ import com.shreyaspatil.MaterialDialog.MaterialDialog;
 import com.shreyaspatil.MaterialDialog.interfaces.DialogInterface;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import maes.tech.intentanim.CustomIntent;
 
@@ -42,12 +47,16 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
     private ConstraintLayout contentView, addPlacesBtn;
     private ImageButton dashboardMenu;
     private RecyclerView featuredRecycler, mostViewedRecycler, categoriesRecycler;
-    private TextView categoriesViewAll;
+//    private TextView categoriesViewAll;
     private ImageButton imgBtnRe, imgBtnHo, imgBtnEd, imgBtnSh;
-
+    private Button button;
     //Other Variables
     private RecyclerView.Adapter featuredAdapter, mostViewedAdapter, categoriesAdapter;
     private static final float END_SCALE = 0.8f;
+
+    Spinner spinner;
+    public static final String[] languages = {"Select Language", "English", "Arabic"};
+    private Activity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +92,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(UserDashboardActivity.this, HotelsActivity.class));
+
             }
         });
 
@@ -112,12 +122,11 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
         //Dashboard Views
         contentView = findViewById(R.id.content_view);
         dashboardMenu = findViewById(R.id.dashboard_menu);
-        addPlacesBtn = findViewById(R.id.add_places_btn);
+//        addPlacesBtn = findViewById(R.id.add_places_btn);
         featuredRecycler = findViewById(R.id.featured_locations_recycler);
         mostViewedRecycler = findViewById(R.id.most_viewed_locations_recycler);
         categoriesRecycler = findViewById(R.id.categories_recycler);
-        categoriesViewAll = findViewById(R.id.categories_view_all);
-
+//        categoriesViewAll = findViewById(R.id.categories_view_all);
 
     }
 
@@ -138,24 +147,55 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
         animateNavigationDrawer();
     }
 
+    public void setLocal(Activity activity, String langCode){
+        Locale locale = new Locale(langCode);
+        locale.setDefault(locale);
+        Resources resources = activity.getResources();
+        Configuration config = resources.getConfiguration();
+        config.setLocale(locale);
+        resources.updateConfiguration(config, resources.getDisplayMetrics());
+    }
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
         switch (item.getItemId()) {
-            case R.id.nav_all_categories :
-                startActivity(new Intent(UserDashboardActivity.this, AllCategoriesActivity.class));
+                case R.id.nav_home :
+                startActivity(new Intent(UserDashboardActivity.this, UserDashboardActivity.class));
                 CustomIntent.customType(UserDashboardActivity.this, "left-to-right");
-                break;
-            case R.id.nav_add_missing_place :
-                startActivity(new Intent(UserDashboardActivity.this, RetailerStartUpScreenActivity.class));
-                CustomIntent.customType(UserDashboardActivity.this, "bottom-to-up");
                 break;
             case R.id.nav_currency :
                 startActivity(new Intent(UserDashboardActivity.this, CurrencyActivity.class));
                 CustomIntent.customType(UserDashboardActivity.this, "bottom-to-up");
                 break;
-
+            case R.id.nav_share:
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("text/plain");
+                i.putExtra(Intent.EXTRA_SUBJECT, "Sharing URL");
+                i.putExtra(Intent.EXTRA_TEXT, "https://bit.ly/3qcOtAB");
+                startActivity(Intent.createChooser(i, "Share URL"));
+                break;
+            case R.id.nav_rate_us:
+                gotoUrl("https://bit.ly/3qcOtAB");
+                break;
         }
+//        change
+        if (item.getItemId() == R.id.languages && getString(R.string.lang).equals("English")){
+            setLocal(UserDashboardActivity.this, "en");
+            finish();
+            startActivity(getIntent());
+        }else if (item.getItemId() == R.id.languages && getString(R.string.lang).equals("اللغة العربية")){
+            setLocal(UserDashboardActivity.this, "ar");
+            finish();
+            startActivity(getIntent());
+        }
+
         return false;
+    }
+
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 
     private void animateNavigationDrawer() {
@@ -178,14 +218,18 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
     private void setFeaturedRecycler() {
         //Setting Featured Locations Recycler
         featuredRecycler.setHasFixedSize(true);
-        featuredRecycler.setLayoutManager(new LinearLayoutManager(UserDashboardActivity.this, LinearLayoutManager.HORIZONTAL, false));
+        featuredRecycler.setLayoutManager(new LinearLayoutManager(UserDashboardActivity.this, LinearLayoutManager.HORIZONTAL, false ));
 
         ArrayList<FeaturedModel> featuredLocations = new ArrayList<>();
 
-        featuredLocations.add(new FeaturedModel(R.drawable.img_placeholder1, "ScrapYard", "ScrapYard is the best rated restaurant in the location at the moment."));
-        featuredLocations.add(new FeaturedModel(R.drawable.img_placeholder2, "Radisson Blu", "Radisson Blu is the best rated hotel in the location at the moment."));
-        featuredLocations.add(new FeaturedModel(R.drawable.img_placeholder3, "Chapter7", "Chapter7 is the best rated club in the location at the moment."));
-        featuredLocations.add(new FeaturedModel(R.drawable.img_placeholder4, "Squared", "Squared is the best rated multi-purpose store in the location at the moment."));
+        featuredLocations.add(new FeaturedModel(R.drawable.thumbnail_16, R.string.UqairBeach, R.string.aluqairdec,4.1, "https://goo.gl/maps/VsvYoYf4hKAYZKdq6"));
+        featuredLocations.add(new FeaturedModel(R.drawable.garah2, R.string.AlQarah, R.string.alqaradec,4.1,"https://goo.gl/maps/sif9HkYrGtzmLopY7"));
+        featuredLocations.add(new FeaturedModel(R.drawable.ysea, R.string.AlAsfar, R.string.alasfardec,3.9, "https://goo.gl/maps/HcwayaM5mNTmFkys7"));
+        featuredLocations.add(new FeaturedModel(R.drawable.juatha, R.string.JawathaCity, R.string.jawadec,4.4, "https://goo.gl/maps/ChwGniSrBxQ3dH4m6"));
+        featuredLocations.add(new FeaturedModel(R.drawable.alarba, R.string.AlArbaa, R.string.alarbadec,4.2, "https://goo.gl/maps/dMR1ipYXiwkMxMz77"));
+        featuredLocations.add(new FeaturedModel(R.drawable.alshabah, R.string.AlShu, R.string.alshudec,4.0, "https://goo.gl/maps/ic6gMSsEL8cVNsiu8"));
+        featuredLocations.add(new FeaturedModel(R.drawable.park, R.string.KingAbdullahPark, R.string.kingabdudec,3.9, "https://goo.gl/maps/kHq7VxmTwDS5zjox6"));
+        featuredLocations.add(new FeaturedModel(R.drawable.zoo, R.string.ZooPark, R.string.zoodec,3.3, "https://goo.gl/maps/MDtYUvrYjx6fT49X8"));
 
         featuredAdapter = new FeaturedLocationsAdapter(featuredLocations);
 
@@ -199,10 +243,13 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
 
         ArrayList<MostViewedModel> mostViewedLocations = new ArrayList<>();
 
-        mostViewedLocations.add(new MostViewedModel(R.drawable.img_placeholder3, "Chapter7", "Chapter7 is the best rated club in the location at the moment."));
-        mostViewedLocations.add(new MostViewedModel(R.drawable.img_placeholder4, "Squared", "Squared is the best rated multi-purpose store in the location at the moment."));
-        mostViewedLocations.add(new MostViewedModel(R.drawable.img_placeholder1, "ScrapYard", "ScrapYard is the best rated restaurant in the location at the moment."));
-        mostViewedLocations.add(new MostViewedModel(R.drawable.img_placeholder2, "Radisson Blu", "Radisson Blu is the best rated hotel in the location at the moment."));
+        mostViewedLocations.add(new MostViewedModel(R.drawable.house, getString(R.string.HouseAllegiance), getString(R.string.housedec),  4.1, "https://goo.gl/maps/p5QXwJvbgVx8sT5D9"));
+        mostViewedLocations.add(new MostViewedModel(R.drawable.ibrahem, getString(R.string.IbrahimPalace), getString(R.string.ibrahimdec),  4.2, "https://goo.gl/maps/d46xCcZon2Au4cLW9"));
+        mostViewedLocations.add(new MostViewedModel(R.drawable.sahoood, getString(R.string.SahoodFort), getString(R.string.sahooddec),  4.0, "https://goo.gl/maps/7sE3UNmeVwJRtrh89"));
+        mostViewedLocations.add(new MostViewedModel(R.drawable.muqair, getString(R.string.OldAlUqayrSeaport), getString(R.string.oladec),  4.3, "https://goo.gl/maps/BDwqm4NjFLkApL397"));
+        mostViewedLocations.add(new MostViewedModel(R.drawable.school, getString(R.string.PrincesSchool), getString(R.string.princedec),  4.4, "https://goo.gl/maps/zziZ2NVQ24hA5uFV9"));
+        mostViewedLocations.add(new MostViewedModel(R.drawable.mehers, getString(R.string.MuhairisPalace), getString(R.string.Muhdec),  3.5, "https://goo.gl/maps/pAWeGE75s8JaXH5T6"));
+        mostViewedLocations.add(new MostViewedModel(R.drawable.khusam, getString(R.string.KhuzamPalace), getString(R.string.khuzdec),  2.5, "https://goo.gl/maps/8QXrya6cbGwX6oKm8"));
 
         mostViewedAdapter = new MostViewedLocationsAdapter(mostViewedLocations);
 
@@ -216,11 +263,11 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
 
         ArrayList<CategoriesModel> categories = new ArrayList<>();
 
-        categories.add(new CategoriesModel(R.color.card2, R.drawable.illustration_shopping, "Shopping"));
-        categories.add(new CategoriesModel(R.color.card5, R.drawable.illustration_restaurant, "Restaurants"));
-        categories.add(new CategoriesModel(R.color.card4, R.drawable.illustration_hospital, "Hospitals"));
-        categories.add(new CategoriesModel(R.color.card1, R.drawable.illustration_education, "Education"));
-        categories.add(new CategoriesModel(R.color.card3, R.drawable.illustration_travel, "Travel"));
+        categories.add(new CategoriesModel(R.color.card2, R.drawable.illustration_shopping, R.string.navShops));
+        categories.add(new CategoriesModel(R.color.card5, R.drawable.illustration_restaurant, R.string.navRestaurants));
+        categories.add(new CategoriesModel(R.color.card4, R.drawable.illustration_hotel, R.string.navHotels));
+        categories.add(new CategoriesModel(R.color.card1, R.drawable.illustration_education, R.string.navEducation));
+//        categories.add(new CategoriesModel(R.color.card3, R.drawable.illustration_travel, R.string.travel));
 
         categoriesAdapter = new CategoriesAdapter(categories);
 
@@ -228,21 +275,21 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
     }
 
     private void setActionOnViews() {
-        categoriesViewAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(UserDashboardActivity.this, AllCategoriesActivity.class));
-                CustomIntent.customType(UserDashboardActivity.this, "left-to-right");
-            }
-        });
+//        categoriesViewAll.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(UserDashboardActivity.this, AllCategoriesActivity.class));
+//                CustomIntent.customType(UserDashboardActivity.this, "left-to-right");
+//            }
+//        });
 
-        addPlacesBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(UserDashboardActivity.this, RetailerStartUpScreenActivity.class));
-                CustomIntent.customType(UserDashboardActivity.this, "bottom-to-up");
-            }
-        });
+//        addPlacesBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(UserDashboardActivity.this, RetailerStartUpScreenActivity.class));
+//                CustomIntent.customType(UserDashboardActivity.this, "bottom-to-up");
+//            }
+//        });
     }
 
     @Override
@@ -270,4 +317,6 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
             materialDialog.show();
         }
     }
+
+
 }

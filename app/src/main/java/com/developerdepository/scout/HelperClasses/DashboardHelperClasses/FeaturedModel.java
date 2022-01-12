@@ -2,26 +2,36 @@ package com.developerdepository.scout.HelperClasses.DashboardHelperClasses;
 
 public class FeaturedModel {
     int image;
-    String title, description;
-
+    int title, description;
+    double ratingBar;
+    String url;
     public FeaturedModel() {
     }
 
-    public FeaturedModel(int image, String title, String description) {
+    public FeaturedModel(int image, int title, int description, double ratingBar, String url) {
         this.image = image;
         this.title = title;
         this.description = description;
+        this.ratingBar = ratingBar;
+        this.url = url;
     }
 
     public int getImage() {
         return image;
     }
 
-    public String getTitle() {
+    public int getTitle() {
         return title;
     }
 
-    public String getDescription() {
+    public int getDescription() {
         return description;
     }
+
+    public double getRatingBar() {return ratingBar;}
+
+    public String getUrl() {
+        return url;
+    }
+
 }

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -60,11 +59,11 @@ public class SliderAdapter extends PagerAdapter {
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.layout_onboarding_slider, container, false);
 
-        ImageView sliderImage = view.findViewById(R.id.slider_image);
+
         TextView sliderTitle = view.findViewById(R.id.slider_title);
         TextView sliderDesc = view.findViewById(R.id.slider_desc);
 
-        sliderImage.setImageResource(images[position]);
+
         sliderTitle.setText(titles[position]);
         sliderDesc.setText(descriptions[position]);
 

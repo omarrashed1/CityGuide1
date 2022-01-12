@@ -68,7 +68,7 @@
             android:textAlignment="textStart"
             android:textAllCaps="false"
             android:textColor="@android:color/black"
-            android:textSize="11sp"
+            android:textSize="7sp"
             android:textStyle="normal"
             android:includeFontPadding="false"
             app:layout_constraintBottom_toBottomOf="@+id/most_viewed_location_item_img"

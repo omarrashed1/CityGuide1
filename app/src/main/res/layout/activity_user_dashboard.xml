@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/dashboard_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dashboard_background"
+    android:background="@color/app_logo_background"
     tools:context=".User.UserDashboardActivity">
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/dashboard_navigation_menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="start"
         android:background="@color/dashboard_background"
         android:theme="@style/NavigationTheme"
-        android:layout_gravity="start"
         app:headerLayout="@layout/layout_navigation_menu_header"
-        app:menu="@menu/main_menu"
         app:itemIconTint="@color/colorPrimaryDark"
+        app:itemTextAppearance="@style/NavigationMenuTextStyle"
         app:itemTextColor="@android:color/black"
-        app:itemTextAppearance="@style/NavigationMenuTextStyle"/>
+        app:menu="@menu/main_menu" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/content_view"
@@ -34,39 +33,32 @@
             android:layout_height="32dp"
             android:layout_marginStart="12dp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:focusable="true"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_navigation_menu"
-            app:tint="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/add_places_btn1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/add_places_btn"
-            app:layout_constraintBottom_toBottomOf="@+id/add_places_btn" />
+            app:layout_constraintTop_toTopOf="@+id/content_view"
+            app:tint="@android:color/black" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/add_places_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/add_places_btn1"
+            android:layout_width="164dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginTop="24dp"
             android:background="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
+            android:clickable="false"
+            android:focusable="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:background="@color/add_places_btn_background"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_add_places"
-                app:tint="@android:color/black"
-                android:padding="4dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+<!--            <Spinner-->
+<!--                android:id="@+id/spinner"-->
+<!--                android:layout_width="164dp"-->
+<!--                android:layout_height="17dp"-->
+
+<!--                tools:ignore="MissingConstraints"-->
+<!--                tools:layout_editor_absoluteY="32dp" />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -80,8 +72,10 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/add_places_btn">
+            app:layout_constraintTop_toBottomOf="@+id/dashboard_menu"
+            app:layout_constraintVertical_bias="0.0">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -93,7 +87,7 @@
                     android:layout_height="80dp"
                     android:layout_marginTop="8dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/img_app_logo"
+                    android:src="@drawable/alahsa"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -111,55 +105,55 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/app_logo">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/search_btn"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="?attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:focusable="true"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent">
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:id="@+id/search_btn"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="?attr/selectableItemBackground"-->
+<!--                        android:clickable="true"-->
+<!--                        android:focusable="true"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent">-->
 
-                        <TextView
-                            android:id="@+id/search_text"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="12dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_marginBottom="12dp"
-                            android:alpha="0.5"
-                            android:fontFamily="@font/poppins"
-                            android:text="@string/search_text"
-                            android:textAlignment="textStart"
-                            android:textAllCaps="false"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp"
-                            android:textStyle="normal"
-                            android:includeFontPadding="false"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/search_img"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+<!--                        <TextView-->
+<!--                            android:id="@+id/search_text"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="16dp"-->
+<!--                            android:layout_marginTop="12dp"-->
+<!--                            android:layout_marginEnd="16dp"-->
+<!--                            android:layout_marginBottom="12dp"-->
+<!--                            android:alpha="0.5"-->
+<!--                            android:fontFamily="@font/poppins"-->
+<!--                            android:includeFontPadding="false"-->
+<!--                            android:text="@string/search_text"-->
+<!--                            android:textAlignment="textStart"-->
+<!--                            android:textAllCaps="false"-->
+<!--                            android:textColor="@android:color/black"-->
+<!--                            android:textSize="16sp"-->
+<!--                            android:textStyle="normal"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintEnd_toStartOf="@+id/search_img"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent" />-->
 
-                        <ImageView
-                            android:id="@+id/search_img"
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_marginBottom="8dp"
-                            android:scaleType="centerInside"
-                            android:src="@drawable/ic_search"
-                            app:tint="@android:color/black"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+<!--                        <ImageView-->
+<!--                            android:id="@+id/search_img"-->
+<!--                            android:layout_width="24dp"-->
+<!--                            android:layout_height="24dp"-->
+<!--                            android:layout_marginTop="8dp"-->
+<!--                            android:layout_marginEnd="16dp"-->
+<!--                            android:layout_marginBottom="8dp"-->
+<!--                            android:scaleType="centerInside"-->
+<!--                            android:src="@drawable/ic_search"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent"-->
+<!--                            app:tint="@android:color/black" />-->
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -168,12 +162,12 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="40dp"
-                    app:cardBackgroundColor="@color/card1"
+                    app:cardBackgroundColor="#D6D2D2"
                     app:cardElevation="8dp"
                     app:cardPreventCornerOverlap="true"
                     app:layout_constraintEnd_toStartOf="@+id/hotel_btn_container"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/search_btn_container">
+                    app:layout_constraintTop_toBottomOf="@+id/app_logo">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/restaurant_btn"
@@ -187,14 +181,17 @@
                             android:id="@+id/imgBtnRe"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginTop="1dp"
+                            android:outlineSpotShadowColor="#00C1BBBB"
+                            android:background="@color/card5"
                             android:padding="16dp"
                             android:scaleType="centerCrop"
                             android:src="@drawable/ic_restaurant"
-                            app:tint="@android:color/black"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@android:color/black" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -205,12 +202,12 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="40dp"
-                    app:cardBackgroundColor="@color/card2"
+                    app:cardBackgroundColor="#D6D2D2"
                     app:cardElevation="8dp"
                     app:cardPreventCornerOverlap="true"
                     app:layout_constraintEnd_toStartOf="@+id/education_btn_container"
                     app:layout_constraintStart_toEndOf="@+id/restaurant_btn_container"
-                    app:layout_constraintTop_toBottomOf="@+id/search_btn_container">
+                    app:layout_constraintTop_toBottomOf="@+id/app_logo">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/hotel_btn"
@@ -224,14 +221,16 @@
                             android:id="@+id/imgBtnHo"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="@color/card4"
+                            android:layout_marginTop="1dp"
                             android:padding="16dp"
                             android:scaleType="centerCrop"
                             android:src="@drawable/ic_hotel"
-                            app:tint="@android:color/black"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@android:color/black" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -242,12 +241,12 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="40dp"
-                    app:cardBackgroundColor="@color/card3"
+                    app:cardBackgroundColor="#D6D2D2"
                     app:cardElevation="8dp"
                     app:cardPreventCornerOverlap="true"
                     app:layout_constraintEnd_toStartOf="@+id/shop_btn_container"
                     app:layout_constraintStart_toEndOf="@+id/hotel_btn_container"
-                    app:layout_constraintTop_toBottomOf="@+id/search_btn_container">
+                    app:layout_constraintTop_toBottomOf="@+id/app_logo">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/education_btn"
@@ -261,14 +260,18 @@
                             android:id="@+id/imgBtnEd"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="-1dp"
                             android:padding="16dp"
+                            android:background="@color/card3"
                             android:scaleType="centerCrop"
                             android:src="@drawable/ic_education"
-                            app:tint="@android:color/black"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@android:color/black" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -279,18 +282,18 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="40dp"
-                    app:cardBackgroundColor="@color/card4"
+                    app:cardBackgroundColor="#D6D2D2"
                     app:cardElevation="8dp"
                     app:cardPreventCornerOverlap="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/education_btn_container"
-                    app:layout_constraintTop_toBottomOf="@+id/search_btn_container">
+                    app:layout_constraintTop_toBottomOf="@+id/app_logo">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/shop_btn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="?attr/selectableItemBackground"
+                        android:background="@color/card2"
                         android:clickable="true"
                         android:focusable="true">
 
@@ -298,14 +301,17 @@
                             android:id="@+id/imgBtnSh"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="2dp"
                             android:padding="16dp"
+                            android:background="@color/card2"
                             android:scaleType="centerCrop"
                             android:src="@drawable/ic_shops"
-                            app:tint="@android:color/black"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@android:color/black" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -317,13 +323,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
+                    android:includeFontPadding="false"
                     android:text="@string/restaurants"
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textColor="@android:color/black"
                     android:textSize="12sp"
                     android:textStyle="bold"
-                    android:includeFontPadding="false"
                     app:layout_constraintEnd_toEndOf="@+id/restaurant_btn_container"
                     app:layout_constraintStart_toStartOf="@+id/restaurant_btn_container"
                     app:layout_constraintTop_toBottomOf="@+id/restaurant_btn_container" />
@@ -334,13 +340,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
+                    android:includeFontPadding="false"
                     android:text="@string/hotels"
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textColor="@android:color/black"
                     android:textSize="12sp"
                     android:textStyle="bold"
-                    android:includeFontPadding="false"
                     app:layout_constraintEnd_toEndOf="@+id/hotel_btn_container"
                     app:layout_constraintStart_toStartOf="@+id/hotel_btn_container"
                     app:layout_constraintTop_toBottomOf="@+id/hotel_btn_container" />
@@ -351,13 +357,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
+                    android:includeFontPadding="false"
                     android:text="@string/education"
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textColor="@android:color/black"
                     android:textSize="12sp"
                     android:textStyle="bold"
-                    android:includeFontPadding="false"
                     app:layout_constraintEnd_toEndOf="@+id/education_btn_container"
                     app:layout_constraintStart_toStartOf="@+id/education_btn_container"
                     app:layout_constraintTop_toBottomOf="@+id/education_btn_container" />
@@ -368,21 +374,21 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
+                    android:includeFontPadding="false"
                     android:text="@string/shops"
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textColor="@android:color/black"
                     android:textSize="12sp"
                     android:textStyle="bold"
-                    android:includeFontPadding="false"
                     app:layout_constraintEnd_toEndOf="@+id/shop_btn_container"
                     app:layout_constraintStart_toStartOf="@+id/shop_btn_container"
                     app:layout_constraintTop_toBottomOf="@+id/shop_btn_container" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="406dp"
+                    android:layout_height="323dp"
                     android:layout_marginTop="40dp"
                     android:background="@color/banner_background_light"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -407,13 +413,13 @@
                             android:layout_marginStart="12dp"
                             android:layout_marginEnd="12dp"
                             android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
                             android:text="@string/featured_locations"
                             android:textAlignment="textStart"
                             android:textAllCaps="true"
                             android:textColor="@android:color/black"
                             android:textSize="20sp"
                             android:textStyle="bold"
-                            android:includeFontPadding="false"
                             app:layout_constraintBottom_toTopOf="@+id/featured_locations_desc"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -426,13 +432,13 @@
                             android:layout_marginStart="12dp"
                             android:layout_marginEnd="12dp"
                             android:fontFamily="@font/poppins_light"
+                            android:includeFontPadding="false"
                             android:text="@string/featured_locations_description"
                             android:textAlignment="textStart"
                             android:textAllCaps="false"
                             android:textColor="@android:color/black"
                             android:textSize="14sp"
                             android:textStyle="normal"
-                            android:includeFontPadding="false"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -444,13 +450,15 @@
                         android:id="@+id/featured_locations_recycler"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:orientation="horizontal"
-                        android:padding="8dp"
                         android:clipToPadding="false"
+                        android:orientation="vertical"
+                        android:padding="8dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -462,49 +470,49 @@
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="16dp"
                     android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
                     android:text="@string/most_viewed_locations"
                     android:textAlignment="textStart"
                     android:textAllCaps="true"
                     android:textColor="@android:color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:includeFontPadding="false"
-                    app:layout_constraintEnd_toStartOf="@+id/most_viewed_view_all"
+
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
 
-                <TextView
-                    android:id="@+id/most_viewed_view_all"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:fontFamily="@font/poppins"
-                    android:text="@string/view_all"
-                    android:textAlignment="textStart"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:padding="8dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:includeFontPadding="false"
-                    app:layout_constraintBottom_toBottomOf="@+id/most_viewed_locations_text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/most_viewed_locations_text" />
+<!--                <TextView-->
+<!--                    android:id="@+id/most_viewed_view_all"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:background="?attr/selectableItemBackground"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:fontFamily="@font/poppins"-->
+<!--                    android:includeFontPadding="false"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:text="@string/view_all"-->
+<!--                    android:textAlignment="textStart"-->
+<!--                    android:textAllCaps="true"-->
+<!--                    android:textColor="@color/green"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/most_viewed_locations_text"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/most_viewed_locations_text" />-->
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/most_viewed_locations_recycler"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:clipToPadding="false"
                     android:orientation="horizontal"
                     android:padding="8dp"
-                    android:clipToPadding="false"
-                    app:layout_constraintTop_toBottomOf="@+id/most_viewed_locations_text"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintTop_toBottomOf="@+id/most_viewed_locations_text" />
 
                 <TextView
                     android:id="@+id/categories_text"
@@ -514,37 +522,39 @@
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="16dp"
                     android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
                     android:text="@string/categories"
                     android:textAlignment="textStart"
                     android:textAllCaps="true"
                     android:textColor="@android:color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:includeFontPadding="false"
-                    app:layout_constraintEnd_toStartOf="@+id/categories_view_all"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/most_viewed_locations_recycler" />
+                    app:layout_constraintTop_toBottomOf="@+id/most_viewed_locations_recycler"/>
+<!--                    app:layout_constraintEnd_toStartOf="@+id/categories_view_all"-->
 
-                <TextView
-                    android:id="@+id/categories_view_all"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:fontFamily="@font/poppins"
-                    android:text="@string/view_all"
-                    android:textAlignment="textStart"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:padding="8dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:includeFontPadding="false"
-                    app:layout_constraintBottom_toBottomOf="@+id/categories_text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/categories_text" />
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/categories_view_all"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:background="?attr/selectableItemBackground"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:fontFamily="@font/poppins"-->
+<!--                    android:includeFontPadding="false"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:text="@string/view_all"-->
+<!--                    android:textAlignment="textStart"-->
+<!--                    android:textAllCaps="true"-->
+<!--                    android:textColor="@color/green"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/categories_text"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/categories_text" />-->
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/categories_recycler"
@@ -552,17 +562,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="40dp"
+                    android:clipToPadding="false"
                     android:orientation="horizontal"
                     android:padding="8dp"
-                    android:clipToPadding="false"
-                    app:layout_constraintTop_toBottomOf="@+id/categories_text"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/categories_text" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.core.widget.NestedScrollView>
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

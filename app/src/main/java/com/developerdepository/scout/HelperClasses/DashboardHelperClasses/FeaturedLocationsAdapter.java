@@ -1,20 +1,23 @@
 package com.developerdepository.scout.HelperClasses.DashboardHelperClasses;
-
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
-
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.developerdepository.scout.R;
 
 import java.util.ArrayList;
 
-public class FeaturedLocationsAdapter extends RecyclerView.Adapter<FeaturedLocationsAdapter.FeaturedViewHolder> {
+public class FeaturedLocationsAdapter extends  RecyclerView.Adapter<FeaturedLocationsAdapter.FeaturedViewHolder>  {
 
     ArrayList<FeaturedModel> featuredLocations;
 
@@ -37,7 +40,20 @@ public class FeaturedLocationsAdapter extends RecyclerView.Adapter<FeaturedLocat
         holder.featuredLocationImg.setImageResource(featuredModel.getImage());
         holder.featuredLocationTitle.setText(featuredModel.getTitle());
         holder.featuredLocationDesc.setText(featuredModel.getDescription());
+        holder.ratingBar.setRating((float) featuredModel.getRatingBar());
+        holder.featuredLocationItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Uri uri = Uri.parse(featuredModel.getUrl());
+               v.getContext().startActivity(new Intent(Intent.ACTION_VIEW,uri));
+            }
+
+        });
+
+
     }
+
 
     @Override
     public int getItemCount() {
@@ -49,7 +65,7 @@ public class FeaturedLocationsAdapter extends RecyclerView.Adapter<FeaturedLocat
         ConstraintLayout featuredLocationItem;
         ImageView featuredLocationImg;
         TextView featuredLocationTitle, featuredLocationDesc;
-
+        RatingBar ratingBar;
         public FeaturedViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -58,6 +74,8 @@ public class FeaturedLocationsAdapter extends RecyclerView.Adapter<FeaturedLocat
             featuredLocationImg = itemView.findViewById(R.id.featured_location_item_img);
             featuredLocationTitle = itemView.findViewById(R.id.featured_location_item_title);
             featuredLocationDesc = itemView.findViewById(R.id.featured_location_item_desc);
+            ratingBar = itemView.findViewById(R.id.featured_location_item_rating);
         }
     }
+
 }

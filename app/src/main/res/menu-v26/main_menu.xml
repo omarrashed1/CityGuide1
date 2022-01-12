@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/navHome"
+            android:icon="@drawable/ic_menu_dashboard"
+            android:iconTint="@color/green"
+            android:orderInCategory="100"/>
+
+        <!--        <item-->
+        <!--            android:id="@+id/nav_search"-->
+        <!--            android:title="@string/navSearch"-->
+        <!--            android:icon="@drawable/ic_menu_search"-->
+        <!--            android:iconTint="@android:color/black"-->
+        <!--            android:orderInCategory="200"/>-->
+
+        <!--        <item-->
+        <!--            android:id="@+id/nav_all_categories"-->
+        <!--            android:title="@string/navAllCategories"-->
+        <!--            android:icon="@drawable/ic_menu_categories"-->
+        <!--            android:iconTint="@android:color/black"-->
+        <!--            android:orderInCategory="300"/>-->
+        <!--change-->
+        <!--        <item-->
+        <!--            android:id="@+id/nav_add_missing_place"-->
+        <!--            android:title="@string/navAddMissingPlaces"-->
+        <!--            android:icon="@drawable/ic_menu_add_places"-->
+        <!--            android:iconTint="@android:color/black"-->
+        <!--            android:orderInCategory="400"/>-->
+        <item
+            android:id="@+id/nav_currency"
+            android:title="@string/navCurrency"
+            android:icon="@drawable/dollar"
+            android:iconTint="@android:color/black"
+            android:orderInCategory="500"/>
+
+    </group>
+
+    <!--    <item android:title="@string/navProfileTitle"-->
+    <!--        android:orderInCategory="500">-->
+    <!--        <menu>-->
+
+    <!--            <group android:checkableBehavior="single">-->
+
+    <!--                <item-->
+    <!--                    android:id="@+id/nav_login"-->
+    <!--                    android:title="@string/navLogin"-->
+    <!--                    android:icon="@drawable/ic_menu_login"-->
+    <!--                    android:iconTint="@android:color/black"-->
+    <!--                    android:orderInCategory="600"/>-->
+
+    <!--                <item-->
+    <!--                    android:id="@+id/nav_profile"-->
+    <!--                    android:title="@string/navProfile"-->
+    <!--                    android:icon="@drawable/ic_menu_profile"-->
+    <!--                    android:iconTint="@android:color/black"-->
+    <!--                    android:orderInCategory="700"/>-->
+
+    <!--                <item-->
+    <!--                    android:id="@+id/nav_logout"-->
+    <!--                    android:title="@string/navLogOut"-->
+    <!--                    android:icon="@drawable/ic_menu_logout"-->
+    <!--                    android:iconTint="@android:color/black"-->
+    <!--                    android:orderInCategory="800"/>-->
+
+    <!--            </group>-->
+
+    <!--        </menu>-->
+    <!--    </item>-->
+
+    <!--    <item android:title="@string/navCategoriesTitle"-->
+    <!--        android:orderInCategory="900">-->
+    <!--        <menu>-->
+
+    <!--            <group android:checkableBehavior="single">-->
+
+    <!--                <item-->
+    <!--                    android:id="@+id/nav_restaurants"-->
+    <!--                    android:title="@string/navRestaurants"-->
+    <!--                    android:icon="@drawable/ic_menu_restaurant"-->
+    <!--                    android:iconTint="@android:color/black"-->
+    <!--                    android:orderInCategory="1000"/>-->
+
+    <!--                <item-->
+    <!--                    android:id="@+id/nav_hotels"-->
+    <!--                    android:title="@string/navHotels"-->
+    <!--                    android:icon="@drawable/ic_menu_hotel"-->
+    <!--                    android:iconTint="@android:color/black"-->
+    <!--                    android:orderInCategory="1100"/>-->
+
+    <!--                <item-->
+    <!--                    android:id="@+id/nav_education"-->
+    <!--                    android:title="@string/navEducation"-->
+    <!--                    android:icon="@drawable/ic_menu_education"-->
+    <!--                    android:iconTint="@android:color/black"-->
+    <!--                    android:orderInCategory="1200"/>-->
+
+    <!--                <item-->
+    <!--                    android:id="@+id/nav_shops"-->
+    <!--                    android:title="@string/navShops"-->
+    <!--                    android:icon="@drawable/ic_menu_shops"-->
+    <!--                    android:iconTint="@android:color/black"-->
+    <!--                    android:orderInCategory="1300"/>-->
+
+    <!--            </group>-->
+
+    <!--        </menu>-->
+    <!--    </item>-->
+
+    <item android:title="@string/navCommunicationTitle"
+        android:orderInCategory="1400">
+        <menu>
+
+            <group android:checkableBehavior="none">
+
+                <item
+                    android:id="@+id/nav_share"
+                    android:title="@string/navShare"
+                    android:icon="@drawable/ic_menu_share"
+                    android:iconTint="@android:color/black"
+                    android:orderInCategory="1500"/>
+
+                <item
+                    android:id="@+id/nav_rate_us"
+                    android:title="@string/navRateUs"
+                    android:icon="@drawable/ic_menu_rate_us"
+                    android:iconTint="@android:color/black"
+                    android:orderInCategory="1600"/>
+
+            </group>
+
+        </menu>
+    </item>
+
+    <item android:title="@string/languages"
+        android:orderInCategory="2000">
+
+        <menu>
+            <group android:checkableBehavior="none">
+                <item
+                    android:id="@+id/languages"
+                    android:title="@string/lang"
+                    android:icon="@drawable/arabic1"
+                    android:iconTint="@android:color/black"
+                    android:orderInCategory="2100"/>
+
+            </group>
+        </menu>
+    </item>
+
+</menu>

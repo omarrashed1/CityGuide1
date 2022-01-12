@@ -6,4 +6,710 @@
     android:layout_height="match_parent"
     tools:context=".User.ShopsActivity">
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightWhite"
+        tools:context=".User.AllCategoriesActivity">
+
+        <ImageButton
+            android:id="@+id/back_arrow_btn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            app:tint="@android:color/black"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/search_btn"-->
+<!--            android:layout_width="32dp"-->
+<!--            android:layout_height="32dp"-->
+<!--            android:layout_marginEnd="12dp"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--            android:clickable="true"-->
+<!--            android:focusable="true"-->
+<!--            app:tint="@android:color/black"-->
+<!--            android:scaleType="centerInside"-->
+<!--            android:src="@drawable/ic_search"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/lightWhite"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back_arrow_btn"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/all_categories_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:includeFontPadding="false"
+                    android:text="@string/shops"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints"
+/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/category1_container"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardBackgroundColor="@color/allCategory4"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/all_categories_title">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/most_viewed_location_itemm"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        tools:ignore="DuplicateIds">
+
+                        <ImageView
+                            android:id="@+id/most_viewed_location_item_img1"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/qazari"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/most_viewed_location_item_title1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/al_qaysarya"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/most_viewed_location_item_img1"
+                            app:layout_constraintTop_toTopOf="@+id/most_viewed_location_item_img1" />
+
+                        <RatingBar
+                            android:id="@+id/most_viewed_location_item_rating1"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:rating="4.5"
+                            app:layout_constraintStart_toStartOf="@+id/most_viewed_location_item_title1"
+                            app:layout_constraintTop_toBottomOf="@+id/most_viewed_location_item_title1" />
+
+                        <TextView
+                            android:id="@+id/most_viewed_location_item_desc1"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="12dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:includeFontPadding="false"
+                            android:text="@string/alqisryahdec"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@color/app_logo_background"
+                            android:textSize="11sp"
+                            android:textStyle="normal"
+                            app:layout_constraintBottom_toBottomOf="@+id/most_viewed_location_item_img1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/most_viewed_location_item_title1"
+                            app:layout_constraintTop_toBottomOf="@+id/most_viewed_location_item_rating1"
+                            tools:ignore="SmallSp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/category2_container"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardBackgroundColor="@color/allCategory3"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/category1_container">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/most_viewed_location_item2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:id="@+id/most_viewed_location_item_img2"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/qur"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/most_viewed_location_item_title2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/al_qaria"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/most_viewed_location_item_img2"
+                            app:layout_constraintTop_toTopOf="@+id/most_viewed_location_item_img2" />
+
+                        <RatingBar
+                            android:id="@+id/most_viewed_location_item_rating2"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:rating="4.2"
+                            app:layout_constraintStart_toStartOf="@+id/most_viewed_location_item_title2"
+                            app:layout_constraintTop_toBottomOf="@+id/most_viewed_location_item_title2" />
+
+                        <TextView
+                            android:id="@+id/most_viewed_location_item_desc2"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="12dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:includeFontPadding="false"
+                            android:text="@string/al_qariadec"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@color/app_logo_background"
+                            android:textSize="11sp"
+                            android:textStyle="normal"
+                            app:layout_constraintBottom_toBottomOf="@+id/most_viewed_location_item_img2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/most_viewed_location_item_title2"
+                            app:layout_constraintTop_toBottomOf="@+id/most_viewed_location_item_rating2"
+                            tools:ignore="SmallSp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/category3_container"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardBackgroundColor="@color/allCategory9"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/category2_container">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/most_viewed_location_item3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:id="@+id/most_viewed_location_item_img3"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/swai"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/most_viewed_location_item_title3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/al_sweeq"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/most_viewed_location_item_img3"
+                            app:layout_constraintTop_toTopOf="@+id/most_viewed_location_item_img3" />
+
+                        <RatingBar
+                            android:id="@+id/most_viewed_location_item_rating3"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:rating="4.2"
+                            app:layout_constraintStart_toStartOf="@+id/most_viewed_location_item_title3"
+                            app:layout_constraintTop_toBottomOf="@+id/most_viewed_location_item_title3" />
+
+                        <TextView
+                            android:id="@+id/most_viewed_location_item_desc3"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="12dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:includeFontPadding="false"
+                            android:text="@string/al_sweeqdec"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@color/app_logo_background"
+                            android:textSize="11sp"
+                            android:textStyle="normal"
+                            app:layout_constraintBottom_toBottomOf="@+id/most_viewed_location_item_img3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/most_viewed_location_item_title3"
+                            app:layout_constraintTop_toBottomOf="@+id/most_viewed_location_item_rating3"
+                            tools:ignore="SmallSp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/category4_container"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardBackgroundColor="@color/allCategory10"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/category3_container">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/most_viewed_location_item4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:id="@+id/most_viewed_location_item_img4"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/hs"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/most_viewed_location_item_title4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/alahsa_mall"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/most_viewed_location_item_img4"
+                            app:layout_constraintTop_toTopOf="@+id/most_viewed_location_item_img4" />
+
+                        <RatingBar
+                            android:id="@+id/most_viewed_location_item_rating4"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:rating="4.1"
+                            app:layout_constraintStart_toStartOf="@+id/most_viewed_location_item_title4"
+                            app:layout_constraintTop_toBottomOf="@+id/most_viewed_location_item_title4" />
+
+                        <TextView
+                            android:id="@+id/most_viewed_location_item_desc4"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="12dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:includeFontPadding="false"
+                            android:text="@string/alahsa_malldec"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@color/app_logo_background"
+                            android:textSize="11sp"
+                            android:textStyle="normal"
+                            app:layout_constraintBottom_toBottomOf="@+id/most_viewed_location_item_img4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/most_viewed_location_item_title4"
+                            app:layout_constraintTop_toBottomOf="@+id/most_viewed_location_item_rating4"
+                            tools:ignore="SmallSp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/category5_container"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardBackgroundColor="@color/allCategory6"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/category4_container">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/most_viewed_location_item5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:id="@+id/most_viewed_location_item_img5"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/abs"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/most_viewed_location_item_title5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/alfawares_mall"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/most_viewed_location_item_img5"
+                            app:layout_constraintTop_toTopOf="@+id/most_viewed_location_item_img5" />
+
+                        <RatingBar
+                            android:id="@+id/most_viewed_location_item_rating5"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:rating="3.9"
+                            app:layout_constraintStart_toStartOf="@+id/most_viewed_location_item_title5"
+                            app:layout_constraintTop_toBottomOf="@+id/most_viewed_location_item_title5" />
+
+                        <TextView
+                            android:id="@+id/most_viewed_location_item_desc5"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="12dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:includeFontPadding="false"
+                            android:text="@string/alfawares_malldec"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@color/app_logo_background"
+                            android:textSize="11sp"
+                            android:textStyle="normal"
+                            app:layout_constraintBottom_toBottomOf="@+id/most_viewed_location_item_img5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/most_viewed_location_item_title5"
+                            app:layout_constraintTop_toBottomOf="@+id/most_viewed_location_item_rating5"
+                            tools:ignore="SmallSp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/category6_container"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardBackgroundColor="@color/allCategory7"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/category5_container">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/most_viewed_location_item6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:id="@+id/most_viewed_location_item_img6"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/rer"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/most_viewed_location_item_title6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/farm_superstores"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/most_viewed_location_item_img6"
+                            app:layout_constraintTop_toTopOf="@+id/most_viewed_location_item_img6" />
+
+                        <RatingBar
+                            android:id="@+id/most_viewed_location_item_rating6"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:rating="3.8"
+                            app:layout_constraintStart_toStartOf="@+id/most_viewed_location_item_title6"
+                            app:layout_constraintTop_toBottomOf="@+id/most_viewed_location_item_title6" />
+
+                        <TextView
+                            android:id="@+id/most_viewed_location_item_desc6"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="12dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:includeFontPadding="false"
+                            android:text="@string/farm_superstoresdes"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@color/app_logo_background"
+                            android:textSize="11sp"
+                            android:textStyle="normal"
+                            app:layout_constraintBottom_toBottomOf="@+id/most_viewed_location_item_img6"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/most_viewed_location_item_title6"
+                            app:layout_constraintTop_toBottomOf="@+id/most_viewed_location_item_rating6"
+                            tools:ignore="SmallSp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/category7_container"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardBackgroundColor="@color/allCategory8"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/category6_container">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/most_viewed_location_item7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:id="@+id/most_viewed_location_item_img7"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/otha"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/most_viewed_location_item_title7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/alothaim_mall"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/most_viewed_location_item_img7"
+                            app:layout_constraintTop_toTopOf="@+id/most_viewed_location_item_img7" />
+
+                        <RatingBar
+                            android:id="@+id/most_viewed_location_item_rating7"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:rating="4.2"
+                            app:layout_constraintStart_toStartOf="@+id/most_viewed_location_item_title7"
+                            app:layout_constraintTop_toBottomOf="@+id/most_viewed_location_item_title7" />
+
+                        <TextView
+                            android:id="@+id/most_viewed_location_item_desc"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="12dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:includeFontPadding="false"
+                            android:text="@string/alothaim_malldec"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@color/app_logo_background"
+                            android:textSize="11sp"
+                            android:textStyle="normal"
+                            app:layout_constraintBottom_toBottomOf="@+id/most_viewed_location_item_img7"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/most_viewed_location_item_title7"
+                            app:layout_constraintTop_toBottomOf="@+id/most_viewed_location_item_rating7"
+                            tools:ignore="SmallSp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

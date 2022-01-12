@@ -3,6 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/drawable/btn_main_round.xml" value="0.43125" />
+        <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/drawable/illustration_first_onboarding.xml" value="0.4453125" />
+        <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/drawable/illustration_navigation_menu.xml" value="0.4324074074074074" />
+        <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/drawable/illustration_retailer_login.xml" value="0.4324074074074074" />
+        <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/layout/activity_currency.xml" value="0.42916666666666664" />
+        <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/layout/activity_restaurants.xml" value="0.5" />
+        <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/layout/activity_retailer_login.xml" value="0.41510416666666666" />
+        <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/layout/activity_shops.xml" value="0.2670011148272018" />
+        <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/layout/activity_user_dashboard.xml" value="0.39351851851851855" />
+        <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/layout/fragment_retailer_dashboard.xml" value="0.38981481481481484" />
+        <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/layout/fragment_retailer_manage.xml" value="0.42916666666666664" />
+        <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/layout/layout_navigation_menu_header.xml" value="0.24947916666666667" />
+        <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/layout/layout_onboarding_slider.xml" value="0.24947916666666667" />
+        <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/menu-v26/main_menu.xml" value="0.23541666666666666" />
+        <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/menu/main_menu.xml" value="0.23541666666666666" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/CityGuide-master/app/src/main/res/drawable/ic_hotel.xml" value="0.4453125" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/CityGuide-master/app/src/main/res/layout-ar/activity_user_dashboard.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/CityGuide-master/app/src/main/res/layout/activity_all_categories.xml" value="0.42916666666666664" />
@@ -35,19 +50,30 @@
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/drawable/illustration_travel.xml" value="0.4453125" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/drawable/kfu_back.xml" value="0.4453125" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_all_categories.xml" value="0.2892242892242892" />
+        <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_currency.xml" value="0.5" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_education.xml" value="0.33" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_hotels.xml" value="0.24739583333333334" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_on_boarding.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_restaurants.xml" value="0.33695652173913043" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_shops.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_splash_screen.xml" value="0.33695652173913043" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_user_dashboard.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_verify_otp.xml" value="0.32518115942028986" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/card_item.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/fragment_retailer_manage.xml" value="0.32518115942028986" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/fragment_retailer_profile.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/layout_categories_recycler.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/layout_featured_locations_recycler.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/layout_most_viewed_locations_recycler.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/layout_navigation_menu_header.xml" value="0.67" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/layout_onboarding_slider.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/switch_item.xml" value="0.3541666666666667" />
+        <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/menu-v26/main_menu.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/menu/main_menu.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/mipmap-anydpi-v26/app_logo.xml" value="0.2635416666666667" />
+        <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/mipmap-anydpi-v26/app_logo_round.xml" value="0.4453125" />
+        <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2635416666666667" />
+        <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2635416666666667" />
         <entry key="..\:/Users/pc/Downloads/SCOUT---City-Guide-Application-for-Android-master/app/src/main/res/drawable/bg_bottom_nav_round_corners.xml" value="0.43846153846153846" />
         <entry key="..\:/Users/pc/Downloads/SCOUT---City-Guide-Application-for-Android-master/app/src/main/res/drawable/ic_bottom_nav_dot.xml" value="0.43846153846153846" />
         <entry key="..\:/Users/pc/Downloads/SCOUT---City-Guide-Application-for-Android-master/app/src/main/res/drawable/ic_bottom_nav_profile.xml" value="0.43846153846153846" />

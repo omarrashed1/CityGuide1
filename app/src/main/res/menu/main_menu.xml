@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
 
@@ -7,33 +8,33 @@
             android:id="@+id/nav_home"
             android:title="@string/navHome"
             android:icon="@drawable/ic_menu_dashboard"
-            android:iconTint="@android:color/black"
+            android:iconTint="@color/green"
             android:orderInCategory="100"/>
 
-        <item
-            android:id="@+id/nav_search"
-            android:title="@string/navSearch"
-            android:icon="@drawable/ic_menu_search"
-            android:iconTint="@android:color/black"
-            android:orderInCategory="200"/>
+<!--        <item-->
+<!--            android:id="@+id/nav_search"-->
+<!--            android:title="@string/navSearch"-->
+<!--            android:icon="@drawable/ic_menu_search"-->
+<!--            android:iconTint="@android:color/black"-->
+<!--            android:orderInCategory="200"/>-->
 
-        <item
-            android:id="@+id/nav_all_categories"
-            android:title="@string/navAllCategories"
-            android:icon="@drawable/ic_menu_categories"
-            android:iconTint="@android:color/black"
-            android:orderInCategory="300"/>
-
-        <item
-            android:id="@+id/nav_add_missing_place"
-            android:title="@string/navAddMissingPlaces"
-            android:icon="@drawable/ic_menu_add_places"
-            android:iconTint="@android:color/black"
-            android:orderInCategory="400"/>
+<!--        <item-->
+<!--            android:id="@+id/nav_all_categories"-->
+<!--            android:title="@string/navAllCategories"-->
+<!--            android:icon="@drawable/ic_menu_categories"-->
+<!--            android:iconTint="@android:color/black"-->
+<!--            android:orderInCategory="300"/>-->
+<!--change-->
+<!--        <item-->
+<!--            android:id="@+id/nav_add_missing_place"-->
+<!--            android:title="@string/navAddMissingPlaces"-->
+<!--            android:icon="@drawable/ic_menu_add_places"-->
+<!--            android:iconTint="@android:color/black"-->
+<!--            android:orderInCategory="400"/>-->
         <item
             android:id="@+id/nav_currency"
             android:title="@string/navCurrency"
-            android:icon="@drawable/ic_menu_add_places"
+            android:icon="@drawable/dollar"
             android:iconTint="@android:color/black"
             android:orderInCategory="500"/>
 
@@ -130,29 +131,24 @@
                     android:iconTint="@android:color/black"
                     android:orderInCategory="1600"/>
 
-                <item
-                    android:id="@+id/nav_contact_us"
-                    android:title="@string/navContactUs"
-                    android:icon="@drawable/ic_menu_help_support"
-                    android:iconTint="@android:color/black"
-                    android:orderInCategory="1700"/>
-
-                <item
-                    android:id="@+id/nav_about"
-                    android:title="@string/navAboutUs"
-                    android:icon="@drawable/ic_menu_about_us"
-                    android:iconTint="@android:color/black"
-                    android:orderInCategory="1800"/>
-
-                <item
-                    android:id="@+id/nav_privacy_policy"
-                    android:title="@string/navPrivacyPolicy"
-                    android:icon="@drawable/ic_menu_privacy_policy"
-                    android:iconTint="@android:color/black"
-                    android:orderInCategory="1900"/>
-
             </group>
 
+        </menu>
+    </item>
+
+    <item android:title="@string/languages"
+        android:orderInCategory="2000">
+
+        <menu>
+            <group android:checkableBehavior="none">
+            <item
+                android:id="@+id/languages"
+                android:title="@string/lang"
+                android:icon="@drawable/arabic1"
+                android:iconTint="@android:color/black"
+                android:orderInCategory="2100"/>
+
+            </group>
         </menu>
     </item>
 

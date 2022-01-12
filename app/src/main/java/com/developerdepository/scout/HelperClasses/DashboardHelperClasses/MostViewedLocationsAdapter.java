@@ -1,9 +1,12 @@
 package com.developerdepository.scout.HelperClasses.DashboardHelperClasses;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,6 +23,7 @@ public class MostViewedLocationsAdapter extends RecyclerView.Adapter<MostViewedL
 
     public MostViewedLocationsAdapter(ArrayList<MostViewedModel> mostViewedLocations) {
         this.mostViewedLocations = mostViewedLocations;
+
     }
 
     @NonNull
@@ -37,6 +41,16 @@ public class MostViewedLocationsAdapter extends RecyclerView.Adapter<MostViewedL
         holder.mostViewedLocationImg.setImageResource(mostViewedModel.getImage());
         holder.mostViewedLocationTitle.setText(mostViewedModel.getTitle());
         holder.mostViewedLocationDesc.setText(mostViewedModel.getDescription());
+        holder.ratingBar.setRating((float) mostViewedModel.getRatingBar());
+        holder.mostViewedLocationItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Uri uri = Uri.parse(mostViewedModel.getUrl());
+                v.getContext().startActivity(new Intent(Intent.ACTION_VIEW,uri));
+            }
+
+        });
     }
 
     @Override
@@ -49,7 +63,7 @@ public class MostViewedLocationsAdapter extends RecyclerView.Adapter<MostViewedL
         ConstraintLayout mostViewedLocationItem;
         ImageView mostViewedLocationImg;
         TextView mostViewedLocationTitle, mostViewedLocationDesc;
-
+        RatingBar ratingBar;
         public MostViewedViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -58,6 +72,7 @@ public class MostViewedLocationsAdapter extends RecyclerView.Adapter<MostViewedL
             mostViewedLocationImg = itemView.findViewById(R.id.most_viewed_location_item_img);
             mostViewedLocationTitle = itemView.findViewById(R.id.most_viewed_location_item_title);
             mostViewedLocationDesc = itemView.findViewById(R.id.most_viewed_location_item_desc);
+            ratingBar = itemView.findViewById(R.id.most_viewed_location_item_rating);
         }
     }
 }
