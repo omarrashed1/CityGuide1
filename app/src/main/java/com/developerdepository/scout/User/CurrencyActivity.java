@@ -16,6 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.developerdepository.scout.R;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 public class CurrencyActivity extends AppCompatActivity {
     Spinner sp1,sp2;
@@ -63,32 +65,35 @@ public class CurrencyActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                double tot;
+                double tot ;
 
                 double amt = Double.parseDouble(ed1.getText().toString());
                 DecimalFormat  dU = new  DecimalFormat("0.00");
+                NumberFormat nf=NumberFormat.getInstance(new Locale("en","EN"));
+
                 if(sp1.getSelectedItem().toString().equals("SAR") && sp2.getSelectedItem().toString().equals("Indian Rupees"))
                 {
 
                     tot = amt *19.943;
-                    String d = dU.format(tot);
-                    result.setText(   d );
+                      String i = "₹";
+                    String x = nf.format(tot);
+                    result.setText( i + x  );
                 }
                 else if(sp1.getSelectedItem().toString().equals("SAR") && sp2.getSelectedItem().toString().equals("USD"))
                 {
                     tot = amt / 3.75;
-                    String d = dU.format(tot);
-                    result.setText(   d );
-
-
+                    String i = "$";
+                    String x = nf.format(tot);
+                    result.setText(i+x);
                 }
 
 
                 else if(sp1.getSelectedItem().toString().equals("SAR") && sp2.getSelectedItem().toString().equals("EUR"))
                 {
                     tot = amt * 0.23552;
-                    String d = dU.format(tot);
-                    result.setText(  d );
+                    String i = "€";
+                    String x = nf.format(tot);
+                    result.setText( i+x  );
                 }
 
 
@@ -97,14 +102,16 @@ public class CurrencyActivity extends AppCompatActivity {
                 {
 
                     tot = amt /19.943;
-                    String d = dU.format(tot);
-                    result.setText(   d );
+                    String i = "SAR";
+                    String x = nf.format(tot);
+                    result.setText( i+x  );
                 }
                 else if(sp1.getSelectedItem().toString().equals("USD") && sp2.getSelectedItem().toString().equals("SAR"))
                 {
                     tot = amt * 3.75;
-                    String d = dU.format(tot);
-                    result.setText(   d );
+                    String i = "SAR";
+                    String x = nf.format(tot);
+                    result.setText( i+x  );
 
 
                 }
@@ -113,8 +120,9 @@ public class CurrencyActivity extends AppCompatActivity {
                 else if(sp1.getSelectedItem().toString().equals("EUR") && sp2.getSelectedItem().toString().equals("SAR"))
                 {
                     tot = amt / 0.23552;
-                    String d = dU.format(tot);
-                    result.setText(  d );
+                    String i = "SAR";
+                    String x = nf.format(tot);
+                    result.setText( i + x  );
                 }
                 else if (sp1.getSelectedItem().toString().equals("SAR") && sp2.getSelectedItem().toString().equals("SAR"))
                 {

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -159,8 +160,8 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.nav_all_categories :
-                startActivity(new Intent(UserDashboardActivity.this, AllCategoriesActivity.class));
+                case R.id.nav_home :
+                startActivity(new Intent(UserDashboardActivity.this, UserDashboardActivity.class));
                 CustomIntent.customType(UserDashboardActivity.this, "left-to-right");
                 break;
             case R.id.nav_currency :
@@ -171,11 +172,12 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("text/plain");
                 i.putExtra(Intent.EXTRA_SUBJECT, "Sharing URL");
-                i.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/collection/cluster?clp=igNBChkKEzc0NDgzOTIzODU1NTk3MjMzMTUQCBgDEiIKHGNvbS5jb2Rld29yZC5kb2N1bWVudHNjYW5uZXIQARgDGAE%3D:S:ANO1ljIaAkk&gsr=CkSKA0EKGQoTNzQ0ODM5MjM4NTU1OTcyMzMxNRAIGAMSIgocY29tLmNvZGV3b3JkLmRvY3VtZW50c2Nhbm5lchABGAMYAQ%3D%3D:S:ANO1ljIkNIQ");
+                i.putExtra(Intent.EXTRA_TEXT, "https://bit.ly/3qcOtAB");
                 startActivity(Intent.createChooser(i, "Share URL"));
                 break;
-            default:
-
+            case R.id.nav_rate_us:
+                gotoUrl("https://bit.ly/3qcOtAB");
+                break;
         }
 //        change
         if (item.getItemId() == R.id.languages && getString(R.string.lang).equals("English")){
@@ -189,6 +191,11 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
         }
 
         return false;
+    }
+
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 
     private void animateNavigationDrawer() {

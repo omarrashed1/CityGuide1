@@ -18,13 +18,13 @@
         <!--            android:iconTint="@android:color/black"-->
         <!--            android:orderInCategory="200"/>-->
 
-        <item
-            android:id="@+id/nav_all_categories"
-            android:title="@string/navAllCategories"
-            android:icon="@drawable/ic_menu_categories"
-            android:iconTint="@android:color/black"
-            android:orderInCategory="300"/>
-
+        <!--        <item-->
+        <!--            android:id="@+id/nav_all_categories"-->
+        <!--            android:title="@string/navAllCategories"-->
+        <!--            android:icon="@drawable/ic_menu_categories"-->
+        <!--            android:iconTint="@android:color/black"-->
+        <!--            android:orderInCategory="300"/>-->
+        <!--change-->
         <!--        <item-->
         <!--            android:id="@+id/nav_add_missing_place"-->
         <!--            android:title="@string/navAddMissingPlaces"-->
@@ -135,7 +135,7 @@
 
         </menu>
     </item>
-<!--change-->
+
     <item android:title="@string/languages"
         android:orderInCategory="2000">
 
