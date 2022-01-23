@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/lightWhite"
     tools:context=".User.AllCategoriesActivity">
-<!--    CANGE-->
+<!--    CANGE11-->
     <ImageButton
         android:id="@+id/back_arrow_btn"
         android:layout_width="32dp"

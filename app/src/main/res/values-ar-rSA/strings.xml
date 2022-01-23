@@ -41,7 +41,11 @@
 
     <!-- Titles and Descriptions -->
     <string name="featured_locations" translatable="false">هنا معظم\nالاماكن\nالمميزة </string>
+<<<<<<< HEAD
     <string name="most_viewed_locations">القصور التاريخية</string>
+=======
+    <string name="most_viewed_locations">الاكثر مشاهدة</string>
+>>>>>>> d0852ef79de704a4b2d925e39e96d60b3008caec
     <string name="categories">الفئات</string>
     <string name="view_all">مشاهدة الكل</string>
     <string name="search_text">ابحث عن موقع</string>
@@ -92,13 +96,21 @@
 
 
     <!-- RetailerLogin Strings -->
+<<<<<<< HEAD
     <string name="retailerLoginTitle" translatable="false">محول العملات</string>
+=======
+    <string name="retailerLoginTitle" translatable="false">LOGIN</string>
+>>>>>>> d0852ef79de704a4b2d925e39e96d60b3008caec
     <string name="retailerLoginMessage" translatable="false">Sign in to continue!</string>
     <string name="retailerLoginUsernameHint" translatable="false">Username</string>
     <string name="retailerLoginPasswordHint" translatable="false">Password</string>
     <string name="retailerLoginRememberMeCheckBox" translatable="false">Remember Me</string>
     <string name="retailerLoginForgotPassword" translatable="false">Forgot Password?</string>
+<<<<<<< HEAD
     <string name="retailerLoginBtn" translatable="false">حول</string>
+=======
+    <string name="retailerLoginBtn" translatable="false">LOGIN</string>
+>>>>>>> d0852ef79de704a4b2d925e39e96d60b3008caec
     <string name="retailerLoginCreateAccountMsg" translatable="false">Don\'t have an account?</string>
     <string name="retailerLoginCreateAccountBtn" translatable="false">Create Account</string>
 
