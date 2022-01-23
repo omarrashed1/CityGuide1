@@ -281,17 +281,16 @@
     <string name="resturant8_desc">r</string>
     <string name="resturant9_desc">r</string>
     <string name="resturant10_desc">r</string>
-    <string name="hotel1_desc">h</string>
-    <string name="hotel2_desc">h</string>
-    <string name="hotel3_desc">h</string>
-    <string name="hotel4_desc">h</string>
-    <string name="hotel5_desc">h</string>
-    <string name="hotel6_desc">h</string>
-    <string name="hotel7_desc">h</string>
-    <string name="hotel8_desc">h</string>
-    <string name="hotel9_desc">h</string>
-    <string name="hotel10_desc">h</string>
+    <string name="hotel1_desc">Triple Tree offers accommodation in Al Hofuf. This property features free WiFi, a supermarket and a car rental service.</string>
+    <string name="hotel9_desc">Located in Hofuf, 8 km from Al Ahsa, Linah Houses Furnished Units provides a shared lounge and free WiFi. Each unit has a fully equipped kitchen with a microwave, a fireplace, and a seating area</string>
+    <string name="hotel10_desc">Al Koot Heritage Hotel is a 4-star property located in Hofuf. Among the facilities of this property are a restaurant and a 24-hour front desk</string>
+    <string name="hotel2_desc">Upscale, contemporary rooms feature free Wi-Fi and flat-screen TVs, as well as kitchenettes and coffee and tea makers. In addition to the above, the suites have separate living and dining rooms</string>
+    <string name="hotel3_desc">Al Ahsa InterContinental is an elegant 5-star hotel located in Al Ahsa in the business and shopping district of Hofuf, ideal for business and leisure travelers.</string>
+    <string name="hotel4_desc">Al-Ahsa Grand Hotel ... a 21st century hotel that raises the offerings of Al-Hofuf, Al-Ahsa Hotel, Conference, Meeting and Wedding Market to the international level. The tower consists of 15 floors</string>
+    <string name="hotel5_desc">Discover a new world of warmth and a vibrant atmosphere at Coral Al Ahsa Hotel</string>
+    <string name="hotel6_desc">Free Wi-Fi and parking are offered in the aparthotel, and there is also a dry cleaning service. All rooms include kitchenettes and LCD TVs</string>
+    <string name="hotel7_desc">Taleen Al Sulaimanyah also offers many facilities to enrich your stay. The hotel provides a family room, coffee shop, safety deposit boxes</string>
+    <string name="hotel8_desc">Garden Plaza Hotel is located in Hofuf and in the center of Al Ahsa. Guests can enjoy the on-site restaurant. Free private parking is available on site</string>
 
-    <string name="errorWIFI">Please connect your phone to the Internet</string>
-    
+
 </resources>

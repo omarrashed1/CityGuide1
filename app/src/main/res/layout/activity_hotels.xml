@@ -106,7 +106,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/qur"
+                        android:src="@drawable/tree"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -207,7 +207,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/qur"
+                        android:src="@drawable/makan"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -308,7 +308,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/qur"
+                        android:src="@drawable/inter"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -408,7 +408,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/qur"
+                        android:src="@drawable/ahsaa"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -508,7 +508,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/qur"
+                        android:src="@drawable/coral"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -608,7 +608,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/qur"
+                        android:src="@drawable/sup"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -709,7 +709,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/qur"
+                        android:src="@drawable/tal"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -809,7 +809,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/qur"
+                        android:src="@drawable/gg"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -909,7 +909,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/qur"
+                        android:src="@drawable/hom"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -1011,7 +1011,7 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/qur"
+                        android:src="@drawable/cot"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
