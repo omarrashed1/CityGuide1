@@ -41,7 +41,7 @@
 
     <!-- Titles and Descriptions -->
     <string name="featured_locations" translatable="false">هنا معظم\nالاماكن\nالمميزة </string>
-    <string name="most_viewed_locations">الاكثر مشاهدة</string>
+    <string name="most_viewed_locations">القصور التاريخية</string>
     <string name="categories">الفئات</string>
     <string name="view_all">مشاهدة الكل</string>
     <string name="search_text">ابحث عن موقع</string>
@@ -74,7 +74,7 @@
 
     <!-- Exit Dialog Strings -->
     <string name="exitDialogTitle" translatable="false">انهاء الجولة ؟</string>
-    <string name="exitDialogMessage">هل تريد الخروج حقا ؟</string>
+    <string name="exitDialogMessage">هل انت متأكد؟</string>
     <string name="exitDialogConfirm">نعم</string>
     <string name="exitDialogCancel">لا</string>
 
@@ -92,13 +92,13 @@
 
 
     <!-- RetailerLogin Strings -->
-    <string name="retailerLoginTitle" translatable="false">LOGIN</string>
+    <string name="retailerLoginTitle" translatable="false">محول العملات</string>
     <string name="retailerLoginMessage" translatable="false">Sign in to continue!</string>
     <string name="retailerLoginUsernameHint" translatable="false">Username</string>
     <string name="retailerLoginPasswordHint" translatable="false">Password</string>
     <string name="retailerLoginRememberMeCheckBox" translatable="false">Remember Me</string>
     <string name="retailerLoginForgotPassword" translatable="false">Forgot Password?</string>
-    <string name="retailerLoginBtn" translatable="false">LOGIN</string>
+    <string name="retailerLoginBtn" translatable="false">حول</string>
     <string name="retailerLoginCreateAccountMsg" translatable="false">Don\'t have an account?</string>
     <string name="retailerLoginCreateAccountBtn" translatable="false">Create Account</string>
 
@@ -159,7 +159,7 @@
     <string name="setPasswordSuccessLoginBtn" translatable="false">LOGIN</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
-    <string name="select_lang">اختر اللغة</string>
+    <string name="select_lang">اختر لغة</string>
     <string name="king_faisal_university">جامعة الملك فيصل (KFU)</string>
     <string name="imam_muhammad_bin_saud_islamic_university">جامعة الامام محمد بن سعود</string>
     <string name="king_suad_university">جامعة الملك سعود</string>
@@ -168,7 +168,7 @@
     <string name="technical_and_vocational_training_corporation">كلية التقنية</string>
     <string name="alkhaleej_training_and_education">معهد الخليج</string>
     <string name="wall_street_english">معهد وول ستريت</string>
-    <string name="al_anjal_national_schools">مدارس الأنجال الأهلية</string>
+    <string name="al_anjal_national_schools">مدارس النجاح</string>
     <string name="future_vision_private_schools">مدارس رؤية المستقبل</string>
     <string name="project_id">scout-city-guide</string>
     <string name="google_storage_bucket">هنا ، سترى وتستكشف بالتأكيد سياحة فريدة من نوعها</string>
@@ -199,6 +199,12 @@
     <string name="dunkin">دانكن دونات</string>
     <!-- اسواق -->
     <string name="al_qaysarya">القيصريـة</string>
+    <string name="alqisryahdec">سوق تاريخي يقع في مدينة الهفوف انشئ عام 1822م ستجد هناك كل مايتعلق بالتراث الاحسائي</string>
+    <string name="al_qariadec">"القرية الشعبية سوق انشئ حديثاً بهوية تراثية  يقع في مدينة المبرز يحتوي على اكثر من 1500 نشاط تجاري مختلف حديثًا وقديماً "</string>
+    <string name="al_sweeqdec">يعد واحد من اشهر الاسواق في المنطقة يقع في مدينة الهفوف حيث يرتاده الكثيرين من الزوار داخل وخارج المملكة</string>
+    <string name="alahsa_malldec">هو مجمع تجاري يحتوي على العديد من الأنشطة التجارية الحديثة,اضافةً الى السينما , يوجد ايضاً عدداً من المطاعم والكافيهات المميزة</string>
+    <string name="farm_superstoresdes">اسواق المزرعة سوق تمويني للمواد الغذائية والمواد الضرورية</string>
+    <string name="housedec">بيت البيعة هو منزل تاريخي يقع في حي الكوت في مدينة الهفوف الأحساء بالمملكة العربية السعودية. هو منزل عبد اللطيف بن عبد الرحمن الملا ، رب أسرة الملا ، وبيت من شهد مبايعة أهل الأحساء للملك عبد العزيز وانضمامهم للدولة السعودية. في عام 1913.</string>
     <string name="al_qaria">القرية الشعبية</string>
     <string name="al_sweeq">السويق</string>
     <string name="alahsa_mall">الاحساء مول</string>
@@ -238,12 +244,45 @@
     <string name="princedec">تعتبر مدرسة الأمراء أو دار الثقافة أو مدرسة الهفوف الأولى من أقدم المدارس الحكومية في المملكة العربية السعودية ، بدأ بناؤها عام 1937 وافتتحت رسمياً في فبراير 1941.</string>
     <string name="Muhdec">قصر المحيرس هو قصر بناه الإمام سعود بن عبد العزيز على قمة تل عام 1208 هـ لأغراض عسكرية.</string>
     <string name="khuzdec">يقع قصر خزام شرق حي الرقة (المزروعية حاليا) غرب مدينة الهفوف. هو مقر السكان البدو الذين يتوجهون إلى الأحساء في مواسم الصيف لمدة شهرين لتبادل البضائع المتوفرة في الأحساء مثل التمور والسكر وبعض المنسوجات والبنادق والذخيرة وغيرها مقابل البضائع التي جلبوها من الصحراء.</string>
-    <string name="alqisryahdec">سوق تاريخي يقع في مدينة الهفوف انشئ عام 1822م ستجد هناك كل مايتعلق بالتراث الاحسائي</string>
-    <string name="al_qariadec">"القرية الشعبية سوق انشئ حديثاً بهوية تراثية  يقع في مدينة المبرز يحتوي على اكثر من 1500 نشاط تجاري مختلف حديثًا وقديماً "</string>
-    <string name="al_sweeqdec">يعد واحد من اشهر الاسواق في المنطقة يقع في مدينة الهفوف حيث يرتاده الكثيرين من الزوار داخل وخارج المملكة</string>
-    <string name="alahsa_malldec">هو مجمع تجاري يحتوي على العديد من الأنشطة التجارية الحديثة,اضافةً الى السينما , يوجد ايضاً عدداً من المطاعم والكافيهات المميزة</string>
-    <string name="farm_superstoresdes">اسواق المزرعة سوق تمويني للمواد الغذائية والمواد الضرورية</string>
-    <string name="housedec">بيت البيعة هو منزل تاريخي يقع في حي الكوت في مدينة الهفوف الأحساء بالمملكة العربية السعودية. هو منزل عبد اللطيف بن عبد الرحمن الملا ، رب أسرة الملا ، وبيت من شهد مبايعة أهل الأحساء للملك عبد العزيز وانضمامهم للدولة السعودية. في عام 1913.</string>
+    <string name="curnamount">ادخل المبلغ</string>
+    <string name="fromc">العملة الاولى</string>
+    <string name="result1">النتيجة</string>
+    <string name="toc">العملة الثانية</string>
+    <string name="education1_desc">d</string>
+    <string name="education2_desc">d</string>
+    <string name="education3_desc">d</string>
+    <string name="education4_desc">d</string>
+    <string name="education5_desc">d</string>
+    <string name="education6_desc">d</string>
+    <string name="education7_desc">d</string>
+    <string name="education8_desc">d</string>
+    <string name="education9_desc">d</string>
+    <string name="education10_desc">d</string>
+<!--    <string name="education11_desc">d</string>-->
+<!--    <string name="education12_desc">d</string>-->
+<!--    <string name="education13_desc">d</string>-->
+<!--    <string name="education14_desc">d</string>-->
+<!--    <string name="education15_desc">d</string>-->
+    <string name="resturant1_desc">r</string>
+    <string name="resturant2_desc">r</string>
+    <string name="resturant3_desc">r</string>
+    <string name="resturant4_desc">r</string>
+    <string name="resturant5_desc">r</string>
+    <string name="resturant6_desc">r</string>
+    <string name="resturant7_desc">r</string>
+    <string name="resturant8_desc">r</string>
+    <string name="resturant9_desc">r</string>
+    <string name="resturant10_desc">r</string>
+    <string name="hotel1_desc">h</string>
+    <string name="hotel2_desc">h</string>
+    <string name="hotel3_desc">h</string>
+    <string name="hotel4_desc">h</string>
+    <string name="hotel5_desc">h</string>
+    <string name="hotel6_desc">h</string>
+    <string name="hotel7_desc">h</string>
+    <string name="hotel8_desc">h</string>
+    <string name="hotel9_desc">h</string>
+    <string name="hotel10_desc">h</string>
 
 
 </resources>

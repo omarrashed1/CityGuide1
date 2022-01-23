@@ -40,9 +40,9 @@
     <!-- Strings for Dashboard -->
 
     <!-- Titles and Descriptions -->
-    <string name="featured_locations" translatable="false">All\nPopular\nLocations</string>
-    <string name="featured_locations_description" translatable="false">Most of the popular locations that have the top demand in town at the moment!</string>
-    <string name="most_viewed_locations">Most Viewed</string>
+    <string name="featured_locations">All\nPopular\nLocations</string>
+    <string name="featured_locations_description">Most of the popular locations that have the top demand in town at the moment!</string>
+    <string name="most_viewed_locations">Historical Palaces</string>
     <string name="categories">Categories</string>
     <string name="view_all">View All</string>
     <string name="search_text">Search a location</string>
@@ -78,7 +78,7 @@
     <string name="navPrivacyPolicy">Privacy Policy</string>
 
     <!-- Exit Dialog Strings -->
-    <string name="exitDialogTitle">Exit SCOUT?</string>
+    <string name="exitDialogTitle">Exit Al-Ahsa Tour?</string>
     <string name="exitDialogMessage">Do you really want to exit?</string>
     <string name="exitDialogConfirm">YES</string>
     <string name="exitDialogCancel">NO</string>
@@ -97,13 +97,13 @@
 
 
     <!-- RetailerLogin Strings -->
-    <string name="retailerLoginTitle" translatable="false">LOGIN</string>
+    <string name="retailerLoginTitle" translatable="false">currency converter</string>
     <string name="retailerLoginMessage" translatable="false">Sign in to continue!</string>
     <string name="retailerLoginUsernameHint" translatable="false">Username</string>
     <string name="retailerLoginPasswordHint" translatable="false">Password</string>
     <string name="retailerLoginRememberMeCheckBox" translatable="false">Remember Me</string>
     <string name="retailerLoginForgotPassword" translatable="false">Forgot Password?</string>
-    <string name="retailerLoginBtn" translatable="false">LOGIN</string>
+    <string name="retailerLoginBtn">Convert</string>
     <string name="retailerLoginCreateAccountMsg" translatable="false">Don\'t have an account?</string>
     <string name="retailerLoginCreateAccountBtn" translatable="false">Create Account</string>
 
@@ -169,7 +169,7 @@
     <string name="imam_muhammad_bin_saud_islamic_university">Imam Muhammad Bin Saud Islamic University</string>
     <string name="king_suad_university">King Saud University</string>
     <string name="arab_open_university">Arab Open University</string>
-    <string name="national_industrial_training_institute">National Industrial Training Institute</string>
+    <string name="national_industrial_training_institute">National Industrial Training Institute (NITI)</string>
     <string name="technical_and_vocational_training_corporation">Technical and Vocational Training Corporation</string>
     <string name="alkhaleej_training_and_education">Alkhaleej Training and Education</string>
     <string name="wall_street_english">Wall Street English</string>
@@ -178,7 +178,7 @@
     <string name="horn">Horn</string>
     <string name="restaurents">Restaurents</string>
     <string name="tendrliune">Tendrliune</string>
-    <string name="todo">TODO</string>
+
     <string name="khaibar">Khaibar</string>
     <string name="topaz">Topaz</string>
     <string name="bharat">Bharat</string>
@@ -236,7 +236,7 @@
     <string name="MuhairisPalace">Muhairis Palace</string>
     <string name="KhuzamPalace">"Khuzam Palace "</string>
     <string name="languages">languages</string>
-    <string name="lang">العربية</string>
+    <string name="lang"> اللغة العربية</string>
     <string name="housedec">The House of Allegiance or House of Allegiance is a historical house located in the Al Kut neighborhood of Al Hofuf Al Ahsa’iya city, Kingdom of Saudi Arabia. It is the house of Abdul Latif bin Abdul Rahman Al-Mulla, the head of the Al-Mulla family, and the house of the one who witnessed the people of Al-Ahsa pledge allegiance to King Abdul Aziz and their accession to the Saudi state in 1913.</string>
     <string name="ibrahimdec">The Ibrahim Palace was built during the time of the first Saudi state and is considered to be an architectural masterpiece.</string>
     <string name="sahooddec">Sahood Fort is situated outside the western walls of Al Mubarraz, Saudi Arabia. The fort is used as barracks for the Saudi Arabian Armed Forces.</string>
@@ -246,5 +246,46 @@
     <string name="khuzdec">Khuzam Palace is located in the east of Al-Raqeqa neighborhood (currently Al-Mazrou’iya) located west of the city of Hofuf. It is the seat of the Bedouin residents who go to Al-Ahsa in the summer seasons for two months to exchange goods available in Al-Ahsa such as dates, sugar, some textiles, guns, ammunition and others for the goods they brought from the desert.</string>
     <string name="first_slide_title">The Beautiful City of Al-Ahsa</string>
     <string name="fourth_slide_desc">"Here, you will definitely see and explore unique tourism "</string>
+    <string name="curnamount">ENTER AMOUNT</string>
+    <string name="fromc">From Currency:</string>
+    <string name="result1">Result</string>
+    <string name="toc">To Currency:</string>
+    <string name="education1_desc">d</string>
+    <string name="education2_desc">d</string>
+    <string name="education3_desc">d</string>
+    <string name="education4_desc">d</string>
+    <string name="education5_desc">d</string>
+    <string name="education6_desc">d</string>
+    <string name="education7_desc">d</string>
+    <string name="education8_desc">d</string>
+    <string name="education9_desc">d</string>
+    <string name="education10_desc">d</string>
+<!--    <string name="education11_desc">d</string>-->
+<!--    <string name="education12_desc">d</string>-->
+<!--    <string name="education13_desc">d</string>-->
+<!--    <string name="education14_desc">d</string>-->
+<!--    <string name="education15_desc">d</string>-->
+    <string name="resturant1_desc">r</string>
+    <string name="resturant2_desc">r</string>
+    <string name="resturant3_desc">r</string>
+    <string name="resturant4_desc">r</string>
+    <string name="resturant5_desc">r</string>
+    <string name="resturant6_desc">r</string>
+    <string name="resturant7_desc">r</string>
+    <string name="resturant8_desc">r</string>
+    <string name="resturant9_desc">r</string>
+    <string name="resturant10_desc">r</string>
+    <string name="hotel1_desc">h</string>
+    <string name="hotel2_desc">h</string>
+    <string name="hotel3_desc">h</string>
+    <string name="hotel4_desc">h</string>
+    <string name="hotel5_desc">h</string>
+    <string name="hotel6_desc">h</string>
+    <string name="hotel7_desc">h</string>
+    <string name="hotel8_desc">h</string>
+    <string name="hotel9_desc">h</string>
+    <string name="hotel10_desc">h</string>
+
+
 
 </resources>

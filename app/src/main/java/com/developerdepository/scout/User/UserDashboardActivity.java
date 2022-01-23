@@ -4,16 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +21,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.developerdepository.scout.Common.LoginSignup.RetailerStartUpScreenActivity;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.CategoriesAdapter;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.CategoriesModel;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.FeaturedLocationsAdapter;
@@ -50,7 +47,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
     private ConstraintLayout contentView, addPlacesBtn;
     private ImageButton dashboardMenu;
     private RecyclerView featuredRecycler, mostViewedRecycler, categoriesRecycler;
-    private TextView categoriesViewAll;
+//    private TextView categoriesViewAll;
     private ImageButton imgBtnRe, imgBtnHo, imgBtnEd, imgBtnSh;
     private Button button;
     //Other Variables
@@ -59,6 +56,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
 
     Spinner spinner;
     public static final String[] languages = {"Select Language", "English", "Arabic"};
+    private Activity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,7 +126,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
         featuredRecycler = findViewById(R.id.featured_locations_recycler);
         mostViewedRecycler = findViewById(R.id.most_viewed_locations_recycler);
         categoriesRecycler = findViewById(R.id.categories_recycler);
-        categoriesViewAll = findViewById(R.id.categories_view_all);
+//        categoriesViewAll = findViewById(R.id.categories_view_all);
 
     }
 
@@ -160,24 +158,44 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
         switch (item.getItemId()) {
-            case R.id.nav_all_categories :
-                startActivity(new Intent(UserDashboardActivity.this, AllCategoriesActivity.class));
+                case R.id.nav_home :
+                startActivity(new Intent(UserDashboardActivity.this, UserDashboardActivity.class));
                 CustomIntent.customType(UserDashboardActivity.this, "left-to-right");
                 break;
             case R.id.nav_currency :
                 startActivity(new Intent(UserDashboardActivity.this, CurrencyActivity.class));
                 CustomIntent.customType(UserDashboardActivity.this, "bottom-to-up");
                 break;
+            case R.id.nav_share:
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("text/plain");
+                i.putExtra(Intent.EXTRA_SUBJECT, "Sharing URL");
+                i.putExtra(Intent.EXTRA_TEXT, "https://bit.ly/3qcOtAB");
+                startActivity(Intent.createChooser(i, "Share URL"));
+                break;
+            case R.id.nav_rate_us:
+                gotoUrl("https://bit.ly/3qcOtAB");
+                break;
         }
+//        change
         if (item.getItemId() == R.id.languages && getString(R.string.lang).equals("English")){
             setLocal(UserDashboardActivity.this, "en");
+            finish();
+            startActivity(getIntent());
         }else if (item.getItemId() == R.id.languages && getString(R.string.lang).equals("اللغة العربية")){
             setLocal(UserDashboardActivity.this, "ar");
+            finish();
+            startActivity(getIntent());
         }
-        finish();
-        startActivity(getIntent());
+
         return false;
+    }
+
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 
     private void animateNavigationDrawer() {
@@ -247,9 +265,9 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
 
         categories.add(new CategoriesModel(R.color.card2, R.drawable.illustration_shopping, R.string.navShops));
         categories.add(new CategoriesModel(R.color.card5, R.drawable.illustration_restaurant, R.string.navRestaurants));
-        categories.add(new CategoriesModel(R.color.card4, R.drawable.illustration_hospital, R.string.navHotels));
+        categories.add(new CategoriesModel(R.color.card4, R.drawable.illustration_hotel, R.string.navHotels));
         categories.add(new CategoriesModel(R.color.card1, R.drawable.illustration_education, R.string.navEducation));
-        categories.add(new CategoriesModel(R.color.card3, R.drawable.illustration_travel, R.string.travel));
+//        categories.add(new CategoriesModel(R.color.card3, R.drawable.illustration_travel, R.string.travel));
 
         categoriesAdapter = new CategoriesAdapter(categories);
 
@@ -257,13 +275,13 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
     }
 
     private void setActionOnViews() {
-        categoriesViewAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(UserDashboardActivity.this, AllCategoriesActivity.class));
-                CustomIntent.customType(UserDashboardActivity.this, "left-to-right");
-            }
-        });
+//        categoriesViewAll.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(UserDashboardActivity.this, AllCategoriesActivity.class));
+//                CustomIntent.customType(UserDashboardActivity.this, "left-to-right");
+//            }
+//        });
 
 //        addPlacesBtn.setOnClickListener(new View.OnClickListener() {
 //            @Override

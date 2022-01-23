@@ -183,6 +183,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="1dp"
                             android:outlineSpotShadowColor="#00C1BBBB"
+                            android:background="@color/card5"
                             android:padding="16dp"
                             android:scaleType="centerCrop"
                             android:src="@drawable/ic_restaurant"
@@ -220,7 +221,7 @@
                             android:id="@+id/imgBtnHo"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-
+                            android:background="@color/card4"
                             android:layout_marginTop="1dp"
                             android:padding="16dp"
                             android:scaleType="centerCrop"
@@ -262,6 +263,7 @@
                             android:layout_marginTop="1dp"
                             android:layout_marginBottom="-1dp"
                             android:padding="16dp"
+                            android:background="@color/card3"
                             android:scaleType="centerCrop"
                             android:src="@drawable/ic_education"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -291,7 +293,7 @@
                         android:id="@+id/shop_btn"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="?attr/selectableItemBackground"
+                        android:background="@color/card2"
                         android:clickable="true"
                         android:focusable="true">
 
@@ -302,6 +304,7 @@
                             android:layout_marginTop="1dp"
                             android:layout_marginBottom="2dp"
                             android:padding="16dp"
+                            android:background="@color/card2"
                             android:scaleType="centerCrop"
                             android:src="@drawable/ic_shops"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -474,30 +477,30 @@
                     android:textColor="@android:color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/most_viewed_view_all"
+
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
 
-                <TextView
-                    android:id="@+id/most_viewed_view_all"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:fontFamily="@font/poppins"
-                    android:includeFontPadding="false"
-                    android:padding="8dp"
-                    android:text="@string/view_all"
-                    android:textAlignment="textStart"
-                    android:textAllCaps="true"
-                    android:textColor="@color/green"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@+id/most_viewed_locations_text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/most_viewed_locations_text" />
+<!--                <TextView-->
+<!--                    android:id="@+id/most_viewed_view_all"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:background="?attr/selectableItemBackground"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:fontFamily="@font/poppins"-->
+<!--                    android:includeFontPadding="false"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:text="@string/view_all"-->
+<!--                    android:textAlignment="textStart"-->
+<!--                    android:textAllCaps="true"-->
+<!--                    android:textColor="@color/green"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/most_viewed_locations_text"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/most_viewed_locations_text" />-->
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/most_viewed_locations_recycler"
@@ -526,30 +529,32 @@
                     android:textColor="@android:color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/categories_view_all"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/most_viewed_locations_recycler" />
+                    app:layout_constraintTop_toBottomOf="@+id/most_viewed_locations_recycler"/>
+<!--                    app:layout_constraintEnd_toStartOf="@+id/categories_view_all"-->
 
-                <TextView
-                    android:id="@+id/categories_view_all"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:fontFamily="@font/poppins"
-                    android:includeFontPadding="false"
-                    android:padding="8dp"
-                    android:text="@string/view_all"
-                    android:textAlignment="textStart"
-                    android:textAllCaps="true"
-                    android:textColor="@color/green"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@+id/categories_text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/categories_text" />
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/categories_view_all"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:background="?attr/selectableItemBackground"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:fontFamily="@font/poppins"-->
+<!--                    android:includeFontPadding="false"-->
+<!--                    android:padding="8dp"-->
+<!--                    android:text="@string/view_all"-->
+<!--                    android:textAlignment="textStart"-->
+<!--                    android:textAllCaps="true"-->
+<!--                    android:textColor="@color/green"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/categories_text"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/categories_text" />-->
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/categories_recycler"
