@@ -290,4 +290,6 @@
     <string name="hotel9_desc">h</string>
     <string name="hotel10_desc">h</string>
 
+    <string name="errorWIFI">الرجاء الاتصال بالانترنت</string>
+
 </resources>

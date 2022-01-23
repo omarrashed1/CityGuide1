@@ -291,5 +291,7 @@
     <string name="hotel8_desc">h</string>
     <string name="hotel9_desc">h</string>
     <string name="hotel10_desc">h</string>
+
+    <string name="errorWIFI">Please connect your phone to the Internet</string>
     
 </resources>

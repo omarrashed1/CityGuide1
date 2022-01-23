@@ -95,11 +95,6 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
             setCategoriesRecycler();
             setActionOnViews();
 
-            if (isNetworkConnected()){
-                loadWeatherByCityName(city);
-            }else {
-                    Toast.makeText(this, "Please Connect your Phone to the Internet",Toast.LENGTH_SHORT).show();
-            }
             imgBtnRe = findViewById(R.id.imgBtnRe);
             imgBtnHo = findViewById(R.id.imgBtnHo);
             imgBtnEd = findViewById(R.id.imgBtnEd);
@@ -110,7 +105,11 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
             w1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    loadWeatherByCityName(city);
+                    if (isNetworkConnected()){
+                        loadWeatherByCityName(city);
+                    }else {
+                        Toast.makeText(UserDashboardActivity.this, R.string.errorWIFI,Toast.LENGTH_SHORT).show();
+                    }
                 }
             });
 
