@@ -513,6 +513,17 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/most_viewed_locations_text" />
+                <EditText
+                    android:id="@+id/test1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    app:layout_constraintTop_toBottomOf="@+id/most_viewed_locations_recycler"
+                    tools:ignore="MissingConstraints"
+
+                    tools:layout_editor_absoluteX="224dp" />
 
                 <TextView
                     android:id="@+id/categories_text"
@@ -595,9 +606,10 @@
                             android:fontFamily="@font/poppins_medium"
                             android:includeFontPadding="false"
                             android:text="@string/alahsaWeather"
+                            android:textColor="@android:color/white"
                             android:textAlignment="center"
                             android:textAllCaps="false"
-                            android:textColor="@android:color/black"
+
                             android:textSize="20sp"
                             android:textStyle="bold"
 
@@ -627,6 +639,7 @@
                             android:layout_marginStart="32dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="8dp"
+                            android:textColor="@android:color/white"
                             android:text="@string/loding"
                             android:textAlignment="center"
                             android:textSize="30sp"
@@ -648,6 +661,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="32dp"
                             android:text="@string/loding"
+                            android:textColor="@android:color/white"
                             android:textAlignment="center"
                             app:layout_constraintEnd_toStartOf="@+id/iconWeather"
                             app:layout_constraintHorizontal_bias="0.57"
@@ -662,6 +676,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="8dp"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:text="13.12'C"
                             app:layout_constraintEnd_toStartOf="@+id/mintemp"
                             app:layout_constraintStart_toStartOf="parent"
@@ -677,6 +692,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="8dp"
                             android:textAlignment="center"
+                            android:textColor="@android:color/white"
                             android:text="13.12'C"
                             app:layout_constraintEnd_toStartOf="@+id/iconWeather"
                             app:layout_constraintStart_toEndOf="@+id/maxtemp"

@@ -58,7 +58,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
     private DrawerLayout dashboardDrawerLayout;
     private NavigationView dashboardNavigationMenu;
     //Dashboard View Variables
-    private ConstraintLayout contentView, addPlacesBtn;
+    private ConstraintLayout contentView, addPlacesBtn, categories_background;
     private RecyclerView featuredRecycler, mostViewedRecycler, categoriesRecycler;
 //    private TextView categoriesViewAll;
     private ImageButton imgBtnRe, imgBtnHo, imgBtnEd, imgBtnSh,dashboardMenu;
@@ -68,6 +68,8 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
     private RecyclerView.Adapter featuredAdapter, mostViewedAdapter, categoriesAdapter;
     private static final float END_SCALE = 0.8f;
      private EditText test1;
+
+
     Spinner spinner;
     public static final String[] languages = {"Select Language", "English", "Arabic"};
     private Activity activity;
@@ -97,13 +99,15 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
         imgBtnEd = findViewById(R.id.imgBtnEd);
         imgBtnSh = findViewById(R.id.imgBtnSh);
         w1 = findViewById(R.id.weathercard);
-//        test1 = findViewById(R.id.test1);
+        categories_background =findViewById(R.id.categories_background);
+        test1 = findViewById(R.id.test1);
 
         w1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 loadWeatherByCityName(city);
             }
+
         });
 
         imgBtnRe.setOnClickListener(new View.OnClickListener() {
@@ -327,7 +331,8 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                             }
 
 
-                            String icon = weather.get(0).getAsJsonObject().get("icon").getAsString();
+//                            String icon = weather.get(0).getAsJsonObject().get("icon").getAsString();
+                            String icon = test1.getText().toString();
                             loadicon(icon);
 
 //                            JsonObject sys = result.get("sys").getAsJsonObject();
@@ -402,6 +407,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                 case "01d":
 
                 iconWeather.setImageResource(R.drawable.sun);
+                categories_background.setBackgroundResource(R.drawable.clear1);
                 break;
 
                 case "01n":
@@ -409,6 +415,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                 break;
 
                 case "02d":
+                 categories_background.setBackgroundResource(R.drawable.fewclouds);
                 iconWeather.setImageResource( R.drawable.cloudyday);
                 break;
 
@@ -417,6 +424,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                 break;
 
                 case "03d":
+                    categories_background.setBackgroundResource(R.drawable.scatteredclouds);
                 iconWeather.setImageResource( R.drawable.cloudy);
                 break;
 
@@ -425,6 +433,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                 break;
 
                 case "04d":
+                    categories_background.setBackgroundResource(R.drawable.brokenclouds);
                 iconWeather.setImageResource( R.drawable.cloudcomputing);
                 break;
 
@@ -433,6 +442,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                 break;
 
                 case "09d":
+                    categories_background.setBackgroundResource(R.drawable.showerrain);
                 iconWeather.setImageResource( R.drawable.rainy);
                 break;
 
@@ -441,6 +451,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                 break;
 
                 case "10d":
+                    categories_background.setBackgroundResource(R.drawable.rain);
                 iconWeather.setImageResource( R.drawable.raining);
                 break;
 
@@ -449,6 +460,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                 break;
 
                 case "11d":
+                    categories_background.setBackgroundResource(R.drawable.thunderstorm1);
                 iconWeather.setImageResource( R.drawable.thunderstorm);
                 break;
 
@@ -457,6 +469,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                  break;
 
                  case "13d":
+                     categories_background.setBackgroundResource(R.drawable.snow);
                  iconWeather.setImageResource( R.drawable.snowflake);
                  break;
 
@@ -465,6 +478,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                  break;
 
                  case "50d":
+                     categories_background.setBackgroundResource(R.drawable.mist1);
                  iconWeather.setImageResource( R.drawable.mist);
                  break;
 
