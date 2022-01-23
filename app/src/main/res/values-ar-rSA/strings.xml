@@ -253,5 +253,43 @@
     <string name="loding">جاري التحميل ..</string>
     <string name="m">العظمى</string>
     <string name="n">الصغرى</string>
+    <string name="error">اها اخلص حط رقم عاد</string>
+    <string name="education1_desc">d</string>
+    <string name="education2_desc">d</string>
+    <string name="education3_desc">d</string>
+    <string name="education4_desc">d</string>
+    <string name="education5_desc">d</string>
+    <string name="education6_desc">d</string>
+    <string name="education7_desc">d</string>
+    <string name="education8_desc">d</string>
+    <string name="education9_desc">d</string>
+    <string name="education10_desc">d</string>
+<!--    <string name="education11_desc">d</string>-->
+<!--    <string name="education12_desc">d</string>-->
+<!--    <string name="education13_desc">d</string>-->
+<!--    <string name="education14_desc">d</string>-->
+<!--    <string name="education15_desc">d</string>-->
+    <string name="resturant1_desc">r</string>
+    <string name="resturant2_desc">r</string>
+    <string name="resturant3_desc">r</string>
+    <string name="resturant4_desc">r</string>
+    <string name="resturant5_desc">r</string>
+    <string name="resturant6_desc">r</string>
+    <string name="resturant7_desc">r</string>
+    <string name="resturant8_desc">r</string>
+    <string name="resturant9_desc">r</string>
+    <string name="resturant10_desc">r</string>
+    <string name="hotel1_desc">h</string>
+    <string name="hotel2_desc">h</string>
+    <string name="hotel3_desc">h</string>
+    <string name="hotel4_desc">h</string>
+    <string name="hotel5_desc">h</string>
+    <string name="hotel6_desc">h</string>
+    <string name="hotel7_desc">h</string>
+    <string name="hotel8_desc">h</string>
+    <string name="hotel9_desc">h</string>
+    <string name="hotel10_desc">h</string>
+
+    <string name="errorWIFI">الرجاء الاتصال بالانترنت</string>
 
 </resources>
