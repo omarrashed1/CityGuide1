@@ -27,6 +27,9 @@
         <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/layout/weatherlayout.xml" value="0.28958333333333336" />
         <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/menu-v26/main_menu.xml" value="0.23541666666666666" />
         <entry key="..\:/SilahEmpv/CityGuide1/app/src/main/res/menu/main_menu.xml" value="0.23541666666666666" />
+        <entry key="..\:/Users/pc/.gradle/caches/transforms-3/b16389bea1918e9e17d093d68e33d774/transformed/appcompat-1.4.1/res/drawable/abc_ratingbar_indicator_material.xml" value="0.3814814814814815" />
+        <entry key="..\:/Users/pc/.gradle/caches/transforms-3/b16389bea1918e9e17d093d68e33d774/transformed/appcompat-1.4.1/res/drawable/abc_ratingbar_material.xml" value="0.3814814814814815" />
+        <entry key="..\:/Users/pc/.gradle/caches/transforms-3/b16389bea1918e9e17d093d68e33d774/transformed/appcompat-1.4.1/res/drawable/abc_ratingbar_small_material.xml" value="0.3814814814814815" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/CityGuide-master/app/src/main/res/drawable/ic_hotel.xml" value="0.4453125" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/CityGuide-master/app/src/main/res/layout-ar/activity_user_dashboard.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/CityGuide-master/app/src/main/res/layout/activity_all_categories.xml" value="0.42916666666666664" />
@@ -53,14 +56,17 @@
         <entry key="..\:/Users/pc/AndroidStudioProjects/CityGuide-master/app/src/main/res/layout/layout_navigation_menu_header.xml" value="0.35643115942028986" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/CityGuide-master/app/src/main/res/layout/layout_onboarding_slider.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/CityGuide-master/app/src/main/res/menu/main_menu.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/pc/AppData/Local/Android/Sdk/platforms/android-31/data/res/drawable/ratingbar_full.xml" value="0.3814814814814815" />
+        <entry key="..\:/Users/pc/AppData/Local/Android/Sdk/platforms/android-31/data/res/drawable/ratingbar_full_empty.xml" value="0.3814814814814815" />
+        <entry key="..\:/Users/pc/AppData/Local/Android/Sdk/platforms/android-31/data/res/drawable/ratingbar_full_filled.xml" value="0.3814814814814815" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.4453125" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/drawable/bg_bottom_nav_round_corners.xml" value="0.4453125" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/drawable/bg_country_code_picker.xml" value="0.4453125" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/drawable/illustration_travel.xml" value="0.4453125" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/drawable/kfu_back.xml" value="0.4453125" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_all_categories.xml" value="0.2892242892242892" />
-        <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_currency.xml" value="0.5" />
-        <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_education.xml" value="0.2536164973838104" />
+        <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_currency.xml" value="0.25" />
+        <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_education.xml" value="0.33" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_hotels.xml" value="0.33" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_on_boarding.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/pc/Documents/GitHub/CityGuide1/app/src/main/res/layout/activity_restaurants.xml" value="0.33" />
