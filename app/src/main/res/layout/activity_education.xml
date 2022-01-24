@@ -299,7 +299,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:rating="3.7"
+                        android:rating="4.5"
                         app:layout_constraintStart_toStartOf="@+id/category3_txt"
                         app:layout_constraintTop_toBottomOf="@+id/category3_txt" />
 
@@ -311,7 +311,7 @@
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/poppins_light"
                         android:includeFontPadding="false"
-                        android:text="@string/education4_desc"
+                        android:text="@string/education3_desc"
                         android:textAlignment="textStart"
                         android:textAllCaps="false"
                         android:textColor="@color/app_logo_background"
@@ -388,7 +388,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:rating="3.7"
+                        android:rating="3.3"
                         app:layout_constraintStart_toStartOf="@+id/category4_txt"
                         app:layout_constraintTop_toBottomOf="@+id/category4_txt" />
 
@@ -476,7 +476,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:rating="3.7"
+                        android:rating="4.5"
                         app:layout_constraintStart_toStartOf="@+id/category5_txt"
                         app:layout_constraintTop_toBottomOf="@+id/category5_txt" />
 
@@ -565,7 +565,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:rating="3.7"
+                        android:rating="3.8"
                         app:layout_constraintStart_toStartOf="@+id/category6_txt"
                         app:layout_constraintTop_toBottomOf="@+id/category6_txt" />
 
@@ -653,7 +653,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:rating="3.7"
+                        android:rating="3.4"
                         app:layout_constraintStart_toStartOf="@+id/category7_txt"
                         app:layout_constraintTop_toBottomOf="@+id/category7_txt" />
 
@@ -741,7 +741,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:rating="3.7"
+                        android:rating="4.0"
                         app:layout_constraintStart_toStartOf="@+id/category8_txt"
                         app:layout_constraintTop_toBottomOf="@+id/category8_txt" />
 
@@ -829,7 +829,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:rating="3.7"
+                        android:rating="3.0"
                         app:layout_constraintStart_toStartOf="@+id/category9_txt"
                         app:layout_constraintTop_toBottomOf="@+id/category9_txt" />
 
@@ -873,12 +873,14 @@
                 android:layout_width="0dp"
                 android:layout_height="180dp"
                 android:layout_marginTop="64dp"
+                android:layout_marginBottom="40dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 app:cardBackgroundColor="#19BCAC"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="8dp"
                 app:cardPreventCornerOverlap="true"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/category9_container"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
@@ -956,448 +958,6 @@
                 app:layout_constraintEnd_toEndOf="@+id/category10_container"
                 app:layout_constraintTop_toTopOf="@+id/category10_container" />
 
-<!--            <androidx.cardview.widget.CardView-->
-<!--                android:id="@+id/category11_container"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="180dp"-->
-<!--                android:layout_marginTop="64dp"-->
-<!--                android:layout_marginStart="16dp"-->
-<!--                android:layout_marginEnd="16dp"-->
-<!--                app:cardBackgroundColor="#8FBC8F"-->
-<!--                app:cardCornerRadius="16dp"-->
-<!--                app:cardElevation="8dp"-->
-<!--                app:cardPreventCornerOverlap="true"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/category10_container"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent">-->
-
-<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                    android:id="@+id/category11"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:background="?attr/selectableItemBackground"-->
-<!--                    android:clickable="true"-->
-<!--                    android:focusable="true">-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/category11_txt"-->
-<!--                        android:layout_width="210dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginStart="16dp"-->
-<!--                        android:layout_marginTop="24dp"-->
-<!--                        android:layout_marginBottom="24dp"-->
-<!--                        android:fontFamily="@font/poppins_medium"-->
-<!--                        android:includeFontPadding="false"-->
-<!--                        android:text="@string/al_anjal_national_schools"-->
-<!--                        android:textAlignment="textStart"-->
-<!--                        android:textAllCaps="false"-->
-<!--                        android:textColor="@android:color/white"-->
-<!--                        android:textSize="15sp"-->
-<!--                        android:textStyle="bold"-->
-<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                        app:layout_constraintStart_toStartOf="parent"-->
-<!--                        app:layout_constraintTop_toTopOf="parent"-->
-<!--                        app:layout_constraintVertical_bias="0.0" />-->
-
-<!--                    <RatingBar-->
-<!--                        android:id="@+id/category11_rate"-->
-<!--                        style="@style/Widget.AppCompat.RatingBar.Small"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginTop="4dp"-->
-<!--                        android:rating="3.7"-->
-<!--                        app:layout_constraintStart_toStartOf="@+id/category11_txt"-->
-<!--                        app:layout_constraintTop_toBottomOf="@+id/category11_txt" />-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/category11_desc2"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginEnd="12dp"-->
-<!--                        android:layout_marginTop="12dp"-->
-<!--                        android:fontFamily="@font/poppins_light"-->
-<!--                        android:includeFontPadding="false"-->
-<!--                        android:text="@string/education11_desc"-->
-<!--                        android:textAlignment="textStart"-->
-<!--                        android:textAllCaps="false"-->
-<!--                        android:textColor="@color/app_logo_background"-->
-<!--                        android:textSize="11sp"-->
-<!--                        android:textStyle="normal"-->
-<!--                        app:layout_constraintEnd_toEndOf="parent"-->
-<!--                        app:layout_constraintStart_toStartOf="@+id/category11_rate"-->
-<!--                        app:layout_constraintTop_toBottomOf="@+id/category11_rate"-->
-<!--                        tools:ignore="SmallSp" />-->
-
-<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<!--            </androidx.cardview.widget.CardView>-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/category11_img"-->
-<!--                android:layout_width="120dp"-->
-<!--                android:layout_height="120dp"-->
-<!--                android:layout_marginEnd="24dp"-->
-<!--                android:scaleType="centerInside"-->
-<!--                android:elevation="10dp"-->
-<!--                android:src="@drawable/alanjal"-->
-<!--                app:layout_constraintBottom_toTopOf="@+id/category11_container"-->
-<!--                app:layout_constraintEnd_toEndOf="@+id/category11_container"-->
-<!--                app:layout_constraintTop_toTopOf="@+id/category11_container" />-->
-
-<!--            <androidx.cardview.widget.CardView-->
-<!--                android:id="@+id/category12_container"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="180dp"-->
-<!--                android:layout_marginTop="64dp"-->
-<!--                android:layout_marginStart="16dp"-->
-<!--                android:layout_marginEnd="16dp"-->
-<!--                app:cardBackgroundColor="#FF8A80"-->
-<!--                app:cardCornerRadius="16dp"-->
-<!--                app:cardElevation="8dp"-->
-<!--                app:cardPreventCornerOverlap="true"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/category11_container"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent">-->
-
-<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                    android:id="@+id/category12"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:background="?attr/selectableItemBackground"-->
-<!--                    android:clickable="true"-->
-<!--                    android:focusable="true">-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/category12_txt"-->
-<!--                        android:layout_width="210dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginStart="16dp"-->
-<!--                        android:layout_marginTop="24dp"-->
-<!--                        android:layout_marginBottom="24dp"-->
-<!--                        android:fontFamily="@font/poppins_medium"-->
-<!--                        android:includeFontPadding="false"-->
-<!--                        android:text="@string/future_vision_private_schools"-->
-<!--                        android:textAlignment="textStart"-->
-<!--                        android:textAllCaps="false"-->
-<!--                        android:textColor="@android:color/white"-->
-<!--                        android:textSize="15sp"-->
-<!--                        android:textStyle="bold"-->
-<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                        app:layout_constraintStart_toStartOf="parent"-->
-<!--                        app:layout_constraintTop_toTopOf="parent"-->
-<!--                        app:layout_constraintVertical_bias="0.0" />-->
-
-<!--                    <RatingBar-->
-<!--                        android:id="@+id/category12_rate"-->
-<!--                        style="@style/Widget.AppCompat.RatingBar.Small"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginTop="4dp"-->
-<!--                        android:rating="3.7"-->
-<!--                        app:layout_constraintStart_toStartOf="@+id/category12_txt"-->
-<!--                        app:layout_constraintTop_toBottomOf="@+id/category12_txt" />-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/category12_desc2"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginEnd="12dp"-->
-<!--                        android:layout_marginTop="12dp"-->
-<!--                        android:fontFamily="@font/poppins_light"-->
-<!--                        android:includeFontPadding="false"-->
-<!--                        android:text="@string/education12_desc"-->
-<!--                        android:textAlignment="textStart"-->
-<!--                        android:textAllCaps="false"-->
-<!--                        android:textColor="@color/app_logo_background"-->
-<!--                        android:textSize="11sp"-->
-<!--                        android:textStyle="normal"-->
-<!--                        app:layout_constraintEnd_toEndOf="parent"-->
-<!--                        app:layout_constraintStart_toStartOf="@+id/category12_rate"-->
-<!--                        app:layout_constraintTop_toBottomOf="@+id/category12_rate"-->
-<!--                        tools:ignore="SmallSp" />-->
-
-
-<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<!--            </androidx.cardview.widget.CardView>-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/category12_img"-->
-<!--                android:layout_width="120dp"-->
-<!--                android:layout_height="120dp"-->
-<!--                android:layout_marginEnd="24dp"-->
-<!--                android:scaleType="centerInside"-->
-<!--                android:elevation="10dp"-->
-<!--                android:src="@drawable/future"-->
-<!--                app:layout_constraintBottom_toTopOf="@+id/category12_container"-->
-<!--                app:layout_constraintEnd_toEndOf="@+id/category12_container"-->
-<!--                app:layout_constraintTop_toTopOf="@+id/category12_container" />-->
-
-<!--            <androidx.cardview.widget.CardView-->
-<!--                android:id="@+id/category13_container"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="180dp"-->
-<!--                android:layout_marginTop="64dp"-->
-<!--                android:layout_marginStart="16dp"-->
-<!--                android:layout_marginEnd="16dp"-->
-<!--                app:cardBackgroundColor="#A5D6A7"-->
-<!--                app:cardCornerRadius="16dp"-->
-<!--                app:cardElevation="8dp"-->
-<!--                app:cardPreventCornerOverlap="true"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/category12_container"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent">-->
-
-<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                    android:id="@+id/category13"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:background="?attr/selectableItemBackground"-->
-<!--                    android:clickable="true"-->
-<!--                    android:focusable="true">-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/category13_txt"-->
-<!--                        android:layout_width="210dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginStart="16dp"-->
-<!--                        android:layout_marginTop="24dp"-->
-<!--                        android:layout_marginBottom="24dp"-->
-<!--                        android:fontFamily="@font/poppins_medium"-->
-<!--                        android:includeFontPadding="false"-->
-<!--                        android:text="@string/al_anjal_national_schools"-->
-<!--                        android:textAlignment="textStart"-->
-<!--                        android:textAllCaps="false"-->
-<!--                        android:textColor="@android:color/white"-->
-<!--                        android:textSize="15sp"-->
-<!--                        android:textStyle="bold"-->
-<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                        app:layout_constraintStart_toStartOf="parent"-->
-<!--                        app:layout_constraintTop_toTopOf="parent"-->
-<!--                        app:layout_constraintVertical_bias="0.0" />-->
-
-<!--                    <RatingBar-->
-<!--                        android:id="@+id/category13_rate"-->
-<!--                        style="@style/Widget.AppCompat.RatingBar.Small"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginTop="4dp"-->
-<!--                        android:rating="3.7"-->
-<!--                        app:layout_constraintStart_toStartOf="@+id/category13_txt"-->
-<!--                        app:layout_constraintTop_toBottomOf="@+id/category13_txt" />-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/category13_desc2"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginEnd="12dp"-->
-<!--                        android:layout_marginTop="12dp"-->
-<!--                        android:fontFamily="@font/poppins_light"-->
-<!--                        android:includeFontPadding="false"-->
-<!--                        android:text="@string/education13_desc"-->
-<!--                        android:textAlignment="textStart"-->
-<!--                        android:textAllCaps="false"-->
-<!--                        android:textColor="@color/app_logo_background"-->
-<!--                        android:textSize="11sp"-->
-<!--                        android:textStyle="normal"-->
-<!--                        app:layout_constraintEnd_toEndOf="parent"-->
-<!--                        app:layout_constraintStart_toStartOf="@+id/category13_rate"-->
-<!--                        app:layout_constraintTop_toBottomOf="@+id/category13_rate"-->
-<!--                        tools:ignore="SmallSp" />-->
-
-<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<!--            </androidx.cardview.widget.CardView>-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/category13_img"-->
-<!--                android:layout_width="120dp"-->
-<!--                android:layout_height="120dp"-->
-<!--                android:layout_marginEnd="24dp"-->
-<!--                android:scaleType="centerInside"-->
-<!--                android:elevation="10dp"-->
-<!--                android:src="@drawable/alanjal"-->
-<!--                app:layout_constraintBottom_toTopOf="@+id/category13_container"-->
-<!--                app:layout_constraintEnd_toEndOf="@+id/category13_container"-->
-<!--                app:layout_constraintTop_toTopOf="@+id/category13_container" />-->
-
-<!--            <androidx.cardview.widget.CardView-->
-<!--                android:id="@+id/category14_container"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="180dp"-->
-<!--                android:layout_marginTop="64dp"-->
-<!--                android:layout_marginStart="16dp"-->
-<!--                android:layout_marginEnd="16dp"-->
-<!--                app:cardBackgroundColor="#D81B60"-->
-<!--                app:cardCornerRadius="16dp"-->
-<!--                app:cardElevation="8dp"-->
-<!--                app:cardPreventCornerOverlap="true"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/category13_container"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent">-->
-
-<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                    android:id="@+id/category14"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:background="?attr/selectableItemBackground"-->
-<!--                    android:clickable="true"-->
-<!--                    android:focusable="true">-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/category14_txt"-->
-<!--                        android:layout_width="210dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginStart="16dp"-->
-<!--                        android:layout_marginTop="24dp"-->
-<!--                        android:layout_marginBottom="24dp"-->
-<!--                        android:fontFamily="@font/poppins_medium"-->
-<!--                        android:includeFontPadding="false"-->
-<!--                        android:text="@string/future_vision_private_schools"-->
-<!--                        android:textAlignment="textStart"-->
-<!--                        android:textAllCaps="false"-->
-<!--                        android:textColor="@android:color/white"-->
-<!--                        android:textSize="15sp"-->
-<!--                        android:textStyle="bold"-->
-<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                        app:layout_constraintStart_toStartOf="parent"-->
-<!--                        app:layout_constraintTop_toTopOf="parent"-->
-<!--                        app:layout_constraintVertical_bias="0.0" />-->
-
-<!--                    <RatingBar-->
-<!--                        android:id="@+id/category14_rate"-->
-<!--                        style="@style/Widget.AppCompat.RatingBar.Small"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginTop="4dp"-->
-<!--                        android:rating="3.7"-->
-<!--                        app:layout_constraintStart_toStartOf="@+id/category14_txt"-->
-<!--                        app:layout_constraintTop_toBottomOf="@+id/category14_txt" />-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/category14_desc2"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginEnd="12dp"-->
-<!--                        android:layout_marginTop="12dp"-->
-<!--                        android:fontFamily="@font/poppins_light"-->
-<!--                        android:includeFontPadding="false"-->
-<!--                        android:text="@string/education14_desc"-->
-<!--                        android:textAlignment="textStart"-->
-<!--                        android:textAllCaps="false"-->
-<!--                        android:textColor="@color/app_logo_background"-->
-<!--                        android:textSize="11sp"-->
-<!--                        android:textStyle="normal"-->
-<!--                        app:layout_constraintEnd_toEndOf="parent"-->
-<!--                        app:layout_constraintStart_toStartOf="@+id/category14_rate"-->
-<!--                        app:layout_constraintTop_toBottomOf="@+id/category14_rate"-->
-<!--                        tools:ignore="SmallSp" />-->
-
-<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<!--            </androidx.cardview.widget.CardView>-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/category14_img"-->
-<!--                android:layout_width="120dp"-->
-<!--                android:layout_height="120dp"-->
-<!--                android:layout_marginEnd="24dp"-->
-<!--                android:scaleType="centerInside"-->
-<!--                android:elevation="10dp"-->
-<!--                android:src="@drawable/future"-->
-<!--                app:layout_constraintBottom_toTopOf="@+id/category14_container"-->
-<!--                app:layout_constraintEnd_toEndOf="@+id/category14_container"-->
-<!--                app:layout_constraintTop_toTopOf="@+id/category14_container" />-->
-
-<!--            <androidx.cardview.widget.CardView-->
-<!--                android:id="@+id/category15_container"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="180dp"-->
-<!--                android:layout_marginTop="64dp"-->
-<!--                android:layout_marginStart="16dp"-->
-<!--                android:layout_marginEnd="16dp"-->
-<!--                android:layout_marginBottom="40dp"-->
-<!--                app:cardBackgroundColor="#2F4F4F"-->
-<!--                app:cardCornerRadius="16dp"-->
-<!--                app:cardElevation="8dp"-->
-<!--                app:cardPreventCornerOverlap="true"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/category14_container"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent">-->
-
-<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                    android:id="@+id/category15"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:background="?attr/selectableItemBackground"-->
-<!--                    android:clickable="true"-->
-<!--                    android:focusable="true">-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/category15_txt"-->
-<!--                        android:layout_width="210dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginStart="16dp"-->
-<!--                        android:layout_marginTop="24dp"-->
-<!--                        android:layout_marginBottom="24dp"-->
-<!--                        android:fontFamily="@font/poppins_medium"-->
-<!--                        android:includeFontPadding="false"-->
-<!--                        android:text="@string/al_anjal_national_schools"-->
-<!--                        android:textAlignment="textStart"-->
-<!--                        android:textAllCaps="false"-->
-<!--                        android:textColor="@android:color/white"-->
-<!--                        android:textSize="15sp"-->
-<!--                        android:textStyle="bold"-->
-<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                        app:layout_constraintStart_toStartOf="parent"-->
-<!--                        app:layout_constraintTop_toTopOf="parent"-->
-<!--                        app:layout_constraintVertical_bias="0.0" />-->
-
-<!--                    <RatingBar-->
-<!--                        android:id="@+id/category15_rate"-->
-<!--                        style="@style/Widget.AppCompat.RatingBar.Small"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginTop="4dp"-->
-<!--                        android:rating="3.7"-->
-<!--                        app:layout_constraintStart_toStartOf="@+id/category15_txt"-->
-<!--                        app:layout_constraintTop_toBottomOf="@+id/category15_txt" />-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/category15_desc2"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginEnd="12dp"-->
-<!--                        android:layout_marginTop="12dp"-->
-<!--                        android:fontFamily="@font/poppins_light"-->
-<!--                        android:includeFontPadding="false"-->
-<!--                        android:text="@string/education15_desc"-->
-<!--                        android:textAlignment="textStart"-->
-<!--                        android:textAllCaps="false"-->
-<!--                        android:textColor="@color/app_logo_background"-->
-<!--                        android:textSize="11sp"-->
-<!--                        android:textStyle="normal"-->
-<!--                        app:layout_constraintEnd_toEndOf="parent"-->
-<!--                        app:layout_constraintStart_toStartOf="@+id/category15_rate"-->
-<!--                        app:layout_constraintTop_toBottomOf="@+id/category15_rate"-->
-<!--                        tools:ignore="SmallSp" />-->
-
-<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<!--            </androidx.cardview.widget.CardView>-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/category15_img"-->
-<!--                android:layout_width="120dp"-->
-<!--                android:layout_height="120dp"-->
-<!--                android:layout_marginEnd="24dp"-->
-<!--                android:scaleType="centerInside"-->
-<!--                android:elevation="10dp"-->
-<!--                android:src="@drawable/alanjal"-->
-<!--                app:layout_constraintBottom_toTopOf="@+id/category15_container"-->
-<!--                app:layout_constraintEnd_toEndOf="@+id/category15_container"-->
-<!--                app:layout_constraintTop_toTopOf="@+id/category15_container" />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

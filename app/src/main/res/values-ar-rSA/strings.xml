@@ -160,7 +160,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="select_lang">اختر لغة</string>
-    <string name="king_faisal_university">جامعة الملك فيصل (KFU)</string>
+    <string name="king_faisal_university">جامعة الملك فيصل </string>
     <string name="imam_muhammad_bin_saud_islamic_university">جامعة الامام محمد بن سعود</string>
     <string name="king_suad_university">جامعة الملك سعود</string>
     <string name="arab_open_university">جامعة العربية المفنوحة</string>
@@ -178,7 +178,7 @@
     <string name="tendrliune">تيندرلايون</string>
     <string name="restaurents">المطاعم</string>
     <string name="horn">هورن</string>
-    <string name="featured_locations_description" translatable="false">هنا الاماكن السياحية الاكثر شهرة في المنطقة حيث تعتبر الاعلى تقيماً والاكثر زيارة.</string>
+    <string name="featured_locations_description">هنا الاماكن السياحية الاكثر شهرة في المنطقة حيث تعتبر الاعلى تقيماً والاكثر زيارة.</string>
     <!-- فنادق-->
     <string name="hotel">فنادق </string>
     <string name="triple_tree_hotel">تريبل تري</string>
@@ -248,16 +248,16 @@
     <string name="fromc">العملة الاولى</string>
     <string name="result1">النتيجة</string>
     <string name="toc">العملة الثانية</string>
-    <string name="education1_desc">d</string>
-    <string name="education2_desc">d</string>
-    <string name="education3_desc">d</string>
-    <string name="education4_desc">d</string>
-    <string name="education5_desc">d</string>
-    <string name="education6_desc">d</string>
-    <string name="education7_desc">d</string>
-    <string name="education8_desc">d</string>
-    <string name="education9_desc">d</string>
-    <string name="education10_desc">d</string>
+    <string name="education1_desc">تم إنشاء جامعة الملك فيصل في تاريخ 28 / 7/ 1395هـ (1975م)، ويقع المقر الرئيسي للجامعة في مدينة الهفوف في الأحساء. كليات الجامعة: كلية الطب، كلية إدارة الأعمال، كلية علوم الحاسب وتقنية المعلومات، كلية الهندسة، كلية الآداب، كلية الحقوق و كلية الصيدلة الإكلينيكية، و غيرها.</string>
+    <string name="education2_desc">كلية الشريعة والدراسات الإسلامية بالأحساء هي إحدى فروع جامعة الإمام محمد بن سعود الإسلامية تم تأسيس كلية الشريعة بالأحساء في عام 1400 هـ.</string>
+    <string name="education3_desc">هي جامعة حكومية متخصصة في العلوم الصحية وتحظى باعتماد وزارة التعليم في المملكة العربية السعودية لمختلف برامجها لمرحلتي البكالوريوس والدراسات العليا</string>
+    <string name="education4_desc">" هي جامعة عربية إقليمية غير ربحية، انبثقت فكرتها على يد مؤسسها الأمير طلال بن عبدالعزيز حين أعلن في عام 1996 عن مبادرته لإنشاء جامعة عربية مفتوحة ككيان أكاديمي تعليمي غير تقليدي."</string>
+    <string name="education5_desc">إنه معهد على أحدث طراز يلهم شغف التدريب المتميز ، وبرامج التدريب ذات المستوى العالمي. وهي نتيجة شراكة إستراتيجية بين أرامكو السعودية (SA) والمؤسسة العامة للتدريب التقني والمهني (TVTC).</string>
+    <string name="education6_desc">تركز الكلية أساسًا على التدريب التقني والمهني لإعداد الطلاب للمهن. وهي واحدة من الكليات التقنية التي تحكمها المؤسسة العامة للتدريب التقني والمهني، المزود الحكومي للتدريب في المملكة السعودية.</string>
+    <string name="education7_desc">يتمثل نشاط شركة الخليج للتدريب والتعليم في تقديم دورات تدريبية في مجال اللغة الإنجليزية وعلوم الحاسب الآلي، وتقنية المعلومات وعلوم الإدارة.</string>
+    <string name="education8_desc">يعتبر أسلوب وول ستريت خليطا من أساليب تعليم اللغة، حيث تقدم الدروس التفاعلية مع الفصول التقليدية، مدرسون من أهل اللغة، بالإضافة إلى الأنشطة الترفيهية.</string>
+    <string name="education9_desc">بدأت المدارس نشاطها في العام الدراسي 1985/ 1986 بعدد قليل من الطلاب لم يتجاوز 200 طالب، وبنهاية العام الدراسي بلغ إجمالي عدد الطلاب في المدارس 500 طالب.</string>
+    <string name="education10_desc">تقديم خدمات تربوية وتعليمية ذات جودة عالية من خلال بنية تربوية تعزز فرص الطلاب في التعليم التعاوني والتواصل من خلال الاستخدام الأمثل للتقنية الحديثة وبمشاركة مجتمعية.</string>
 <!--    <string name="education11_desc">d</string>-->
 <!--    <string name="education12_desc">d</string>-->
 <!--    <string name="education13_desc">d</string>-->
@@ -290,6 +290,6 @@
     <string name="m">العظمى</string>
     <string name="n">الصغرى</string>
     <string name="error">الرجاء التأكد من ادخال رقم.</string>
-
+    <string name="errorWIFI">الرجاء الاتصال بالانترنت</string>
 
 </resources>

@@ -165,7 +165,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="select_lang">select language</string>
-    <string name="king_faisal_university">King Faisal University (KFU)</string>
+    <string name="king_faisal_university">King Faisal University</string>
     <string name="imam_muhammad_bin_saud_islamic_university">Imam Muhammad Bin Saud Islamic University</string>
     <string name="king_suad_university">King Saud University</string>
     <string name="arab_open_university">Arab Open University</string>
@@ -256,16 +256,16 @@
     <string name="m">MAX</string>
     <string name="n">MIN</string>
     <string name="error">Please Enter the number here</string>
-    <string name="education1_desc">d</string>
-    <string name="education2_desc">d</string>
-    <string name="education3_desc">d</string>
-    <string name="education4_desc">d</string>
-    <string name="education5_desc">d</string>
-    <string name="education6_desc">d</string>
-    <string name="education7_desc">d</string>
-    <string name="education8_desc">d</string>
-    <string name="education9_desc">d</string>
-    <string name="education10_desc">d</string>
+    <string name="education1_desc">King Faisal University was established on 7/28/1395 AH (1975 AD), University colleges: College of Medicine, College of Business Administration, College of Computer Science and Information Technology, College of Engineering, College of Arts, College of Law and College of Clinical Pharmacy, and others.</string>
+    <string name="education2_desc">The College of Sharia and Islamic Studies in Al-Ahsa is one of the branches of Imam Muhammad bin Saud Islamic University. The College of Sharia in Al-Ahsa was established in the year 1400 AH.</string>
+    <string name="education3_desc">It is a university specialized in health sciences and has the accreditation of the Ministry of Education in the Kingdom of Saudi Arabia for its various programs for the undergraduate and postgraduate levels.</string>
+    <string name="education4_desc">It is a non-profit, regional Arab university. Its idea emerged from its founder, Prince Talal bin Abdulaziz, when he announced in 1996 his initiative to establish an Arab Open University as a non-traditional academic entity.</string>
+    <string name="education5_desc">It is a state of the art institute that inspires passion for training excellence, world-class training programs. It is the result of a strategic partnership between Saudi Aramco (SA) and the Technical and Vocational Training Corporation (TVTC).</string>
+    <string name="education6_desc">The college mainly focuses on technical and vocational training to prepare students for careers. It is governed by the Technical and Vocational Training Corporation, the government provider of training in the Kingdom of Saudi Arabia.</string>
+    <string name="education7_desc">The activity of the Gulf Training and Education Company is to provide training courses in the fields of English language, computer science, information technology and management sciences.</string>
+    <string name="education8_desc">Wall Street Style is a mix of language teaching methods, offering interactive lessons with traditional classes, native language teachers, and fun activities.</string>
+    <string name="education9_desc">Schools started their activities in the academic year 1985/1986 with a small number of students that did not exceed 200 students, and by the end of the academic year the total number of students in schools reached 500 students.</string>
+    <string name="education10_desc">Providing high quality educational services through an educational structure that enhances students opportunities in cooperative education and communication through optimal use of modern technology and community participation.</string>
 <!--    <string name="education11_desc">d</string>-->
 <!--    <string name="education12_desc">d</string>-->
 <!--    <string name="education13_desc">d</string>-->
