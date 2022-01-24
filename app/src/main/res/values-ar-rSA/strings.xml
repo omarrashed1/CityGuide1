@@ -284,7 +284,12 @@
     <string name="resturant8_desc">احد اشهر المطاعم التي تقدم الستيك مع البرجر مع خدمة الطلب البحري المتوفره في المطعم</string>
     <string name="resturant9_desc">من اعرق المطاعم في الاحساء يمتاز بتنوع الاطباق الشهية و يمتاز بتصميم عصري رائع</string>
     <string name="resturant10_desc">يمتاز مطعم خيبر في الاحساء بالماكولات الشعبية مع التصميم التراثي الجميل</string>
-
+    <string name="WeatherS">حالة الطقس</string>
+    <string name="alahsaWeather">الأحساء</string>
+    <string name="loding">جاري التحميل ..</string>
+    <string name="m">العظمى</string>
+    <string name="n">الصغرى</string>
+    <string name="error">الرجاء التأكد من ادخال رقم.</string>
 
 
 </resources>

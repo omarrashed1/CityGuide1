@@ -100,7 +100,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
         imgBtnSh = findViewById(R.id.imgBtnSh);
         w1 = findViewById(R.id.weathercard);
         categories_background =findViewById(R.id.categories_background);
-        test1 = findViewById(R.id.test1);
+
 
         w1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -331,8 +331,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                             }
 
 
-//                            String icon = weather.get(0).getAsJsonObject().get("icon").getAsString();
-                            String icon = test1.getText().toString();
+                            String icon = weather.get(0).getAsJsonObject().get("icon").getAsString();
                             loadicon(icon);
 
 //                            JsonObject sys = result.get("sys").getAsJsonObject();
@@ -408,27 +407,31 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
 
                 iconWeather.setImageResource(R.drawable.sun);
                 categories_background.setBackgroundResource(R.drawable.clear1);
+
                 break;
 
                 case "01n":
+                    categories_background.setBackgroundResource(R.drawable.clearnight);
                 iconWeather.setImageResource(R.drawable.moon);
                 break;
 
                 case "02d":
-                 categories_background.setBackgroundResource(R.drawable.fewclouds);
+                 categories_background.setBackgroundResource(R.drawable.scatteredclouds);
                 iconWeather.setImageResource( R.drawable.cloudyday);
                 break;
 
                 case "02n":
+                    categories_background.setBackgroundResource(R.drawable.scatteredcloudsnight);
                 iconWeather.setImageResource( R.drawable.night);
                 break;
 
                 case "03d":
-                    categories_background.setBackgroundResource(R.drawable.scatteredclouds);
+                    categories_background.setBackgroundResource(R.drawable.fewclouds);
                 iconWeather.setImageResource( R.drawable.cloudy);
                 break;
 
                 case "03n":
+                    categories_background.setBackgroundResource(R.drawable.fewcloudsnight);
                 iconWeather.setImageResource( R.drawable.cloudy);
                 break;
 
@@ -438,6 +441,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                 break;
 
                 case "04n":
+                    categories_background.setBackgroundResource(R.drawable.brokencloudsnight);
                 iconWeather.setImageResource( R.drawable.cloudcomputing);
                 break;
 
@@ -447,6 +451,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                 break;
 
                 case "09n":
+                    categories_background.setBackgroundResource(R.drawable.showerrainaight);
                 iconWeather.setImageResource( R.drawable.rainy);
                 break;
 
@@ -456,6 +461,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                 break;
 
                 case "10n":
+                    categories_background.setBackgroundResource(R.drawable.rainight);
                 iconWeather.setImageResource( R.drawable.rainynight);
                 break;
 
@@ -465,6 +471,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                 break;
 
                 case "11n":
+                    categories_background.setBackgroundResource(R.drawable.thunderstormnight);
                  iconWeather.setImageResource( R.drawable.thunderstorm);
                  break;
 
@@ -474,6 +481,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                  break;
 
                  case "13n":
+                     categories_background.setBackgroundResource(R.drawable.snownight);
                  iconWeather.setImageResource( R.drawable.snowflake);
                  break;
 
@@ -483,6 +491,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                  break;
 
                  case "50n":
+                     categories_background.setBackgroundResource(R.drawable.mistnight);
                  iconWeather.setImageResource( R.drawable.mist);
                  break;
 
