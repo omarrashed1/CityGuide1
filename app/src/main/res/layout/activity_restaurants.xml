@@ -127,7 +127,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:rating="4.2"
+                        android:rating="4.7"
                         app:layout_constraintStart_toStartOf="@+id/category1_txt"
                         app:layout_constraintTop_toBottomOf="@+id/category1_txt" />
 
@@ -139,7 +139,7 @@
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/poppins_light"
                         android:includeFontPadding="false"
-                        android:text="@string/resturant2_desc"
+                        android:text="@string/resturant1_desc"
                         android:textAlignment="textStart"
                         android:textAllCaps="false"
                         android:textColor="@color/app_logo_background"
@@ -215,7 +215,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:rating="3.7"
+                        android:rating="3.1"
                         app:layout_constraintStart_toStartOf="@+id/category2_txt"
                         app:layout_constraintTop_toBottomOf="@+id/category2_txt" />
 
@@ -303,7 +303,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:rating="3.7"
+                        android:rating="3.0"
                         app:layout_constraintStart_toStartOf="@+id/category3_txt"
                         app:layout_constraintTop_toBottomOf="@+id/category3_txt" />
 
@@ -567,7 +567,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:rating="3.7"
+                        android:rating="3.9"
                         app:layout_constraintStart_toStartOf="@+id/category6_txt"
                         app:layout_constraintTop_toBottomOf="@+id/category6_txt" />
 
@@ -656,7 +656,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:rating="3.7"
+                        android:rating="3.5"
                         app:layout_constraintStart_toStartOf="@+id/category7_txt"
                         app:layout_constraintTop_toBottomOf="@+id/category7_txt" />
 
@@ -702,7 +702,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="64dp"
                 android:layout_marginEnd="16dp"
-                app:cardBackgroundColor="@color/allCategory2"
+                app:cardBackgroundColor="#504747"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="8dp"
                 app:cardPreventCornerOverlap="true"
@@ -744,7 +744,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:rating="3.7"
+                        android:rating="3.9"
                         app:layout_constraintStart_toStartOf="@+id/category8_txt"
                         app:layout_constraintTop_toBottomOf="@+id/category8_txt" />
 
@@ -752,8 +752,8 @@
                         android:id="@+id/category8_desc2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
                         android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
                         android:fontFamily="@font/poppins_light"
                         android:includeFontPadding="false"
                         android:text="@string/resturant8_desc"
@@ -840,8 +840,8 @@
                         android:id="@+id/category9_desc2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
                         android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
                         android:fontFamily="@font/poppins_light"
                         android:includeFontPadding="false"
                         android:text="@string/resturant9_desc"
@@ -852,8 +852,10 @@
                         android:textStyle="normal"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="@+id/category9_rate"
                         app:layout_constraintTop_toBottomOf="@+id/category9_rate"
+                        app:layout_constraintVertical_bias="0.0"
                         tools:ignore="SmallSp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -923,7 +925,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:rating="3.7"
+                        android:rating="3.5"
                         app:layout_constraintStart_toStartOf="@+id/category10_txt"
                         app:layout_constraintTop_toBottomOf="@+id/category10_txt" />
 

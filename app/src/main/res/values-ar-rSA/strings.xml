@@ -248,12 +248,6 @@
     <string name="fromc">العملة الاولى</string>
     <string name="result1">النتيجة</string>
     <string name="toc">العملة الثانية</string>
-    <string name="alahsaWeather">الاحساء</string>
-    <string name="WeatherS">حالة الطقس</string>
-    <string name="loding">جاري التحميل ..</string>
-    <string name="m">العظمى</string>
-    <string name="n">الصغرى</string>
-    <string name="error">اها اخلص حط رقم عاد</string>
     <string name="education1_desc">d</string>
     <string name="education2_desc">d</string>
     <string name="education3_desc">d</string>
@@ -269,16 +263,7 @@
 <!--    <string name="education13_desc">d</string>-->
 <!--    <string name="education14_desc">d</string>-->
 <!--    <string name="education15_desc">d</string>-->
-    <string name="resturant1_desc">r</string>
-    <string name="resturant2_desc">r</string>
-    <string name="resturant3_desc">r</string>
-    <string name="resturant4_desc">r</string>
-    <string name="resturant5_desc">r</string>
-    <string name="resturant6_desc">r</string>
-    <string name="resturant7_desc">r</string>
-    <string name="resturant8_desc">r</string>
-    <string name="resturant9_desc">r</string>
-    <string name="resturant10_desc">r</string>
+
     <string name="hotel9_desc">تقع منازل لينا للوحدات السكنية في الهفوف على بعد 8 كم من الأحساء، وتوفر صالة مشتركة وخدمة الواي فاي المجانية. تحتوي كل وحدة على مطبخ مجهز بالكامل مع ميكروويف ومدفأة ومنطقة جلوس</string>
     <string name="hotel10_desc">يقع فندق الكوت التراثي في الهفوف، وهو مكان إقامة مصنف 4 نجوم، كما تشمل المرافق المتوفرة في مكان الإقامة هذا مطعماً ومكتباً للاستقبال يعمل على مدار الساعة</string>
     <string name="hotel1_desc">يوفرتريبل تري مكان إقامة في الهفوف. يوفر مكان الإقامة هذا خدمة الواي فاي المجانية وسوبر ماركت وخدمة تأجير السيارات.</string>
@@ -289,7 +274,17 @@
     <string name="hotel6_desc">يتم تقديم خدمتي الواي فاي وركن السيارات مجانا في شقة فندقية، وهناك أيضا خدمة التنظيف الجاف. تشمل جميع الغرف مطابخ مُصغّرة وأجهزة تلفاز إل سي دي</string>
     <string name="hotel7_desc">كما تقدم تالين السليمانية العديد من المرافق لإثراء إقامتك. يوفر الفندق غرفة عائلية ومقهى وصناديق ودائع آمنة</string>
     <string name="hotel8_desc">يقع فندق جاردن بلازا في الهفوف وفي وسط مدينة الأحساء، ويمكن للضيوف التمتع بالمطعم الموجود في الموقع، وتتوفر مواقف خاصة ومجانية للسيارات في الموقع</string>
+    <string name="resturant1_desc">مطعم أمريكي في الأحساء متخصص في صنع الستيك بالطريقة التي تحبها، يقدم أجود أنواع البرجر والستيك مكان مناسب للقاء العائلة و الاصدقاء</string>
+    <string name="resturant2_desc">الاحساء جريل مطعم متخصص في بيع اشهى اللحوم مع وجود شيف متخصص في المجال</string>
+    <string name="resturant3_desc">مطعم الكيت من اشهر المطاعم في الاحساء في تقديم الاكلات البحرية الطازجة ، مع توفر مكان مناسب للعايلة والافراد</string>
+    <string name="resturant4_desc">مطعم يختص بتقديم الذ الاطباق الايطالية ويمتاز بتقديم مكونات طازجه بطريقة عصرية ويعتبر من افضل المطاعم الايطالية في الاحساء.</string>
+    <string name="resturant5_desc">"يشتهر مطعم لافا في الاحساء بتقديم اطباق متنوعه مع الحفاظ بجودة الطعام المقدم، تصميم المكان عصري و جذاب للزوار للاستمتاع به "</string>
+    <string name="resturant6_desc">من اشهر الكافيهات المتواجد في الاحساء في تقديم المشروبات البارده والساخنه مع الذ الدونات التي ستاكولها.</string>
+    <string name="resturant7_desc">مطعم بهارات في الاحساء يقدم الذ الماكولات الهنديه مع تصميم عصري يناسب الجميع</string>
+    <string name="resturant8_desc">احد اشهر المطاعم التي تقدم الستيك مع البرجر مع خدمة الطلب البحري المتوفره في المطعم</string>
+    <string name="resturant9_desc">من اعرق المطاعم في الاحساء يمتاز بتنوع الاطباق الشهية و يمتاز بتصميم عصري رائع</string>
+    <string name="resturant10_desc">يمتاز مطعم خيبر في الاحساء بالماكولات الشعبية مع التصميم التراثي الجميل</string>
 
-    <string name="errorWIFI">الرجاء الاتصال بالانترنت</string>
+
 
 </resources>
