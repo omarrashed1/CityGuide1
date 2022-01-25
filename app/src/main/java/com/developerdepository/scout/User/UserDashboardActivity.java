@@ -1,37 +1,50 @@
 package com.developerdepository.scout.User;
 
+import static com.developerdepository.scout.R.drawable.house;
+
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Spinner;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.CategoriesAdapter;
-import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.CategoriesModel;
+import com.bumptech.glide.Glide;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.FeaturedLocationsAdapter;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.FeaturedModel;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.MostViewedLocationsAdapter;
 import com.developerdepository.scout.HelperClasses.DashboardHelperClasses.MostViewedModel;
 import com.developerdepository.scout.R;
 import com.google.android.material.navigation.NavigationView;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
 import com.shreyaspatil.MaterialDialog.MaterialDialog;
 import com.shreyaspatil.MaterialDialog.interfaces.DialogInterface;
 
+import org.apache.commons.lang3.StringUtils;
+
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -40,24 +53,24 @@ import maes.tech.intentanim.CustomIntent;
 public class UserDashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //Drawer Menu Variables
+    private  static final String API_KEY ="bb93b338055f73edcb743d4d348999e2";
     private DrawerLayout dashboardDrawerLayout;
     private NavigationView dashboardNavigationMenu;
-
     //Dashboard View Variables
-    private ConstraintLayout contentView, addPlacesBtn;
+    private ConstraintLayout contentView, categories_background;
+    private RecyclerView featuredRecycler, mostViewedRecycler;
+    private ImageButton imgBtnHo;
+    private ImageButton imgBtnEd;
+    private ImageButton imgBtnSh;
     private ImageButton dashboardMenu;
-    private RecyclerView featuredRecycler, mostViewedRecycler, categoriesRecycler;
-//    private TextView categoriesViewAll;
-    private ImageButton imgBtnRe, imgBtnHo, imgBtnEd, imgBtnSh;
-    private Button button;
+    private CardView w1;
     //Other Variables
-    private RecyclerView.Adapter featuredAdapter, mostViewedAdapter, categoriesAdapter;
+    private RecyclerView.Adapter featuredAdapter, mostViewedAdapter;
     private static final float END_SCALE = 0.8f;
 
-    Spinner spinner;
-    public static final String[] languages = {"Select Language", "English", "Arabic"};
-    private Activity activity;
-
+    TextView tVtemp  ,etCityName, descriptionw1, maxtemp , mintemp;
+    private ImageView iconWeather;
+    String city = "Hofuf";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,13 +86,32 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
         setNavigationMenu();
         setFeaturedRecycler();
         setMostViewedRecycler();
-        setCategoriesRecycler();
-        setActionOnViews();
 
-        imgBtnRe = findViewById(R.id.imgBtnRe);
+
+        //    private TextView categoriesViewAll;
+        ImageButton imgBtnRe = findViewById(R.id.imgBtnRe);
         imgBtnHo = findViewById(R.id.imgBtnHo);
         imgBtnEd = findViewById(R.id.imgBtnEd);
         imgBtnSh = findViewById(R.id.imgBtnSh);
+        w1 = findViewById(R.id.weathercard);
+        categories_background =findViewById(R.id.categories_background);
+
+        if (isNetworkConnected()){
+            loadWeatherByCityName(city);
+        }else {
+            Toast.makeText(UserDashboardActivity.this, R.string.errorWIFI,Toast.LENGTH_SHORT).show();
+        }
+            w1.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    if (isNetworkConnected()){
+                        loadWeatherByCityName(city);
+                    }else {
+                        Toast.makeText(UserDashboardActivity.this, R.string.errorWIFI,Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
 
         imgBtnRe.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,6 +142,12 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
             }
         });
 
+
+    }
+    private boolean isNetworkConnected() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        return cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnected();
     }
 
     private void initViews() {
@@ -122,11 +160,14 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
         //Dashboard Views
         contentView = findViewById(R.id.content_view);
         dashboardMenu = findViewById(R.id.dashboard_menu);
-//        addPlacesBtn = findViewById(R.id.add_places_btn);
         featuredRecycler = findViewById(R.id.featured_locations_recycler);
         mostViewedRecycler = findViewById(R.id.most_viewed_locations_recycler);
-        categoriesRecycler = findViewById(R.id.categories_recycler);
-//        categoriesViewAll = findViewById(R.id.categories_view_all);
+        etCityName = findViewById(R.id.CityName);
+        tVtemp = findViewById(R.id.tVtemp);
+        iconWeather = findViewById(R.id.iconWeather);
+        descriptionw1 = findViewById(R.id.descriptionw1);
+        maxtemp = findViewById(R.id.maxtemp);
+        mintemp = findViewById(R.id.mintemp);
 
     }
 
@@ -243,7 +284,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
 
         ArrayList<MostViewedModel> mostViewedLocations = new ArrayList<>();
 
-        mostViewedLocations.add(new MostViewedModel(R.drawable.house, getString(R.string.HouseAllegiance), getString(R.string.housedec),  4.1, "https://goo.gl/maps/p5QXwJvbgVx8sT5D9"));
+        mostViewedLocations.add(new MostViewedModel(house, getString(R.string.HouseAllegiance), getString(R.string.housedec),  4.1, "https://goo.gl/maps/p5QXwJvbgVx8sT5D9"));
         mostViewedLocations.add(new MostViewedModel(R.drawable.ibrahem, getString(R.string.IbrahimPalace), getString(R.string.ibrahimdec),  4.2, "https://goo.gl/maps/d46xCcZon2Au4cLW9"));
         mostViewedLocations.add(new MostViewedModel(R.drawable.sahoood, getString(R.string.SahoodFort), getString(R.string.sahooddec),  4.0, "https://goo.gl/maps/7sE3UNmeVwJRtrh89"));
         mostViewedLocations.add(new MostViewedModel(R.drawable.muqair, getString(R.string.OldAlUqayrSeaport), getString(R.string.oladec),  4.3, "https://goo.gl/maps/BDwqm4NjFLkApL397"));
@@ -255,41 +296,207 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
 
         mostViewedRecycler.setAdapter(mostViewedAdapter);
     }
+    private void loadWeatherByCityName(String city) {
+        Ion.with(this)
+                .load("http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+ API_KEY )
+                .asJsonObject()
+                .setCallback(new FutureCallback<JsonObject>() {
+                    @Override
+                    public void onCompleted(Exception e, JsonObject result) {
+                        NumberFormat nf =NumberFormat.getInstance(new Locale("en","EN"));
 
-    private void setCategoriesRecycler() {
-        //Setting Categories Recycler
-        categoriesRecycler.setHasFixedSize(true);
-        categoriesRecycler.setLayoutManager(new LinearLayoutManager(UserDashboardActivity.this, LinearLayoutManager.HORIZONTAL, false));
+                        // do stuff with the result or error
+                        if (e != null){
+                            e.printStackTrace();
+                            Toast.makeText(UserDashboardActivity.this, "SERVER ERROR", Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                        {
+                            JsonObject  main = result.get("main").getAsJsonObject();
+                            double temp = main.get("temp").getAsDouble();
+                            String s = nf.format(temp - 273.15) + "°C";
+                            tVtemp.setText(s);
 
-        ArrayList<CategoriesModel> categories = new ArrayList<>();
+                            JsonArray weather = result.get("weather").getAsJsonArray();
+                            String description = weather.get(0).getAsJsonObject().get("main").getAsString();
 
-        categories.add(new CategoriesModel(R.color.card2, R.drawable.illustration_shopping, R.string.navShops));
-        categories.add(new CategoriesModel(R.color.card5, R.drawable.illustration_restaurant, R.string.navRestaurants));
-        categories.add(new CategoriesModel(R.color.card4, R.drawable.illustration_hotel, R.string.navHotels));
-        categories.add(new CategoriesModel(R.color.card1, R.drawable.illustration_education, R.string.navEducation));
-//        categories.add(new CategoriesModel(R.color.card3, R.drawable.illustration_travel, R.string.travel));
+                            double tempmax = main.get("temp_max").getAsDouble();
+                            String s1 = nf.format( tempmax - 273.15)+ "°C";
+                            maxtemp.setText(getString(R.string.m)+ "\n" + s1);
 
-        categoriesAdapter = new CategoriesAdapter(categories);
+                            double tempmin = main.get("temp_min").getAsDouble();
+                            String s2 = nf.format(tempmin - 273.15) +"°C";
+                            mintemp.setText(getString(R.string.n)+"\n"+s2);
 
-        categoriesRecycler.setAdapter(categoriesAdapter);
+                            if (getString(R.string.lang).equals("English")){
+                                ardscrip(description);
+                            }else if (getString(R.string.lang).equals("اللغة العربية")){
+                                descriptionw1.setText(StringUtils.capitalize(description));
+                            }
+
+                            String icon = weather.get(0).getAsJsonObject().get("icon").getAsString();
+                            loadicon(icon);
+
+                        }
+                        Log.d("result",result.toString());
+                    }
+                });
     }
 
-    private void setActionOnViews() {
-//        categoriesViewAll.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(UserDashboardActivity.this, AllCategoriesActivity.class));
-//                CustomIntent.customType(UserDashboardActivity.this, "left-to-right");
-//            }
-//        });
+    private void ardscrip(String description) {
 
-//        addPlacesBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(UserDashboardActivity.this, RetailerStartUpScreenActivity.class));
-//                CustomIntent.customType(UserDashboardActivity.this, "bottom-to-up");
-//            }
-//        });
+        switch (description)
+        {
+            case "Clouds":
+                descriptionw1.setText("غائم");
+                break;
+                case "Thunderstorm":
+                descriptionw1.setText("عاصفة رعدية");
+                break;
+                case "Drizzle":
+                descriptionw1.setText("ندى المطر");
+                break;
+                case "Rain":
+                descriptionw1.setText("مطر");
+                break;
+                case "Snow":
+                descriptionw1.setText("ثلوج");
+                break;
+                case "Mist":
+                descriptionw1.setText("ضباب");
+                break;
+                case "Smoke":
+                descriptionw1.setText("دُُخان");
+                break;
+                case "Haze":
+                descriptionw1.setText("ضباب");
+                break;
+                case "Dust":
+                descriptionw1.setText("غبار");
+                break;
+                case "Fog":
+                descriptionw1.setText("ضباب");
+                break;
+                case "Sand":
+                descriptionw1.setText("تراب");
+                break;
+                case "Ash":
+                descriptionw1.setText("غبار كثيف");
+                break;
+                case "Squall":
+                descriptionw1.setText("عاصفة");
+                break;
+                case "Tornado":
+                descriptionw1.setText("اعصار");
+                break;
+                case "Clear":
+                descriptionw1.setText("صافي");
+                break;
+                default: descriptionw1.setText("جاري التحميل ..");
+
+        }
+
+    }
+
+    private void loadicon(String icon) {
+        switch(icon) {
+                case "01d":
+
+                iconWeather.setImageResource(R.drawable.sun);
+                categories_background.setBackgroundResource(R.drawable.clear1);
+
+                break;
+
+                case "01n":
+                    categories_background.setBackgroundResource(R.drawable.clearnight);
+                iconWeather.setImageResource(R.drawable.moon);
+                break;
+
+                case "02d":
+                 categories_background.setBackgroundResource(R.drawable.scatteredclouds);
+                iconWeather.setImageResource( R.drawable.cloudyday);
+                break;
+
+                case "02n":
+                    categories_background.setBackgroundResource(R.drawable.scatteredcloudsnight);
+                iconWeather.setImageResource( R.drawable.night);
+                break;
+
+                case "03d":
+                    categories_background.setBackgroundResource(R.drawable.fewclouds);
+                iconWeather.setImageResource( R.drawable.cloudy);
+                break;
+
+                case "03n":
+                    categories_background.setBackgroundResource(R.drawable.fewcloudsnight);
+                iconWeather.setImageResource( R.drawable.cloudy);
+                break;
+
+                case "04d":
+                    categories_background.setBackgroundResource(R.drawable.brokenclouds);
+                iconWeather.setImageResource( R.drawable.cloudcomputing);
+                break;
+
+                case "04n":
+                    categories_background.setBackgroundResource(R.drawable.brokencloudsnight);
+                iconWeather.setImageResource( R.drawable.cloudcomputing);
+                break;
+
+                case "09d":
+                    categories_background.setBackgroundResource(R.drawable.showerrain);
+                iconWeather.setImageResource( R.drawable.rainy);
+                break;
+
+                case "09n":
+                    categories_background.setBackgroundResource(R.drawable.showerrainaight);
+                iconWeather.setImageResource( R.drawable.rainy);
+                break;
+
+                case "10d":
+                    categories_background.setBackgroundResource(R.drawable.rain);
+                iconWeather.setImageResource( R.drawable.raining);
+                break;
+
+                case "10n":
+                    categories_background.setBackgroundResource(R.drawable.rainight);
+                iconWeather.setImageResource( R.drawable.rainynight);
+                break;
+
+                case "11d":
+                    categories_background.setBackgroundResource(R.drawable.thunderstorm1);
+                iconWeather.setImageResource( R.drawable.thunderstorm);
+                break;
+
+                case "11n":
+                    categories_background.setBackgroundResource(R.drawable.thunderstormnight);
+                 iconWeather.setImageResource( R.drawable.thunderstorm);
+                 break;
+
+                 case "13d":
+                     categories_background.setBackgroundResource(R.drawable.snow);
+                 iconWeather.setImageResource( R.drawable.snowflake);
+                 break;
+
+                 case "13n":
+                     categories_background.setBackgroundResource(R.drawable.snownight);
+                 iconWeather.setImageResource( R.drawable.snowflake);
+                 break;
+
+                 case "50d":
+                     categories_background.setBackgroundResource(R.drawable.mist1);
+                 iconWeather.setImageResource( R.drawable.mist);
+                 break;
+
+                 case "50n":
+                     categories_background.setBackgroundResource(R.drawable.mistnight);
+                 iconWeather.setImageResource( R.drawable.mist);
+                 break;
+
+                 default:
+                     Glide.with(this).load(R.drawable.loading).into(iconWeather);
+                // code block
+        }
+
     }
 
     @Override

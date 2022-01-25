@@ -9,24 +9,22 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
+import com.developerdepository.scout.HelperClasses.CURRNCYHELP.Retrofit.RetrofitBuilder;
+import com.developerdepository.scout.HelperClasses.CURRNCYHELP.Retrofit.RetrofitInterface;
 import com.developerdepository.scout.R;
-
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
-import java.util.Locale;
+import com.google.gson.JsonObject;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class CurrencyActivity extends AppCompatActivity {
-    Spinner sp1,sp2;
-    EditText ed1 ;
-    Button b1;
-    TextView result ;
+    Button button;
+    EditText currencyToBeConverted;
+    TextView currencyConverted;
+    Spinner convertToDropdown;
+    Spinner convertFromDropdown;
     ImageButton backbtn;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //StatusBar Color
@@ -36,10 +34,13 @@ public class CurrencyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_currency);
 
-        sp1 = findViewById(R.id.spfrom);
-        sp2 = findViewById(R.id.spto);
-        ed1 = findViewById(R.id.txtamt);
-         result= findViewById(R.id.result1);
+        //Initialization
+        currencyConverted = (TextView) findViewById(R.id.result1);
+        currencyToBeConverted = (EditText) findViewById(R.id.txtamt);
+        convertToDropdown = (Spinner) findViewById(R.id.spto);
+        convertFromDropdown = (Spinner) findViewById(R.id.spfrom);
+        button = (Button) findViewById(R.id.btn1);
+
         backbtn = findViewById(R.id.back_arrow_btn);
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,98 +48,41 @@ public class CurrencyActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+        //Adding Functionality
+        String[] dropDownList = {"USD", "INR","EUR","EGP","SAR","PHP","QAR","BHD","KWD","AED","OMR","YER"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, dropDownList);
+        convertToDropdown.setAdapter(adapter);
+        convertFromDropdown.setAdapter(adapter);
 
+        button.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if (currencyToBeConverted.length() == 0){
+                currencyToBeConverted.setError(getString(R.string.error));
 
+            }else {
+                RetrofitInterface retrofitInterface = RetrofitBuilder.getRetrofitInstance().create(RetrofitInterface.class);
+                Call<JsonObject> call = retrofitInterface.getExchangeCurrency(convertFromDropdown.getSelectedItem().toString());
+                call.enqueue(new Callback<JsonObject>() {
+                    @Override
+                    public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+                        JsonObject res = response.body();
+                        JsonObject rates = res.getAsJsonObject("conversion_rates");
+                        double currency = Double.valueOf(currencyToBeConverted.getText().toString());
+                        double multiplier = Double.valueOf(rates.get(convertToDropdown.getSelectedItem().toString()).toString());
+                        double result = currency * multiplier;
+                        currencyConverted.setText(String.valueOf(result));
+                    }
 
-        String[] from = {"SAR","Indian Rupees","USD","EUR"};
-        ArrayAdapter ad = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, from);
-        sp1.setAdapter(ad);
+                    @Override
+                    public void onFailure(Call<JsonObject> call, Throwable t) {
 
-
-        String[] to = {"SAR","Indian Rupees","USD","EUR"};
-        ArrayAdapter ad1 = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, to);
-        sp2.setAdapter(ad1);
-
-        b1 = findViewById(R.id.btn1);
-
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                double tot ;
-
-                double amt = Double.parseDouble(ed1.getText().toString());
-                DecimalFormat  dU = new  DecimalFormat("0.00");
-                NumberFormat nf=NumberFormat.getInstance(new Locale("en","EN"));
-
-                if(sp1.getSelectedItem().toString().equals("SAR") && sp2.getSelectedItem().toString().equals("Indian Rupees"))
-                {
-
-                    tot = amt *19.943;
-                      String i = "₹";
-                    String x = nf.format(tot);
-                    result.setText( i + x  );
-                }
-                else if(sp1.getSelectedItem().toString().equals("SAR") && sp2.getSelectedItem().toString().equals("USD"))
-                {
-                    tot = amt / 3.75;
-                    String i = "$";
-                    String x = nf.format(tot);
-                    result.setText(i+x);
-                }
-
-
-                else if(sp1.getSelectedItem().toString().equals("SAR") && sp2.getSelectedItem().toString().equals("EUR"))
-                {
-                    tot = amt * 0.23552;
-                    String i = "€";
-                    String x = nf.format(tot);
-                    result.setText( i+x  );
-                }
-
-
-
-                else if(sp1.getSelectedItem().toString().equals("Indian Rupees") && sp2.getSelectedItem().toString().equals("SAR"))
-                {
-
-                    tot = amt /19.943;
-                    String i = "SAR";
-                    String x = nf.format(tot);
-                    result.setText( i+x  );
-                }
-                else if(sp1.getSelectedItem().toString().equals("USD") && sp2.getSelectedItem().toString().equals("SAR"))
-                {
-                    tot = amt * 3.75;
-                    String i = "SAR";
-                    String x = nf.format(tot);
-                    result.setText( i+x  );
-
-
-                }
-
-
-                else if(sp1.getSelectedItem().toString().equals("EUR") && sp2.getSelectedItem().toString().equals("SAR"))
-                {
-                    tot = amt / 0.23552;
-                    String i = "SAR";
-                    String x = nf.format(tot);
-                    result.setText( i + x  );
-                }
-                else if (sp1.getSelectedItem().toString().equals("SAR") && sp2.getSelectedItem().toString().equals("SAR"))
-                {
-                    Toast.makeText(CurrencyActivity.this, "You can not choose same currency  ", Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
-                    Toast.makeText(CurrencyActivity.this, "You have to chose from SAR to other currency or opposite ", Toast.LENGTH_SHORT).show();
-                }
-
-
-
+                    }
+                });
             }
-        });
 
-
+        }
+    });
 
     }
 }

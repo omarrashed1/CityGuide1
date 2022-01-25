@@ -24,7 +24,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginEnd="12dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/img_placeholder1"
+            android:src="@drawable/sahood1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

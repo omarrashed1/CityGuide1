@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightWhite"
-    tools:context=".User.AllCategoriesActivity">
-<!--    CANGE-->
+    tools:context=".User.RestaurantsActivity">
+
     <ImageButton
         android:id="@+id/back_arrow_btn"
         android:layout_width="32dp"
@@ -23,22 +23,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<!--    <ImageButton-->
-<!--        android:id="@+id/search_btn"-->
-<!--        android:layout_width="48dp"-->
-<!--        android:layout_height="48dp"-->
-<!--        android:layout_marginTop="24dp"-->
-<!--        android:layout_marginEnd="12dp"-->
-<!--        android:background="?attr/selectableItemBackgroundBorderless"-->
-<!--        android:clickable="true"-->
-<!--        android:focusable="true"-->
-<!--        android:scaleType="centerInside"-->
-<!--        android:src="@drawable/ic_search"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:tint="@android:color/black"-->
-<!--        tools:ignore="SpeakableTextPresentCheck"-->
-<!--        android:contentDescription="@string/todo" />-->
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nested_scroll_view"
@@ -102,9 +86,10 @@
                     android:focusable="true">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/category1_txt"
+                        android:layout_width="210dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="24dp"
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
@@ -112,12 +97,42 @@
                         android:text="@string/tendrliune"
                         android:textAlignment="textStart"
                         android:textAllCaps="false"
-                        android:textColor="@android:color/black"
-                        android:textSize="28sp"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <RatingBar
+                        android:id="@+id/category1_rate"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:rating="4.7"
+                        app:layout_constraintStart_toStartOf="@+id/category1_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/category1_txt" />
+
+                    <TextView
+                        android:id="@+id/category1_desc2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/poppins_light"
+                        android:includeFontPadding="false"
+                        android:text="@string/resturant1_desc"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_logo_background"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/category1_rate"
+                        app:layout_constraintTop_toBottomOf="@+id/category1_rate"
+                        tools:ignore="SmallSp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -159,22 +174,53 @@
                     android:focusable="true">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/category2_txt"
+                        android:layout_width="210dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="24dp"
-                        android:layout_marginEnd="24dp"
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
                         android:includeFontPadding="false"
                         android:text="@string/hasa_gril"
-                        android:textAlignment="textEnd"
+                        android:textAlignment="textStart"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
-                        android:textSize="28sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <RatingBar
+                        android:id="@+id/category2_rate"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:rating="3.1"
+                        app:layout_constraintStart_toStartOf="@+id/category2_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/category2_txt" />
+
+                    <TextView
+                        android:id="@+id/category2_desc2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/poppins_light"
+                        android:includeFontPadding="false"
+                        android:text="@string/resturant2_desc"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_logo_background"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintStart_toStartOf="@+id/category2_rate"
+                        app:layout_constraintTop_toBottomOf="@+id/category2_rate"
+                        tools:ignore="SmallSp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -184,12 +230,12 @@
                 android:id="@+id/category2_img"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_marginStart="24dp"
-                android:elevation="10dp"
+                android:layout_marginEnd="24dp"
                 android:scaleType="centerInside"
+                android:elevation="10dp"
                 android:src="@drawable/xdxd"
                 app:layout_constraintBottom_toTopOf="@+id/category2_container"
-                app:layout_constraintStart_toStartOf="@+id/category2_container"
+                app:layout_constraintEnd_toEndOf="@+id/category2_container"
                 app:layout_constraintTop_toTopOf="@+id/category2_container" />
 
             <androidx.cardview.widget.CardView
@@ -216,9 +262,10 @@
                     android:focusable="true">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/category3_txt"
+                        android:layout_width="210dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="24dp"
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
@@ -227,11 +274,41 @@
                         android:textAlignment="textStart"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
-                        android:textSize="28sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <RatingBar
+                        android:id="@+id/category3_rate"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:rating="3.0"
+                        app:layout_constraintStart_toStartOf="@+id/category3_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/category3_txt" />
+
+                    <TextView
+                        android:id="@+id/category3_desc2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/poppins_light"
+                        android:includeFontPadding="false"
+                        android:text="@string/resturant3_desc"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_logo_background"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/category3_rate"
+                        app:layout_constraintTop_toBottomOf="@+id/category3_rate"
+                        tools:ignore="SmallSp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -273,22 +350,53 @@
                     android:focusable="true">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/category4_txt"
+                        android:layout_width="210dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="24dp"
-                        android:layout_marginEnd="24dp"
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
                         android:includeFontPadding="false"
                         android:text="@string/casa_pasta"
-                        android:textAlignment="textEnd"
+                        android:textAlignment="textStart"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
-                        android:textSize="28sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <RatingBar
+                        android:id="@+id/category4_rate"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:rating="3.7"
+                        app:layout_constraintStart_toStartOf="@+id/category4_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/category4_txt" />
+
+                    <TextView
+                        android:id="@+id/category4_desc2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/poppins_light"
+                        android:includeFontPadding="false"
+                        android:text="@string/resturant4_desc"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_logo_background"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintStart_toStartOf="@+id/category4_rate"
+                        app:layout_constraintTop_toBottomOf="@+id/category4_rate"
+                        tools:ignore="SmallSp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -298,12 +406,12 @@
                 android:id="@+id/category4_img"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_marginStart="24dp"
-                android:elevation="10dp"
+                android:layout_marginEnd="24dp"
                 android:scaleType="centerInside"
+                android:elevation="10dp"
                 android:src="@drawable/ccc"
                 app:layout_constraintBottom_toTopOf="@+id/category4_container"
-                app:layout_constraintStart_toStartOf="@+id/category4_container"
+                app:layout_constraintEnd_toEndOf="@+id/category4_container"
                 app:layout_constraintTop_toTopOf="@+id/category4_container" />
 
             <androidx.cardview.widget.CardView
@@ -330,9 +438,10 @@
                     android:focusable="true">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/category5_txt"
+                        android:layout_width="210dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="24dp"
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
@@ -341,11 +450,41 @@
                         android:textAlignment="textStart"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
-                        android:textSize="28sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <RatingBar
+                        android:id="@+id/category5_rate"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:rating="3.7"
+                        app:layout_constraintStart_toStartOf="@+id/category5_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/category5_txt" />
+
+                    <TextView
+                        android:id="@+id/category5_desc2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/poppins_light"
+                        android:includeFontPadding="false"
+                        android:text="@string/resturant5_desc"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_logo_background"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/category5_rate"
+                        app:layout_constraintTop_toBottomOf="@+id/category5_rate"
+                        tools:ignore="SmallSp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -387,22 +526,54 @@
                     android:focusable="true">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/category6_txt"
+                        android:layout_width="210dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="24dp"
-                        android:layout_marginEnd="24dp"
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
                         android:includeFontPadding="false"
                         android:text="@string/dunkin"
-                        android:textAlignment="textEnd"
+                        android:textAlignment="textStart"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
-                        android:textSize="28sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <RatingBar
+                        android:id="@+id/category6_rate"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:rating="3.9"
+                        app:layout_constraintStart_toStartOf="@+id/category6_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/category6_txt" />
+
+                    <TextView
+                        android:id="@+id/category6_desc2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/poppins_light"
+                        android:includeFontPadding="false"
+                        android:text="@string/resturant6_desc"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_logo_background"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintStart_toStartOf="@+id/category6_rate"
+                        app:layout_constraintTop_toBottomOf="@+id/category6_rate"
+                        tools:ignore="SmallSp" />
+
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -412,13 +583,12 @@
                 android:id="@+id/category6_img"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_marginStart="24dp"
-                android:contentDescription="TODO"
-                android:elevation="10dp"
+                android:layout_marginEnd="24dp"
                 android:scaleType="centerInside"
+                android:elevation="10dp"
                 android:src="@drawable/ddd"
                 app:layout_constraintBottom_toTopOf="@+id/category6_container"
-                app:layout_constraintStart_toStartOf="@+id/category6_container"
+                app:layout_constraintEnd_toEndOf="@+id/category6_container"
                 app:layout_constraintTop_toTopOf="@+id/category6_container" />
 
             <androidx.cardview.widget.CardView
@@ -445,9 +615,10 @@
                     android:focusable="true">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/category7_txt"
+                        android:layout_width="210dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="24dp"
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
@@ -456,11 +627,41 @@
                         android:textAlignment="textStart"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
-                        android:textSize="28sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <RatingBar
+                        android:id="@+id/category7_rate"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:rating="3.5"
+                        app:layout_constraintStart_toStartOf="@+id/category7_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/category7_txt" />
+
+                    <TextView
+                        android:id="@+id/category7_desc2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/poppins_light"
+                        android:includeFontPadding="false"
+                        android:text="@string/resturant7_desc"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_logo_background"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/category7_rate"
+                        app:layout_constraintTop_toBottomOf="@+id/category7_rate"
+                        tools:ignore="SmallSp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -485,7 +686,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="64dp"
                 android:layout_marginEnd="16dp"
-                app:cardBackgroundColor="@color/allCategory2"
+                app:cardBackgroundColor="#504747"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="8dp"
                 app:cardPreventCornerOverlap="true"
@@ -502,22 +703,53 @@
                     android:focusable="true">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/category8_txt"
+                        android:layout_width="210dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="24dp"
-                        android:layout_marginEnd="24dp"
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
                         android:includeFontPadding="false"
                         android:text="@string/horn"
-                        android:textAlignment="textEnd"
+                        android:textAlignment="textStart"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
-                        android:textSize="28sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <RatingBar
+                        android:id="@+id/category8_rate"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:rating="3.9"
+                        app:layout_constraintStart_toStartOf="@+id/category8_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/category8_txt" />
+
+                    <TextView
+                        android:id="@+id/category8_desc2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:fontFamily="@font/poppins_light"
+                        android:includeFontPadding="false"
+                        android:text="@string/resturant8_desc"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_logo_background"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintStart_toStartOf="@+id/category8_rate"
+                        app:layout_constraintTop_toBottomOf="@+id/category8_rate"
+                        tools:ignore="SmallSp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -527,13 +759,12 @@
                 android:id="@+id/category8_img"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_marginStart="24dp"
-
-                android:elevation="10dp"
+                android:layout_marginEnd="24dp"
                 android:scaleType="centerInside"
+                android:elevation="10dp"
                 android:src="@drawable/ho"
                 app:layout_constraintBottom_toTopOf="@+id/category8_container"
-                app:layout_constraintStart_toStartOf="@+id/category8_container"
+                app:layout_constraintEnd_toEndOf="@+id/category8_container"
                 app:layout_constraintTop_toTopOf="@+id/category8_container" />
 
             <androidx.cardview.widget.CardView
@@ -560,9 +791,10 @@
                     android:focusable="true">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/category9_txt"
+                        android:layout_width="210dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="24dp"
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
@@ -571,11 +803,44 @@
                         android:textAlignment="textStart"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
-                        android:textSize="28sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <RatingBar
+                        android:id="@+id/category9_rate"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:rating="3.7"
+                        app:layout_constraintStart_toStartOf="@+id/category9_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/category9_txt" />
+
+                    <TextView
+                        android:id="@+id/category9_desc2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:fontFamily="@font/poppins_light"
+                        android:includeFontPadding="false"
+                        android:text="@string/resturant9_desc"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_logo_background"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/category9_rate"
+                        app:layout_constraintTop_toBottomOf="@+id/category9_rate"
+                        app:layout_constraintVertical_bias="0.0"
+                        tools:ignore="SmallSp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -586,9 +851,8 @@
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_marginEnd="24dp"
-                android:contentDescription="TODO"
-                android:elevation="10dp"
                 android:scaleType="centerInside"
+                android:elevation="10dp"
                 android:src="@drawable/to"
                 app:layout_constraintBottom_toTopOf="@+id/category9_container"
                 app:layout_constraintEnd_toEndOf="@+id/category9_container"
@@ -620,22 +884,53 @@
                     android:focusable="true">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/category10_txt"
+                        android:layout_width="210dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
                         android:layout_marginTop="24dp"
-                        android:layout_marginEnd="24dp"
                         android:layout_marginBottom="24dp"
                         android:fontFamily="@font/poppins_medium"
                         android:includeFontPadding="false"
                         android:text="@string/khaibar"
-                        android:textAlignment="textEnd"
+                        android:textAlignment="textStart"
                         android:textAllCaps="false"
                         android:textColor="@android:color/white"
-                        android:textSize="28sp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <RatingBar
+                        android:id="@+id/category10_rate"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:rating="3.5"
+                        app:layout_constraintStart_toStartOf="@+id/category10_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/category10_txt" />
+
+                    <TextView
+                        android:id="@+id/category10_desc2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/poppins_light"
+                        android:includeFontPadding="false"
+                        android:text="@string/resturant10_desc"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_logo_background"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintStart_toStartOf="@+id/category10_rate"
+                        app:layout_constraintTop_toBottomOf="@+id/category10_rate"
+                        tools:ignore="SmallSp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -645,13 +940,12 @@
                 android:id="@+id/category10_img"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_marginStart="24dp"
-                android:contentDescription="TODO"
-                android:elevation="10dp"
+                android:layout_marginEnd="24dp"
                 android:scaleType="centerInside"
+                android:elevation="10dp"
                 android:src="@drawable/ko"
                 app:layout_constraintBottom_toTopOf="@+id/category10_container"
-                app:layout_constraintStart_toStartOf="@+id/category10_container"
+                app:layout_constraintEnd_toEndOf="@+id/category10_container"
                 app:layout_constraintTop_toTopOf="@+id/category10_container" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

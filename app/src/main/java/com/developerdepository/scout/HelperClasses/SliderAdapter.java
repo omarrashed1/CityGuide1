@@ -58,15 +58,10 @@ public class SliderAdapter extends PagerAdapter {
 
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.layout_onboarding_slider, container, false);
-
-
         TextView sliderTitle = view.findViewById(R.id.slider_title);
         TextView sliderDesc = view.findViewById(R.id.slider_desc);
-
-
         sliderTitle.setText(titles[position]);
         sliderDesc.setText(descriptions[position]);
-
         container.addView(view);
 
         return view;

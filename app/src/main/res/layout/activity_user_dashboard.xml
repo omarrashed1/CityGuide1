@@ -105,55 +105,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/app_logo">
 
-<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                        android:id="@+id/search_btn"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:background="?attr/selectableItemBackground"-->
-<!--                        android:clickable="true"-->
-<!--                        android:focusable="true"-->
-<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                        app:layout_constraintEnd_toEndOf="parent"-->
-<!--                        app:layout_constraintStart_toStartOf="parent"-->
-<!--                        app:layout_constraintTop_toTopOf="parent">-->
-
-<!--                        <TextView-->
-<!--                            android:id="@+id/search_text"-->
-<!--                            android:layout_width="0dp"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_marginStart="16dp"-->
-<!--                            android:layout_marginTop="12dp"-->
-<!--                            android:layout_marginEnd="16dp"-->
-<!--                            android:layout_marginBottom="12dp"-->
-<!--                            android:alpha="0.5"-->
-<!--                            android:fontFamily="@font/poppins"-->
-<!--                            android:includeFontPadding="false"-->
-<!--                            android:text="@string/search_text"-->
-<!--                            android:textAlignment="textStart"-->
-<!--                            android:textAllCaps="false"-->
-<!--                            android:textColor="@android:color/black"-->
-<!--                            android:textSize="16sp"-->
-<!--                            android:textStyle="normal"-->
-<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                            app:layout_constraintEnd_toStartOf="@+id/search_img"-->
-<!--                            app:layout_constraintStart_toStartOf="parent"-->
-<!--                            app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--                        <ImageView-->
-<!--                            android:id="@+id/search_img"-->
-<!--                            android:layout_width="24dp"-->
-<!--                            android:layout_height="24dp"-->
-<!--                            android:layout_marginTop="8dp"-->
-<!--                            android:layout_marginEnd="16dp"-->
-<!--                            android:layout_marginBottom="8dp"-->
-<!--                            android:scaleType="centerInside"-->
-<!--                            android:src="@drawable/ic_search"-->
-<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                            app:layout_constraintEnd_toEndOf="parent"-->
-<!--                            app:layout_constraintTop_toTopOf="parent"-->
-<!--                            app:tint="@android:color/black" />-->
-
-<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -514,6 +465,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/most_viewed_locations_text" />
 
+
                 <TextView
                     android:id="@+id/categories_text"
                     android:layout_width="0dp"
@@ -523,7 +475,7 @@
                     android:layout_marginEnd="16dp"
                     android:fontFamily="@font/poppins_medium"
                     android:includeFontPadding="false"
-                    android:text="@string/categories"
+                    android:text="@string/WeatherS"
                     android:textAlignment="textStart"
                     android:textAllCaps="true"
                     android:textColor="@android:color/black"
@@ -556,19 +508,144 @@
 <!--                    app:layout_constraintEnd_toEndOf="parent"-->
 <!--                    app:layout_constraintTop_toTopOf="@+id/categories_text" />-->
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/categories_recycler"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/weathercard"
                     android:layout_marginBottom="40dp"
-                    android:clipToPadding="false"
-                    android:orientation="horizontal"
-                    android:padding="8dp"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    android:clickable="true"
+                    app:cardBackgroundColor="@color/allCategory1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
+                    app:cardPreventCornerOverlap="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/categories_text" />
+                    app:layout_constraintTop_toBottomOf="@+id/categories_text"
+                    tools:ignore="MissingConstraints"
+                    android:focusable="true">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/categories_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="182dp"
+
+                        android:background="@android:color/white">
+
+
+                        <TextView
+                            android:id="@+id/CityName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="32dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/alahsaWeather"
+                            android:textColor="@android:color/white"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+
+                            app:layout_constraintEnd_toStartOf="@+id/iconWeather"
+                            app:layout_constraintHorizontal_bias="0.594"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/iconWeather"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginEnd="36dp"
+                            android:layout_marginBottom="44dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/sun"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/tVtemp" />
+
+                        <TextView
+                            android:id="@+id/tVtemp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:textColor="@android:color/white"
+                            android:text="@string/loding"
+                            android:textAlignment="center"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/descriptionw1"
+
+                            app:layout_constraintEnd_toStartOf="@+id/iconWeather"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/CityName"
+                            app:layout_constraintVertical_bias="0.0"
+                            tools:ignore="MissingConstraints" />
+
+
+                        <TextView
+                            android:id="@+id/descriptionw1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="32dp"
+                            android:text="@string/loding"
+                            android:textColor="@android:color/white"
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toStartOf="@+id/iconWeather"
+                            app:layout_constraintHorizontal_bias="0.57"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tVtemp" />
+
+                        <TextView
+                            android:id="@+id/maxtemp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:text="13.12'C"
+                            app:layout_constraintEnd_toStartOf="@+id/mintemp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/descriptionw1"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/mintemp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:text="13.12'C"
+                            app:layout_constraintEnd_toStartOf="@+id/iconWeather"
+                            app:layout_constraintStart_toEndOf="@+id/maxtemp"
+                            app:layout_constraintTop_toBottomOf="@+id/descriptionw1" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

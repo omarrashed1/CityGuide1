@@ -56,7 +56,7 @@
 
     <style name="NavigationTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
         <item name="colorPrimary">@color/green</item>
-        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/green</item>
     </style>
 
     <style name="NavigationMenuTextStyle" parent="TextAppearance.AppCompat">
