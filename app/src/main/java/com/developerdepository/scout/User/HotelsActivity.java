@@ -6,12 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
 import com.developerdepository.scout.R;
-
 
 public class HotelsActivity extends AppCompatActivity {
 
@@ -52,9 +49,6 @@ public class HotelsActivity extends AppCompatActivity {
             }
         });
 
-
-
-
         h3 = findViewById(R.id.category3);
         h3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,8 +56,6 @@ public class HotelsActivity extends AppCompatActivity {
                 gotoUrl("https://goo.gl/maps/9jTC1tjWVg7kMUkE6");
             }
         });
-
-
 
         h4 = findViewById(R.id.category4);
         h4.setOnClickListener(new View.OnClickListener() {
@@ -73,9 +65,6 @@ public class HotelsActivity extends AppCompatActivity {
             }
         });
 
-
-
-
         h5 = findViewById(R.id.category5);
         h5.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,9 +72,6 @@ public class HotelsActivity extends AppCompatActivity {
                 gotoUrl("https://goo.gl/maps/EYok6CUkPYsQNvbCA");
             }
         });
-
-
-
 
         h6 = findViewById(R.id.category6);
         h6.setOnClickListener(new View.OnClickListener() {
@@ -95,12 +81,6 @@ public class HotelsActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
         h7 = findViewById(R.id.category7);
         h7.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,12 +88,6 @@ public class HotelsActivity extends AppCompatActivity {
                 gotoUrl("https://g.page/Taleentaleen?share");
             }
         });
-
-
-
-
-
-
 
         h8 = findViewById(R.id.category8);
         h8.setOnClickListener(new View.OnClickListener() {
@@ -123,14 +97,6 @@ public class HotelsActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
-
-
         h9 = findViewById(R.id.category9);
         h9.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,11 +104,6 @@ public class HotelsActivity extends AppCompatActivity {
                 gotoUrl("https://goo.gl/maps/o5185sNTcUdbgFFA7");
             }
         });
-
-
-
-
-
 
         h10 = findViewById(R.id.category10);
         h10.setOnClickListener(new View.OnClickListener() {
@@ -152,31 +113,10 @@ public class HotelsActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     private void gotoUrl(String s) {
         Uri uri = Uri.parse(s);
         startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
-
 }

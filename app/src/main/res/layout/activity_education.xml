@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightWhite"
-    tools:context=".User.AllCategoriesActivity">
+    tools:context=".User.EducationActivity">
 
     <ImageButton
         android:id="@+id/back_arrow_btn"
@@ -23,20 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<!--    <ImageButton-->
-<!--        android:id="@+id/search_btn"-->
-<!--        android:layout_width="32dp"-->
-<!--        android:layout_height="32dp"-->
-<!--        android:layout_marginEnd="12dp"-->
-<!--        android:layout_marginTop="24dp"-->
-<!--        android:background="?attr/selectableItemBackgroundBorderless"-->
-<!--        android:clickable="true"-->
-<!--        android:focusable="true"-->
-<!--        app:tint="@android:color/black"-->
-<!--        android:scaleType="centerInside"-->
-<!--        android:src="@drawable/ic_search"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nested_scroll_view"
@@ -452,7 +439,7 @@
 
                     <TextView
                         android:id="@+id/category5_txt"
-                        android:layout_width="210dp"
+                        android:layout_width="180dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="24dp"
@@ -805,7 +792,7 @@
 
                     <TextView
                         android:id="@+id/category9_txt"
-                        android:layout_width="210dp"
+                        android:layout_width="180dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="24dp"

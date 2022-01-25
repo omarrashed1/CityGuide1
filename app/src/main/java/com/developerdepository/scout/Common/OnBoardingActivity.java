@@ -14,14 +14,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
-
 import com.developerdepository.scout.HelperClasses.SliderAdapter;
 import com.developerdepository.scout.R;
 import com.developerdepository.scout.User.UserDashboardActivity;
-
 import maes.tech.intentanim.CustomIntent;
 
 public class OnBoardingActivity extends AppCompatActivity {

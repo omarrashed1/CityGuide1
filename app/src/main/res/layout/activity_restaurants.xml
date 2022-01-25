@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightWhite"
-    tools:context=".User.AllCategoriesActivity">
-<!--    CANGE-->
+    tools:context=".User.RestaurantsActivity">
+
     <ImageButton
         android:id="@+id/back_arrow_btn"
         android:layout_width="32dp"
@@ -23,22 +23,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<!--    <ImageButton-->
-<!--        android:id="@+id/search_btn"-->
-<!--        android:layout_width="48dp"-->
-<!--        android:layout_height="48dp"-->
-<!--        android:layout_marginTop="24dp"-->
-<!--        android:layout_marginEnd="12dp"-->
-<!--        android:background="?attr/selectableItemBackgroundBorderless"-->
-<!--        android:clickable="true"-->
-<!--        android:focusable="true"-->
-<!--        android:scaleType="centerInside"-->
-<!--        android:src="@drawable/ic_search"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:tint="@android:color/black"-->
-<!--        tools:ignore="SpeakableTextPresentCheck"-->
-<!--        android:contentDescription="@string/todo" />-->
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nested_scroll_view"

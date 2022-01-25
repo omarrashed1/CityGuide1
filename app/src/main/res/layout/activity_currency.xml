@@ -113,6 +113,7 @@
         <EditText
             android:id="@+id/txtamt"
             android:layout_width="250dp"
+            android:backgroundTintMode="@color/green"
             android:layout_height="56dp"
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"

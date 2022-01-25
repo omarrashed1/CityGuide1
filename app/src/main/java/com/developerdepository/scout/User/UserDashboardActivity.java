@@ -3,20 +3,19 @@ package com.developerdepository.scout.User;
 import static com.developerdepository.scout.R.drawable.house;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -58,22 +57,18 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
     private DrawerLayout dashboardDrawerLayout;
     private NavigationView dashboardNavigationMenu;
     //Dashboard View Variables
-    private ConstraintLayout contentView, addPlacesBtn, categories_background;
-    private RecyclerView featuredRecycler, mostViewedRecycler, categoriesRecycler;
-//    private TextView categoriesViewAll;
-    private ImageButton imgBtnRe, imgBtnHo, imgBtnEd, imgBtnSh,dashboardMenu;
-    private Button button;
+    private ConstraintLayout contentView, categories_background;
+    private RecyclerView featuredRecycler, mostViewedRecycler;
+    private ImageButton imgBtnHo;
+    private ImageButton imgBtnEd;
+    private ImageButton imgBtnSh;
+    private ImageButton dashboardMenu;
     private CardView w1;
     //Other Variables
-    private RecyclerView.Adapter featuredAdapter, mostViewedAdapter, categoriesAdapter;
+    private RecyclerView.Adapter featuredAdapter, mostViewedAdapter;
     private static final float END_SCALE = 0.8f;
-     private EditText test1;
 
-
-    Spinner spinner;
-    public static final String[] languages = {"Select Language", "English", "Arabic"};
-    private Activity activity;
-    TextView tVtemp , tVcity,etCityName, descriptionw1, maxtemp , mintemp;
+    TextView tVtemp  ,etCityName, descriptionw1, maxtemp , mintemp;
     private ImageView iconWeather;
     String city = "Hofuf";
     @Override
@@ -91,24 +86,32 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
         setNavigationMenu();
         setFeaturedRecycler();
         setMostViewedRecycler();
-        setCategoriesRecycler();
-        setActionOnViews();
-        loadWeatherByCityName(city);
-        imgBtnRe = findViewById(R.id.imgBtnRe);
+
+
+        //    private TextView categoriesViewAll;
+        ImageButton imgBtnRe = findViewById(R.id.imgBtnRe);
         imgBtnHo = findViewById(R.id.imgBtnHo);
         imgBtnEd = findViewById(R.id.imgBtnEd);
         imgBtnSh = findViewById(R.id.imgBtnSh);
         w1 = findViewById(R.id.weathercard);
         categories_background =findViewById(R.id.categories_background);
 
+        if (isNetworkConnected()){
+            loadWeatherByCityName(city);
+        }else {
+            Toast.makeText(UserDashboardActivity.this, R.string.errorWIFI,Toast.LENGTH_SHORT).show();
+        }
+            w1.setOnClickListener(new View.OnClickListener() {
 
-        w1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                loadWeatherByCityName(city);
-            }
-
-        });
+                @Override
+                public void onClick(View view) {
+                    if (isNetworkConnected()){
+                        loadWeatherByCityName(city);
+                    }else {
+                        Toast.makeText(UserDashboardActivity.this, R.string.errorWIFI,Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
 
         imgBtnRe.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,6 +142,12 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
             }
         });
 
+
+    }
+    private boolean isNetworkConnected() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        return cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnected();
     }
 
     private void initViews() {
@@ -151,15 +160,10 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
         //Dashboard Views
         contentView = findViewById(R.id.content_view);
         dashboardMenu = findViewById(R.id.dashboard_menu);
-//        addPlacesBtn = findViewById(R.id.add_places_btn);
         featuredRecycler = findViewById(R.id.featured_locations_recycler);
         mostViewedRecycler = findViewById(R.id.most_viewed_locations_recycler);
-//        categoriesRecycler = findViewById(R.id.categories_recycler);
-//        categoriesViewAll = findViewById(R.id.categories_view_all);
-
         etCityName = findViewById(R.id.CityName);
         tVtemp = findViewById(R.id.tVtemp);
-        tVcity = findViewById(R.id.tVcity);
         iconWeather = findViewById(R.id.iconWeather);
         descriptionw1 = findViewById(R.id.descriptionw1);
         maxtemp = findViewById(R.id.maxtemp);
@@ -330,14 +334,9 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                                 descriptionw1.setText(StringUtils.capitalize(description));
                             }
 
-
                             String icon = weather.get(0).getAsJsonObject().get("icon").getAsString();
                             loadicon(icon);
 
-//                            JsonObject sys = result.get("sys").getAsJsonObject();
-//                            String country = sys.get("country").getAsString();
-//
-//                            etCityName.setText(city+","+country);
                         }
                         Log.d("result",result.toString());
                     }
@@ -400,8 +399,6 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
     }
 
     private void loadicon(String icon) {
-//        Ion.with(this)
-//                .load("https://openweathermap.org/img/w/"+icon+".png").intoImageView(iconWeather);
         switch(icon) {
                 case "01d":
 
@@ -500,42 +497,6 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                 // code block
         }
 
-    }
-
-    private void setCategoriesRecycler() {
-        //Setting Categories Recycler
-//        categoriesRecycler.setHasFixedSize(true);
-//        categoriesRecycler.setLayoutManager(new LinearLayoutManager(UserDashboardActivity.this, LinearLayoutManager.HORIZONTAL, false));
-//
-//        ArrayList<CategoriesModel> categories = new ArrayList<>();
-
-//        categories.add(new CategoriesModel(R.color.card2, R.drawable.illustration_shopping, R.string.navShops , R.string.));
-//        categories.add(new CategoriesModel(R.color.card5, R.drawable.illustration_restaurant, R.string.navRestaurants));
-//        categories.add(new CategoriesModel(R.color.card4, R.drawable.illustration_hotel, R.string.navHotels));
-//        categories.add(new CategoriesModel(R.color.card1, R.drawable.illustration_education, R.string.navEducation));
-//        categories.add(new CategoriesModel(R.color.card3, R.drawable.illustration_travel, R.string.travel));
-
-//        categoriesAdapter = new CategoriesAdapter(categories);
-//
-//        categoriesRecycler.setAdapter(categoriesAdapter);
-    }
-
-    private void setActionOnViews() {
-//        categoriesViewAll.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(UserDashboardActivity.this, AllCategoriesActivity.class));
-//                CustomIntent.customType(UserDashboardActivity.this, "left-to-right");
-//            }
-//        });
-
-//        addPlacesBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(UserDashboardActivity.this, RetailerStartUpScreenActivity.class));
-//                CustomIntent.customType(UserDashboardActivity.this, "bottom-to-up");
-//            }
-//        });
     }
 
     @Override

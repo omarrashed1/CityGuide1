@@ -105,55 +105,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/app_logo">
 
-<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                        android:id="@+id/search_btn"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:background="?attr/selectableItemBackground"-->
-<!--                        android:clickable="true"-->
-<!--                        android:focusable="true"-->
-<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                        app:layout_constraintEnd_toEndOf="parent"-->
-<!--                        app:layout_constraintStart_toStartOf="parent"-->
-<!--                        app:layout_constraintTop_toTopOf="parent">-->
-
-<!--                        <TextView-->
-<!--                            android:id="@+id/search_text"-->
-<!--                            android:layout_width="0dp"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_marginStart="16dp"-->
-<!--                            android:layout_marginTop="12dp"-->
-<!--                            android:layout_marginEnd="16dp"-->
-<!--                            android:layout_marginBottom="12dp"-->
-<!--                            android:alpha="0.5"-->
-<!--                            android:fontFamily="@font/poppins"-->
-<!--                            android:includeFontPadding="false"-->
-<!--                            android:text="@string/search_text"-->
-<!--                            android:textAlignment="textStart"-->
-<!--                            android:textAllCaps="false"-->
-<!--                            android:textColor="@android:color/black"-->
-<!--                            android:textSize="16sp"-->
-<!--                            android:textStyle="normal"-->
-<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                            app:layout_constraintEnd_toStartOf="@+id/search_img"-->
-<!--                            app:layout_constraintStart_toStartOf="parent"-->
-<!--                            app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--                        <ImageView-->
-<!--                            android:id="@+id/search_img"-->
-<!--                            android:layout_width="24dp"-->
-<!--                            android:layout_height="24dp"-->
-<!--                            android:layout_marginTop="8dp"-->
-<!--                            android:layout_marginEnd="16dp"-->
-<!--                            android:layout_marginBottom="8dp"-->
-<!--                            android:scaleType="centerInside"-->
-<!--                            android:src="@drawable/ic_search"-->
-<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                            app:layout_constraintEnd_toEndOf="parent"-->
-<!--                            app:layout_constraintTop_toTopOf="parent"-->
-<!--                            app:tint="@android:color/black" />-->
-
-<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -583,6 +534,7 @@
                         android:id="@+id/categories_background"
                         android:layout_width="match_parent"
                         android:layout_height="182dp"
+
                         android:background="@android:color/white">
 
 

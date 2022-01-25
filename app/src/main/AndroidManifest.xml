@@ -54,7 +54,6 @@
         <activity android:name=".Common.LoginSignup.RetailerSignUp1Activity" />
         <activity android:name=".Common.LoginSignup.RetailerLoginActivity" />
         <activity android:name=".Common.LoginSignup.RetailerStartUpScreenActivity" />
-        <activity android:name=".User.AllCategoriesActivity" />
         <activity android:name=".Common.OnBoardingActivity" />
         <activity android:name=".User.UserDashboardActivity" />
         <activity android:name=".Common.SplashScreenActivity"
